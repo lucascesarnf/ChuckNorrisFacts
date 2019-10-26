@@ -12,20 +12,15 @@ import Combine
 
 class FactListViewModel: ObservableObject {
     let provider = ServiceProvider<ChuckNorrisFactsService>(executor: MockExecutor())
-    let responseFacts = PassthroughSubject<FactListViewModel, Never>()
     
     init() {
         fetchRandom()
     }
     
-    var facts = [FactViewModel]() {
-        didSet {
-            responseFacts.send(self)
-        }
-    }
+    @Published var facts = [FactViewModel]()
     
     private func fetchRandom() {
-        provider.load(service: .random, decodeType: ChuckNorrisFactsResponse.self) { result in
+        provider.load(service: .query(""), decodeType: ChuckNorrisFactsResponse.self) { result in
             switch result {
             case .success(let response):
                 self.facts = response.result.map(FactViewModel.init)

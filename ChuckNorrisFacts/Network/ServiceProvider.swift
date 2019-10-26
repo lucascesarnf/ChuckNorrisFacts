@@ -27,13 +27,19 @@ class ServiceProvider<T: Service> {
                 let decoder = JSONDecoder()
                 do {
                     let resp = try decoder.decode(decodeType, from: data)
-                    completion(.success(resp))
+                    deliverQueue.async {
+                        completion(.success(resp))
+                    }
                 }
                 catch {
-                    completion(.failure(error))
+                    deliverQueue.async {
+                        completion(.failure(error))
+                    }
                 }
             case .failure(let error):
-                completion(.failure(error))
+                deliverQueue.async {
+                    completion(.failure(error))
+                }
             }
         }
     }

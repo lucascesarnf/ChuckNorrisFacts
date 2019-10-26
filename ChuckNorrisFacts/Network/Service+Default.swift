@@ -48,9 +48,9 @@ extension ServiceExecutor {
                 print((String(describing: String(data: data, encoding: .utf8))))
             }
             if let error = error {
-                    completion(.failure(error))
+                completion(.failure(error))
             } else if let data = data {
-                    completion(.success(data))
+                completion(.success(data))
             }
         }.resume()
     }
@@ -60,18 +60,20 @@ class Executor: ServiceExecutor {}
 
 class MockFailureExecutor: ServiceExecutor {
     func execute<T: Service>(_ service: T, deliverQueue: DispatchQueue, completion: @escaping (Result<Data, Error>) -> Void) {
-            completion(.failure(GenericError.generic))
+        completion(.failure(GenericError.generic))
     }
 }
 
 class MockExecutor: ServiceExecutor {
     func execute<T: Service>(_ service: T, completion: @escaping (Result<Data, Error>) -> Void) {
-        if let url = Bundle.main.url(forResource: service.stub, withExtension: "json") {
-            do {
-                let data = try Data(contentsOf: url)
+        DispatchQueue.global(qos: .background).async {
+            if let url = Bundle.main.url(forResource: service.stub, withExtension: "json") {
+                do {
+                    let data = try Data(contentsOf: url)
                     completion(.success(data))
-            } catch {
+                } catch {
                     completion(.failure(error))
+                }
             }
         }
     }

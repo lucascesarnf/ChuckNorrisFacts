@@ -42,7 +42,14 @@ extension ChuckNorrisFactsService: Service {
     }
     
     var stub: String {
-        return "factsData"
+        switch self {
+        case .category(_), .random:
+            return "RandonFactData"
+        case .query(_):
+            return "FactsData"
+        case .categories:
+            return "CategoriesData"
+        }
     }
     
     

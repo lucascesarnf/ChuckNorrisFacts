@@ -1,0 +1,41 @@
+//
+//  FactsViewModelTests.swift
+//  ChuckNorrisFactsTests
+//
+//  Created by Lucas César  Nogueira Fonseca on 21/10/19.
+//  Copyright © 2019 Lucas César  Nogueira Fonseca. All rights reserved.
+//
+
+import XCTest
+@testable import ChuckNorrisFacts
+
+class FactsViewModelTests: XCTestCase {
+    var viewModel: FactViewModel!
+    let value = "Beaver's use there tails to build Dams. Chuck Norris once used his penis to build one. It's known as The Hoover Dam."
+    let categories: [String] = []
+    let url = "https://api.chucknorris.io/jokes/NpyqYKUbQmqgaPKahsSuHg"
+    
+    override func setUp() {
+        super.setUp()
+        let fact = ChuckNorrisFact(iconURL: nil,
+                                   id: nil,
+                                   url: url,
+                                   value: value,
+                                   categories: categories)
+        viewModel = FactViewModel(fact: fact)
+    }
+
+    override func tearDown() {
+        viewModel = nil
+        super.tearDown()
+    }
+
+    func testFactDescription() {
+        XCTAssertEqual(viewModel.factDescription, value, "Fact computed is wrong")
+    }
+    
+    func testNoCategories() {
+        XCTAssertEqual(viewModel.categories,[""], "Score computed from guess is wrong")
+    }
+
+}

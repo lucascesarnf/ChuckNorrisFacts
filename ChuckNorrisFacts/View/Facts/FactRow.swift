@@ -10,25 +10,42 @@ import SwiftUI
 
 struct FactRow: View {
     var model: FactViewModel
+    @State private var showShare = false
     
     var body: some View {
         VStack(alignment: .leading) {
+            Spacer(minLength:10)
             Text(model.factDescription)
                 .fontWeight(.bold)
-                .multilineTextAlignment(.leading)
-                .padding(5)
+                .font(.system(size: 18))
             HStack {
-                ForEach(model.categories, id: \.self) { category in
-                   Group {
-                    Text(category.uppercased())
-                        .fontWeight(.bold)
-                        .foregroundColor(.white)
-                        .padding(5)
+                ScrollView(.horizontal, showsIndicators: true) {
+                    HStack{
+                        ForEach(model.categories, id: \.self) { category in
+                            Group {
+                                Text(category.uppercased())
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.white)
+                                    .padding(5)
+                            }
+                            .background(Color.blue)
+                        }
                     }
-                   .background(Color.blue)
                 }
+                Spacer()
+                Button(action: {
+                    self.showShare = true
+                    self.model.shareFact()
+                }) {
+                    Image("share")
+                        .resizable()
+                        .frame(width: 30, height: 30, alignment: .center)
+                }.sheet(isPresented: $showShare, onDismiss: {
+                    self.showShare = false
+                }, content: {
+                    self.model.activityVC
+                })
             }
-            .padding()
         }
     }
 }
@@ -38,10 +55,10 @@ struct FactRow_Previews: PreviewProvider {
     static var previews: some View {
         FactRow(model: FactViewModel(fact:
             ChuckNorrisFact(iconURL: "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
-        id: nil,
-        url: nil,
-        value: "CHuck Norris' Mother has a tatoo of Chuck Norris on her right bicep.",
-        categories:["First","Second"])))
+                            id: nil,
+                            url: nil,
+                            value: "CHuck Norris' Mother has a tatoo of Chuck Norris on her right bicep.",
+                            categories:["First","Second"])))
     }
 }
 #endif
