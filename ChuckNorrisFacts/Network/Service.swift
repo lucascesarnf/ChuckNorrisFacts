@@ -23,7 +23,7 @@ protocol Service {
     var path: String { get }
     var parameters: [String: Any]? { get }
     var method: ServiceMethod { get }
-    var stub: String { get }
+    var sampleData: String { get }
 }
 
 protocol ServiceExecutor: AnyObject {

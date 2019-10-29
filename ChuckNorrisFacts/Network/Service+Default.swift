@@ -67,7 +67,7 @@ class MockFailureExecutor: ServiceExecutor {
 class MockExecutor: ServiceExecutor {
     func execute<T: Service>(_ service: T, completion: @escaping (Result<Data, Error>) -> Void) {
         DispatchQueue.global(qos: .background).async {
-            if let url = Bundle.main.url(forResource: service.stub, withExtension: "json") {
+            if let url = Bundle.main.url(forResource: service.sampleData, withExtension: "json") {
                 do {
                     let data = try Data(contentsOf: url)
                     completion(.success(data))

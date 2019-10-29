@@ -41,7 +41,7 @@ extension ChuckNorrisFactsService: Service {
         return nil
     }
     
-    var stub: String {
+    var sampleData: String {
         switch self {
         case .category(_), .random:
             return "RandonFactData"

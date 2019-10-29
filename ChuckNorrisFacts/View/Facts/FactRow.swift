@@ -15,23 +15,11 @@ struct FactRow: View {
     var body: some View {
         VStack(alignment: .leading) {
             Spacer(minLength:10)
-            Text(model.factDescription)
+            Text(model.factDescription())
                 .fontWeight(.bold)
-                .font(.system(size: 18))
+                .font(.system(size: model.fontSize()))
             HStack {
-                ScrollView(.horizontal, showsIndicators: true) {
-                    HStack{
-                        ForEach(model.categories, id: \.self) { category in
-                            Group {
-                                Text(category.uppercased())
-                                    .fontWeight(.bold)
-                                    .foregroundColor(.white)
-                                    .padding(5)
-                            }
-                            .background(Color.blue)
-                        }
-                    }
-                }
+                FactCategories(categories: model.categories())
                 Spacer()
                 Button(action: {
                     self.showShare = true

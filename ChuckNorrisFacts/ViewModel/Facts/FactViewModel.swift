@@ -10,23 +10,28 @@ import Foundation
 import UIKit
 
 class FactViewModel: Identifiable {
-    
+
     @Published var fact: ChuckNorrisFact
     @Published var shareURL: Bool = false
     
     let id = UUID()
     let textToShare = "ChuckNorris is awesome!  Check out this fact about him!"
+    let caractersLimitNumber = 80
     var activityVC: ActivityView!
     
     init(fact: ChuckNorrisFact) {
         self.fact = fact
     }
     
-    var factDescription: String {
+    func factDescription() -> String {
         return fact.value
     }
     
-    var categories: [String] {
+    func fontSize() -> CGFloat {
+        return FontSize(numberOfCaracters: factDescription().count).rawValue
+    }
+    
+    func categories() -> [String] {
         return fact.categories.count > 0 ? fact.categories : ["UNCATEGORIZED"]
     }
     

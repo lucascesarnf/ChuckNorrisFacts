@@ -9,6 +9,7 @@
 import Foundation
 import SwiftUI
 import Combine
+import UIKit
 
 class FactListViewModel: ObservableObject {
     let provider = ServiceProvider<ChuckNorrisFactsService>(executor: MockExecutor())

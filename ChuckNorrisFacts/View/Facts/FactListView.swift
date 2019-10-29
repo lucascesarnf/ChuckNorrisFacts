@@ -11,10 +11,27 @@ import Combine
 
 struct FactListView: View {
     @ObservedObject var model = FactListViewModel()
+    @ObservedObject var searchModel = SearchViewModel()
+    @State var isNavigationBarHidden: Bool = true
+    @State private var shouldShowSearchScreen = false
     
     var body: some View {
-        List(model.facts) { model in
-            FactRow(model: model)
+        NavigationView {
+            VStack {
+                NavigationLink(destination: SearchFactView(searchModel: searchModel, isNavigationBarHidden:
+                    $isNavigationBarHidden), isActive: $shouldShowSearchScreen) {
+                        SearchBar(shouldShowSearchScreen: $shouldShowSearchScreen)
+                }
+                .navigationBarTitle("")
+                .navigationBarHidden(isNavigationBarHidden)
+                .onAppear {
+                    self.isNavigationBarHidden = true
+                }
+                
+                List(model.facts) { model in
+                    FactRow(model: model)
+                }
+            }
         }
     }
 }
