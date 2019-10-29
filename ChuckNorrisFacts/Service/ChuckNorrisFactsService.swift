@@ -16,20 +16,18 @@ enum ChuckNorrisFactsService {
 }
 
 extension ChuckNorrisFactsService: Service {
-    
     var path: String {
         switch self {
-        case .random, .category(_):
+        case .random, .category:
             return "/random"
         case .categories:
             return "/categories"
-        case .query(_):
+        case .query:
             return "/search"
         }
     }
-    
+
     var parameters: [String: Any]? {
-        
         switch self {
         case .category(let category):
             return ["category": category]
@@ -40,19 +38,18 @@ extension ChuckNorrisFactsService: Service {
         }
         return nil
     }
-    
+
     var sampleData: String {
         switch self {
-        case .category(_), .random:
+        case .category, .random:
             return "RandonFactData"
-        case .query(_):
+        case .query:
             return "FactsData"
         case .categories:
             return "CategoriesData"
         }
     }
-    
-    
+
     var method: ServiceMethod {
         return .get
     }

@@ -10,7 +10,7 @@ import SwiftUI
 
 struct FactCategories: View {
     var categories: [String]
-    
+
     var body: some View {
         ScrollView(.horizontal, showsIndicators: true) {
             HStack {

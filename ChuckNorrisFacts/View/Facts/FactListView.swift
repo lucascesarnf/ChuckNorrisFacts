@@ -14,7 +14,7 @@ struct FactListView: View {
     @ObservedObject var searchModel = SearchViewModel()
     @State var isNavigationBarHidden: Bool = true
     @State private var shouldShowSearchScreen = false
-    
+
     var body: some View {
         NavigationView {
             VStack {
@@ -27,7 +27,7 @@ struct FactListView: View {
                 .onAppear {
                     self.isNavigationBarHidden = true
                 }
-                
+
                 List(model.facts) { model in
                     FactRow(model: model)
                 }

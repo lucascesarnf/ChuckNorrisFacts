@@ -11,10 +11,11 @@ import XCTest
 
 class FactViewModelTests: XCTestCase {
     var viewModel: FactViewModel!
-    let value = "Beaver's use there tails to build Dams. Chuck Norris once used his penis to build one. It's known as The Hoover Dam."
+    let value = "Beaver's use there tails to build Dams." +
+    " Chuck Norris once used his penis to build one. It's known as The Hoover Dam."
     let categories: [String] = []
     let url = "https://api.chucknorris.io/jokes/NpyqYKUbQmqgaPKahsSuHg"
-    
+
     override func setUp() {
         super.setUp()
         let fact = ChuckNorrisFact(iconURL: nil,
@@ -33,12 +34,12 @@ class FactViewModelTests: XCTestCase {
     func testFactDescription() {
         XCTAssertEqual(viewModel.factDescription(), value, "Fact computed is wrong")
     }
-    
+
     func testUncategorizedCategorie() {
         viewModel.fact.categories = []
-        XCTAssertEqual(viewModel.categories(),["UNCATEGORIZED"], "Score computed from guess is wrong")
+        XCTAssertEqual(viewModel.categories(), ["UNCATEGORIZED"], "Score computed from guess is wrong")
     }
-    
+
     func testShareActivityView() {
         viewModel.activityVC = nil
         viewModel.shareFact()

@@ -29,4 +29,3 @@ protocol Service {
 protocol ServiceExecutor: AnyObject {
     func execute<T: Service>(_ service: T, completion: @escaping (Result<Data, Error>) -> Void)
 }
-

@@ -9,18 +9,36 @@ import Foundation
 
 class ServiceProvider<T: Service> {
     var executor: ServiceExecutor = Executor()
-    
+    var dataManager = DataManager()
+
     init() {}
+
     convenience init(executor: ServiceExecutor) {
         self.init()
         self.executor = executor
     }
-    
-    func load(service: T, deliverQueue: DispatchQueue = DispatchQueue.main, completion: @escaping (Result<Data, Error>) -> Void) {
+
+    private func loadLocalData<U>(key: String, decodeType: U.Type) -> U? where U: Decodable {
+        let decoder = JSONDecoder()
+
+        guard let data = dataManager.loadData(from: key) else { return nil }
+        do {
+            let resp = try decoder.decode(decodeType, from: data)
+            return resp
+        } catch {
+            print(error)
+            return nil
+        }
+    }
+
+    func load(service: T, deliverQueue: DispatchQueue = DispatchQueue.main,
+              completion: @escaping (Result<Data, Error>) -> Void) {
         executor.execute(service, completion: completion)
     }
-    
-    func load<U>(service: T, decodeType: U.Type, deliverQueue: DispatchQueue = DispatchQueue.main, completion: @escaping (Result<U, Error>) -> Void) where U: Decodable {
+
+    @discardableResult
+    func load<U>(service: T, decodeType: U.Type, deliverQueue: DispatchQueue = DispatchQueue.main,
+                 completion: @escaping (Result<U, Error>) -> Void) -> U? where U: Decodable, T: Service {
         executor.execute(service) { result in
             switch result {
             case .success(let data):
@@ -30,8 +48,7 @@ class ServiceProvider<T: Service> {
                     deliverQueue.async {
                         completion(.success(resp))
                     }
-                }
-                catch {
+                } catch {
                     deliverQueue.async {
                         completion(.failure(error))
                     }
@@ -42,5 +59,6 @@ class ServiceProvider<T: Service> {
                 }
             }
         }
+        return self.loadLocalData(key: service.sampleData, decodeType: decodeType)
     }
 }

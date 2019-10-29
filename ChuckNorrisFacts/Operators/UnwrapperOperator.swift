@@ -11,19 +11,26 @@ import Foundation
 /// I know that this useless but i like the power of change the Swift language :)
 postfix operator ^^
 
-postfix func ^^(rhs: String?) -> String {
+postfix func ^^ (rhs: String?) -> String {
     return rhs ?? ""
 }
 
-postfix func ^^(rhs: Int?) -> Int {
+postfix func ^^ (rhs: Int?) -> Int {
     return rhs ?? 0
 }
 
-postfix func ^^(rhs: Double?) -> Double {
+postfix func ^^ (rhs: Double?) -> Double {
     return rhs ?? 0
 }
 
-postfix func ^^(rhs: NSURL?) -> NSURL {
+postfix func ^^ (rhs: Bool?) -> Bool {
+    return rhs ?? false
+}
+
+postfix func ^^ (rhs: NSURL?) -> NSURL {
     return rhs ?? NSURL()
 }
 
+postfix func ^^ (rhs: NSString?) -> NSString {
+    return rhs ?? ""
+}

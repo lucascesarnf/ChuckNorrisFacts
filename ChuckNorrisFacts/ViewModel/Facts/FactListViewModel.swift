@@ -12,22 +12,27 @@ import Combine
 import UIKit
 
 class FactListViewModel: ObservableObject {
-    let provider = ServiceProvider<ChuckNorrisFactsService>(executor: MockExecutor())
-    
+    let provider = ServiceProvider<ChuckNorrisFactsService>(executor: Executor())
+    var dataManager = DataManager()
+
     init() {
         fetchRandom()
     }
-    
+
     @Published var facts = [FactViewModel]()
-    
+
     private func fetchRandom() {
-        provider.load(service: .query(""), decodeType: ChuckNorrisFactsResponse.self) { result in
+        let cache = provider.load(service: .query("tatoo"), decodeType: ChuckNorrisFactsResponse.self) { result in
             switch result {
             case .success(let response):
                 self.facts = response.result.map(FactViewModel.init)
             case .failure(let error):
                 print(error.localizedDescription)
             }
+        }
+
+        if let facts = cache {
+            self.facts = facts.result.map(FactViewModel.init)
         }
     }
 }

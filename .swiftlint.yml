@@ -1,0 +1,8 @@
+disabled_rules:
+- identifier_name
+
+excluded:
+- .build
+- Package.swift
+
+

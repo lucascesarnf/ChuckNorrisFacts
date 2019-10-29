@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SearchBar: View {
     @Binding var shouldShowSearchScreen: Bool
-    
+
     var body: some View {
        HStack {
             Text("CHUCK NORRIS FACTS")
@@ -19,12 +19,12 @@ struct SearchBar: View {
             Spacer()
             Button(action: {
                 self.shouldShowSearchScreen = true
-            }) {
+            }, label: {
                 Image("search")
                     .resizable()
                     .frame(width: 30, height: 30, alignment: .center)
                     .foregroundColor(.white)
-            }
+            })
         }
         .padding()
         .background(Color.gray)

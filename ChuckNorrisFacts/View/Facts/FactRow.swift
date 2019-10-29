@@ -11,10 +11,10 @@ import SwiftUI
 struct FactRow: View {
     var model: FactViewModel
     @State private var showShare = false
-    
+
     var body: some View {
         VStack(alignment: .leading) {
-            Spacer(minLength:10)
+            Spacer(minLength: 10)
             Text(model.factDescription())
                 .fontWeight(.bold)
                 .font(.system(size: model.fontSize()))
@@ -24,11 +24,11 @@ struct FactRow: View {
                 Button(action: {
                     self.showShare = true
                     self.model.shareFact()
-                }) {
+                }, label: {
                     Image("share")
                         .resizable()
                         .frame(width: 30, height: 30, alignment: .center)
-                }.sheet(isPresented: $showShare, onDismiss: {
+                }).sheet(isPresented: $showShare, onDismiss: {
                     self.showShare = false
                 }, content: {
                     self.model.activityVC
@@ -46,7 +46,7 @@ struct FactRow_Previews: PreviewProvider {
                             id: nil,
                             url: nil,
                             value: "CHuck Norris' Mother has a tatoo of Chuck Norris on her right bicep.",
-                            categories:["First","Second"])))
+                            categories: ["First", "Second"])))
     }
 }
 #endif

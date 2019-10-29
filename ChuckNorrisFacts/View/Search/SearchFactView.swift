@@ -11,7 +11,7 @@ import SwiftUI
 struct SearchFactView: View {
     var searchModel: SearchViewModel
     @Binding var isNavigationBarHidden: Bool
-    
+
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello World!"/*@END_MENU_TOKEN@*/)
         .navigationBarHidden(false)

@@ -19,11 +19,9 @@ struct ChuckNorrisFact: Codable, Hashable {
     var url: String?
     var value: String
     var categories: [String] = []
-    
+
     enum CodingKeys: String, CodingKey {
         case iconURL = "icon_url"
         case id, url, value, categories
     }
 }
-
-

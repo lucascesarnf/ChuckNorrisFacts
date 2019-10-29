@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA0DAEDB2368F8F200C5D2C6 /* Data+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0DAEDA2368F8F200C5D2C6 /* Data+String.swift */; };
+		CA0DAEDD2368F91200C5D2C6 /* URLRequest+Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0DAEDC2368F91200C5D2C6 /* URLRequest+Log.swift */; };
+		CA0DAEE12369007E00C5D2C6 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0DAEDE2369007E00C5D2C6 /* DataManager.swift */; };
+		CA0DAEE22369007E00C5D2C6 /* ChuckNorrisFacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CA0DAEDF2369007E00C5D2C6 /* ChuckNorrisFacts.xcdatamodeld */; };
 		CA3F4C732367B6E300C58234 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3F4C722367B6E300C58234 /* SearchBar.swift */; };
 		CA3F4C762367BB2700C58234 /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3F4C752367BB2700C58234 /* FontSize.swift */; };
 		CA4A327D235E7CB30050854E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A327C235E7CB30050854E /* AppDelegate.swift */; };
@@ -26,7 +30,7 @@
 		CA53C3FC2362783D002F41E2 /* ChuckNorrisFactsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA53C3FB2362783D002F41E2 /* ChuckNorrisFactsService.swift */; };
 		CA53C40023627C2A002F41E2 /* FactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA53C3FF23627C2A002F41E2 /* FactViewModel.swift */; };
 		CA53C40323627E1A002F41E2 /* FactListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA53C40223627E1A002F41E2 /* FactListViewModel.swift */; };
-		CAE39860236299080016C503 /* GenericError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE3985F236299080016C503 /* GenericError.swift */; };
+		CAE39860236299080016C503 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE3985F236299080016C503 /* Error.swift */; };
 		CAE398642363DACC0016C503 /* CategoriesData.json in Resources */ = {isa = PBXBuildFile; fileRef = CAE398632363DACC0016C503 /* CategoriesData.json */; };
 		CAE398662363DAD30016C503 /* RandonFactData.json in Resources */ = {isa = PBXBuildFile; fileRef = CAE398652363DAD30016C503 /* RandonFactData.json */; };
 		CAE398692363F6AB0016C503 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE398682363F6AB0016C503 /* ActivityView.swift */; };
@@ -54,6 +58,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CA0DAEDA2368F8F200C5D2C6 /* Data+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+String.swift"; sourceTree = "<group>"; };
+		CA0DAEDC2368F91200C5D2C6 /* URLRequest+Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Log.swift"; sourceTree = "<group>"; };
+		CA0DAEDE2369007E00C5D2C6 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		CA0DAEE02369007E00C5D2C6 /* ChuckNorrisFact.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChuckNorrisFact.xcdatamodel; sourceTree = "<group>"; };
 		CA3F4C722367B6E300C58234 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		CA3F4C752367BB2700C58234 /* FontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
 		CA4A3279235E7CB30050854E /* ChuckNorrisFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChuckNorrisFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,14 +87,13 @@
 		CA53C3FB2362783D002F41E2 /* ChuckNorrisFactsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckNorrisFactsService.swift; sourceTree = "<group>"; };
 		CA53C3FF23627C2A002F41E2 /* FactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactViewModel.swift; sourceTree = "<group>"; };
 		CA53C40223627E1A002F41E2 /* FactListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactListViewModel.swift; sourceTree = "<group>"; };
-		CAE3985F236299080016C503 /* GenericError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericError.swift; sourceTree = "<group>"; };
+		CAE3985F236299080016C503 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		CAE398632363DACC0016C503 /* CategoriesData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CategoriesData.json; sourceTree = "<group>"; };
 		CAE398652363DAD30016C503 /* RandonFactData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RandonFactData.json; sourceTree = "<group>"; };
 		CAE398682363F6AB0016C503 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		CAE398722364C5B20016C503 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		CAE39875236754A90016C503 /* UnwrapperOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnwrapperOperator.swift; sourceTree = "<group>"; };
 		CAE39877236776FC0016C503 /* FactCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactCategories.swift; sourceTree = "<group>"; };
-		CAE39879236794270016C503 /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; };
 		CAE3987C23679C510016C503 /* SearchFactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFactView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,10 +133,27 @@
 			path = Source;
 			sourceTree = "<group>";
 		};
+		CA0DAED22368F4B800C5D2C6 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				CA0DAEDF2369007E00C5D2C6 /* ChuckNorrisFacts.xcdatamodeld */,
+				CA0DAEDE2369007E00C5D2C6 /* DataManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		CA0DAED92368F8D800C5D2C6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CA0DAEDA2368F8F200C5D2C6 /* Data+String.swift */,
+				CA0DAEDC2368F91200C5D2C6 /* URLRequest+Log.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		CA4A3270235E7CB30050854E = {
 			isa = PBXGroup;
 			children = (
-				CAE39879236794270016C503 /* Playground.playground */,
 				CA4A327B235E7CB30050854E /* ChuckNorrisFacts */,
 				CA4A3292235E7CB40050854E /* ChuckNorrisFactsTests */,
 				CA4A329D235E7CB40050854E /* ChuckNorrisFactsUITests */,
@@ -150,6 +174,8 @@
 		CA4A327B235E7CB30050854E /* ChuckNorrisFacts */ = {
 			isa = PBXGroup;
 			children = (
+				CA0DAED92368F8D800C5D2C6 /* Extensions */,
+				CA0DAED22368F4B800C5D2C6 /* CoreData */,
 				CAE398742367545F0016C503 /* Operators */,
 				CA4A328A235E7CB40050854E /* Info.plist */,
 				CA53C3E423620A2A002F41E2 /* Mock */,
@@ -235,7 +261,7 @@
 				CA53C3EF23624104002F41E2 /* Service.swift */,
 				CA53C3F8236276B5002F41E2 /* Service+Default.swift */,
 				CA53C3F1236267BD002F41E2 /* ServiceProvider.swift */,
-				CAE3985F236299080016C503 /* GenericError.swift */,
+				CAE3985F236299080016C503 /* Error.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -306,6 +332,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA4A32A3235E7CB40050854E /* Build configuration list for PBXNativeTarget "ChuckNorrisFacts" */;
 			buildPhases = (
+				CA0DAED82368F51000C5D2C6 /* Lint */,
 				CA4A3275235E7CB30050854E /* Sources */,
 				CA4A3276235E7CB30050854E /* Frameworks */,
 				CA4A3277235E7CB30050854E /* Resources */,
@@ -428,16 +455,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		CA0DAED82368F51000C5D2C6 /* Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Lint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [ \"$CI\" = true ]; then\necho \"warning: Skiping swiftlint in CI\"\nelif which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CA4A3275235E7CB30050854E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAE39860236299080016C503 /* GenericError.swift in Sources */,
+				CAE39860236299080016C503 /* Error.swift in Sources */,
 				CA53C40323627E1A002F41E2 /* FactListViewModel.swift in Sources */,
 				CA3F4C762367BB2700C58234 /* FontSize.swift in Sources */,
 				CAE398692363F6AB0016C503 /* ActivityView.swift in Sources */,
 				CAE39878236776FC0016C503 /* FactCategories.swift in Sources */,
+				CA0DAEE22369007E00C5D2C6 /* ChuckNorrisFacts.xcdatamodeld in Sources */,
+				CA0DAEDD2368F91200C5D2C6 /* URLRequest+Log.swift in Sources */,
 				CA53C3FC2362783D002F41E2 /* ChuckNorrisFactsService.swift in Sources */,
 				CA3F4C732367B6E300C58234 /* SearchBar.swift in Sources */,
 				CAE39876236754A90016C503 /* UnwrapperOperator.swift in Sources */,
@@ -446,10 +496,12 @@
 				CA4A327D235E7CB30050854E /* AppDelegate.swift in Sources */,
 				CA53C3E2236205F1002F41E2 /* ChuckNorrisFact.swift in Sources */,
 				CA53C40023627C2A002F41E2 /* FactViewModel.swift in Sources */,
+				CA0DAEDB2368F8F200C5D2C6 /* Data+String.swift in Sources */,
 				CA53C3F2236267BD002F41E2 /* ServiceProvider.swift in Sources */,
 				CAE398732364C5B20016C503 /* SearchViewModel.swift in Sources */,
 				CA4A327F235E7CB30050854E /* SceneDelegate.swift in Sources */,
 				CA4A3281235E7CB30050854E /* FactListView.swift in Sources */,
+				CA0DAEE12369007E00C5D2C6 /* DataManager.swift in Sources */,
 				CA53C3E823620B73002F41E2 /* FactRow.swift in Sources */,
 				CA53C3F9236276B5002F41E2 /* Service+Default.swift in Sources */,
 			);
@@ -776,6 +828,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CA0DAEDF2369007E00C5D2C6 /* ChuckNorrisFacts.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CA0DAEE02369007E00C5D2C6 /* ChuckNorrisFact.xcdatamodel */,
+			);
+			currentVersion = CA0DAEE02369007E00C5D2C6 /* ChuckNorrisFact.xcdatamodel */;
+			path = ChuckNorrisFacts.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CA4A3271235E7CB30050854E /* Project object */;
 }
