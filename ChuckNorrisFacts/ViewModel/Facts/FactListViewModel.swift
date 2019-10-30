@@ -27,6 +27,7 @@ class FactListViewModel: ObservableObject {
             case .success(let response):
                 self.facts = response.result.map(FactViewModel.init)
             case .failure(let error):
+                print((error as NSError).code)
                 print(error.localizedDescription)
             }
         }

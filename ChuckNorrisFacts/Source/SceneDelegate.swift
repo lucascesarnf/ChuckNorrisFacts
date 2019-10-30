@@ -19,7 +19,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession,
                options connectionOptions: UIScene.ConnectionOptions) {
-        networkMonitor()
         // Create the SwiftUI view that provides the window contents.
         let contentView = FactListView()
         // Use a UIHostingController as window root view controller.
@@ -29,21 +28,5 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             self.window = window
             window.makeKeyAndVisible()
         }
-    }
-
-    func networkMonitor() {
-        monitor.pathUpdateHandler = { path in
-            DispatchQueue.main.async {
-                if path.status == .satisfied {
-                    newtworkConnection = true
-                } else {
-                    newtworkConnection = false
-                }
-            }
-           // print(path.isExpensive)
-        }
-
-        let queue = DispatchQueue(label: "Monitor")
-        monitor.start(queue: queue)
     }
 }

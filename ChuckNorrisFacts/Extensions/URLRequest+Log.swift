@@ -10,7 +10,7 @@ import Foundation
 
 extension URLRequest {
     func log() {
-        print("\(httpMethod ?? "") \(self)")
+        print("\(httpMethod†) \(self)")
         print("BODY \n \(String(describing: httpBody?.toString()))")
         print("HEADERS \n \(String(describing: allHTTPHeaderFields))")
     }

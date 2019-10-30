@@ -24,6 +24,7 @@ class ServiceProvider<T: Service> {
         guard let data = dataManager.loadData(from: key) else { return nil }
         do {
             let resp = try decoder.decode(decodeType, from: data)
+            print("✅ Cache Loaded")
             return resp
         } catch {
             print(error)
@@ -38,7 +39,7 @@ class ServiceProvider<T: Service> {
 
     @discardableResult
     func load<U>(service: T, decodeType: U.Type, deliverQueue: DispatchQueue = DispatchQueue.main,
-                 completion: @escaping (Result<U, Error>) -> Void) -> U? where U: Decodable, T: Service {
+                 completion: @escaping (Result<U, FactsError>) -> Void) -> U? where U: Decodable, T: Service {
         executor.execute(service) { result in
             switch result {
             case .success(let data):
@@ -50,12 +51,12 @@ class ServiceProvider<T: Service> {
                     }
                 } catch {
                     deliverQueue.async {
-                        completion(.failure(error))
+                        completion(.failure(FactsError(error: error)))
                     }
                 }
             case .failure(let error):
                 deliverQueue.async {
-                    completion(.failure(error))
+                   completion(.failure(FactsError(error: error)))
                 }
             }
         }

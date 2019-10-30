@@ -27,7 +27,6 @@ extension Service {
         var urlComponents = URLComponents(string: baseURL)
         urlComponents?.path = "/jokes" + path
         if method == .get {
-            // add query items to url
             if let parameters = parameters as? [String: String] {
                 urlComponents?.queryItems = parameters.map { URLQueryItem(name: $0.key, value: $0.value) }
             }
@@ -52,11 +51,6 @@ extension ServiceExecutor {
     func execute<T: Service>(_ service: T, completion: @escaping (Result<Data, Error>) -> Void) {
 
         print("\n\n#########################")
-        //        if !newtworkConnection {
-        //           print("📴")
-        //            completion(.failure(GenericError.netWork))
-        //            return
-        //        }
         service.urlRequest.log()
         URLSession.shared.dataTask(with: service.urlRequest) { (data, _, error) in
             if let error = error {
@@ -64,7 +58,7 @@ extension ServiceExecutor {
                 completion(.failure(error))
             } else if let data = data {
                 print("✅ Request completed")
-                self.printJsonData(data: data) //print(data.toString()^^)
+                self.printJsonData(data: data)
                 self.saveData(key: service.sampleData, value: data, url: service.urlRequest.url)
                 completion(.success(data))
             }
@@ -84,7 +78,7 @@ class Executor: ServiceExecutor {}
 class MockFailureExecutor: ServiceExecutor {
     func execute<T: Service>(_ service: T, deliverQueue: DispatchQueue,
                              completion: @escaping (Result<Data, Error>) -> Void) {
-        completion(.failure(GenericError.generic))
+        completion(.failure(FactsError.generic))
     }
 }
 

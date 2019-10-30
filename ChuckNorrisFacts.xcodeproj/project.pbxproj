@@ -30,6 +30,7 @@
 		CA53C3FC2362783D002F41E2 /* ChuckNorrisFactsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA53C3FB2362783D002F41E2 /* ChuckNorrisFactsService.swift */; };
 		CA53C40023627C2A002F41E2 /* FactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA53C3FF23627C2A002F41E2 /* FactViewModel.swift */; };
 		CA53C40323627E1A002F41E2 /* FactListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA53C40223627E1A002F41E2 /* FactListViewModel.swift */; };
+		CAB39E4B23691E6800B57023 /* ErrorCasting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB39E4A23691E6800B57023 /* ErrorCasting.swift */; };
 		CAE39860236299080016C503 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE3985F236299080016C503 /* Error.swift */; };
 		CAE398642363DACC0016C503 /* CategoriesData.json in Resources */ = {isa = PBXBuildFile; fileRef = CAE398632363DACC0016C503 /* CategoriesData.json */; };
 		CAE398662363DAD30016C503 /* RandonFactData.json in Resources */ = {isa = PBXBuildFile; fileRef = CAE398652363DAD30016C503 /* RandonFactData.json */; };
@@ -87,6 +88,7 @@
 		CA53C3FB2362783D002F41E2 /* ChuckNorrisFactsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckNorrisFactsService.swift; sourceTree = "<group>"; };
 		CA53C3FF23627C2A002F41E2 /* FactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactViewModel.swift; sourceTree = "<group>"; };
 		CA53C40223627E1A002F41E2 /* FactListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactListViewModel.swift; sourceTree = "<group>"; };
+		CAB39E4A23691E6800B57023 /* ErrorCasting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCasting.swift; sourceTree = "<group>"; };
 		CAE3985F236299080016C503 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		CAE398632363DACC0016C503 /* CategoriesData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CategoriesData.json; sourceTree = "<group>"; };
 		CAE398652363DAD30016C503 /* RandonFactData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RandonFactData.json; sourceTree = "<group>"; };
@@ -174,10 +176,10 @@
 		CA4A327B235E7CB30050854E /* ChuckNorrisFacts */ = {
 			isa = PBXGroup;
 			children = (
+				CA4A328A235E7CB40050854E /* Info.plist */,
 				CA0DAED92368F8D800C5D2C6 /* Extensions */,
 				CA0DAED22368F4B800C5D2C6 /* CoreData */,
 				CAE398742367545F0016C503 /* Operators */,
-				CA4A328A235E7CB40050854E /* Info.plist */,
 				CA53C3E423620A2A002F41E2 /* Mock */,
 				CA53C3E0236205BE002F41E2 /* Model */,
 				CA53C3EE2362409E002F41E2 /* Network */,
@@ -321,6 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				CAE39875236754A90016C503 /* UnwrapperOperator.swift */,
+				CAB39E4A23691E6800B57023 /* ErrorCasting.swift */,
 			);
 			path = Operators;
 			sourceTree = "<group>";
@@ -497,6 +500,7 @@
 				CA53C3E2236205F1002F41E2 /* ChuckNorrisFact.swift in Sources */,
 				CA53C40023627C2A002F41E2 /* FactViewModel.swift in Sources */,
 				CA0DAEDB2368F8F200C5D2C6 /* Data+String.swift in Sources */,
+				CAB39E4B23691E6800B57023 /* ErrorCasting.swift in Sources */,
 				CA53C3F2236267BD002F41E2 /* ServiceProvider.swift in Sources */,
 				CAE398732364C5B20016C503 /* SearchViewModel.swift in Sources */,
 				CA4A327F235E7CB30050854E /* SceneDelegate.swift in Sources */,
