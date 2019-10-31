@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class SearchViewModel: ObservableObject {
+    // MARK: - @Combine
     @Published var text: String = ""
     @Published var shouldShowSearchScreen: Bool = false
 }

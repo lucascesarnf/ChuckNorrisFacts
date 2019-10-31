@@ -9,8 +9,8 @@
 import SwiftUI
 
 struct FactRow: View {
-    var model: FactViewModel
     @State private var showShare = false
+    var model: FactViewModel
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -21,20 +21,24 @@ struct FactRow: View {
             HStack {
                 FactCategories(categories: model.categories())
                 Spacer()
-                Button(action: {
-                    self.showShare = true
-                    self.model.shareFact()
-                }, label: {
-                    Image("share")
-                        .resizable()
-                        .frame(width: 30, height: 30, alignment: .center)
-                }).sheet(isPresented: $showShare, onDismiss: {
-                    self.showShare = false
-                }, content: {
-                    self.model.activityVC
-                })
+                shareButton
             }
         }
+    }
+
+    var shareButton: some View {
+        Button(action: {
+            self.showShare = true
+            self.model.shareFact()
+        }, label: {
+            Image("share")
+                .resizable()
+                .frame(width: 30, height: 30, alignment: .center)
+        }).sheet(isPresented: $showShare, onDismiss: {
+            self.showShare = false
+        }, content: {
+            self.model.activityVC
+        })
     }
 }
 

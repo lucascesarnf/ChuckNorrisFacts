@@ -10,19 +10,22 @@ import Foundation
 import UIKit
 
 class FactViewModel: Identifiable {
-
+    // MARK: - @Combine
     @Published var fact: ChuckNorrisFact
     @Published var shareURL: Bool = false
 
+    // MARK: - Variables/Constants
     let id = UUID()
     let textToShare = "ChuckNorris is awesome!  Check out this fact about him!"
     let caractersLimitNumber = 80
     var activityVC: ActivityView!
 
+    // MARK: - Lifecycle
     init(fact: ChuckNorrisFact) {
         self.fact = fact
     }
 
+    // MARK: - Functions
     func factDescription() -> String {
         return fact.value
     }

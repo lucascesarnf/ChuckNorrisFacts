@@ -31,13 +31,20 @@ class FactViewModelTests: XCTestCase {
         super.tearDown()
     }
 
+    func testFontSize() {
+        let fontSize = FontSize.init(numberOfCaracters: value.count)
+        XCTAssertEqual(fontSize, FontSize.small, "Font size enum is wrong")
+        XCTAssertEqual(fontSize.rawValue, viewModel.fontSize(), "View Model font size is wrong")
+        XCTAssertEqual(viewModel.factDescription(), value, "Fact computed is wrong")
+    }
+
     func testFactDescription() {
         XCTAssertEqual(viewModel.factDescription(), value, "Fact computed is wrong")
     }
 
     func testUncategorizedCategorie() {
         viewModel.fact.categories = []
-        XCTAssertEqual(viewModel.categories(), ["UNCATEGORIZED"], "Score computed from guess is wrong")
+        XCTAssertEqual(viewModel.categories(), ["UNCATEGORIZED"], "Category empy computed is wrong")
     }
 
     func testShareActivityView() {

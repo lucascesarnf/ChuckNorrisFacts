@@ -24,8 +24,5 @@ protocol Service {
     var parameters: [String: Any]? { get }
     var method: ServiceMethod { get }
     var sampleData: String { get }
-}
-
-protocol ServiceExecutor: AnyObject {
-    func execute<T: Service>(_ service: T, completion: @escaping (Result<Data, Error>) -> Void)
+    var saveData: Bool { get }
 }

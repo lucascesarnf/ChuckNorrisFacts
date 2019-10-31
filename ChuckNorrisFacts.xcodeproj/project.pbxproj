@@ -3,14 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA0549292369BBBE0061F3AA /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CA0549282369BBBE0061F3AA /* RxSwift */; };
+		CA05492B2369BBBE0061F3AA /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = CA05492A2369BBBE0061F3AA /* RxRelay */; };
+		CA05492D2369BBBE0061F3AA /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = CA05492C2369BBBE0061F3AA /* RxCocoa */; };
+		CA0549302369C5950061F3AA /* ChuckNorrisFacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CA05492E2369C5950061F3AA /* ChuckNorrisFacts.xcdatamodeld */; };
+		CA054937236A22160061F3AA /* FactListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA054936236A22160061F3AA /* FactListState.swift */; };
+		CA054939236A498C0061F3AA /* ServiceExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA054938236A498C0061F3AA /* ServiceExecutor.swift */; };
+		CA05493B236A4A370061F3AA /* ServiceExecutor+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA05493A236A4A370061F3AA /* ServiceExecutor+Default.swift */; };
+		CA05493D236A4A6D0061F3AA /* Executor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA05493C236A4A6D0061F3AA /* Executor.swift */; };
+		CA054941236A4EF60061F3AA /* FactsListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA054940236A4EF60061F3AA /* FactsListViewModelTests.swift */; };
 		CA0DAEDB2368F8F200C5D2C6 /* Data+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0DAEDA2368F8F200C5D2C6 /* Data+String.swift */; };
 		CA0DAEDD2368F91200C5D2C6 /* URLRequest+Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0DAEDC2368F91200C5D2C6 /* URLRequest+Log.swift */; };
 		CA0DAEE12369007E00C5D2C6 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0DAEDE2369007E00C5D2C6 /* DataManager.swift */; };
-		CA0DAEE22369007E00C5D2C6 /* ChuckNorrisFacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CA0DAEDF2369007E00C5D2C6 /* ChuckNorrisFacts.xcdatamodeld */; };
 		CA3F4C732367B6E300C58234 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3F4C722367B6E300C58234 /* SearchBar.swift */; };
 		CA3F4C762367BB2700C58234 /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3F4C752367BB2700C58234 /* FontSize.swift */; };
 		CA4A327D235E7CB30050854E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A327C235E7CB30050854E /* AppDelegate.swift */; };
@@ -59,10 +67,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CA05492F2369C5950061F3AA /* ChuckNorrisFact.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChuckNorrisFact.xcdatamodel; sourceTree = "<group>"; };
+		CA054936236A22160061F3AA /* FactListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactListState.swift; sourceTree = "<group>"; };
+		CA054938236A498C0061F3AA /* ServiceExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceExecutor.swift; sourceTree = "<group>"; };
+		CA05493A236A4A370061F3AA /* ServiceExecutor+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServiceExecutor+Default.swift"; sourceTree = "<group>"; };
+		CA05493C236A4A6D0061F3AA /* Executor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Executor.swift; sourceTree = "<group>"; };
+		CA054940236A4EF60061F3AA /* FactsListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListViewModelTests.swift; sourceTree = "<group>"; };
 		CA0DAEDA2368F8F200C5D2C6 /* Data+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+String.swift"; sourceTree = "<group>"; };
 		CA0DAEDC2368F91200C5D2C6 /* URLRequest+Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Log.swift"; sourceTree = "<group>"; };
 		CA0DAEDE2369007E00C5D2C6 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		CA0DAEE02369007E00C5D2C6 /* ChuckNorrisFact.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChuckNorrisFact.xcdatamodel; sourceTree = "<group>"; };
 		CA3F4C722367B6E300C58234 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		CA3F4C752367BB2700C58234 /* FontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
 		CA4A3279235E7CB30050854E /* ChuckNorrisFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChuckNorrisFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +117,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA05492D2369BBBE0061F3AA /* RxCocoa in Frameworks */,
+				CA05492B2369BBBE0061F3AA /* RxRelay in Frameworks */,
+				CA0549292369BBBE0061F3AA /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,8 +143,9 @@
 		CA0AB80E235FAE5A00EAE3D3 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				CA4A327E235E7CB30050854E /* SceneDelegate.swift */,
+				CA4A3285235E7CB40050854E /* Preview Assets.xcassets */,
 				CA4A3287235E7CB40050854E /* LaunchScreen.storyboard */,
+				CA4A327E235E7CB30050854E /* SceneDelegate.swift */,
 				CA4A3282235E7CB40050854E /* Assets.xcassets */,
 				CA4A327C235E7CB30050854E /* AppDelegate.swift */,
 			);
@@ -138,7 +155,7 @@
 		CA0DAED22368F4B800C5D2C6 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				CA0DAEDF2369007E00C5D2C6 /* ChuckNorrisFacts.xcdatamodeld */,
+				CA05492E2369C5950061F3AA /* ChuckNorrisFacts.xcdatamodeld */,
 				CA0DAEDE2369007E00C5D2C6 /* DataManager.swift */,
 			);
 			path = CoreData;
@@ -183,7 +200,6 @@
 				CA53C3E423620A2A002F41E2 /* Mock */,
 				CA53C3E0236205BE002F41E2 /* Model */,
 				CA53C3EE2362409E002F41E2 /* Network */,
-				CA4A3284235E7CB40050854E /* Preview Content */,
 				CA53C3FA23627817002F41E2 /* Service */,
 				CA0AB80E235FAE5A00EAE3D3 /* Source */,
 				CA53C3E323620A0E002F41E2 /* View */,
@@ -192,19 +208,12 @@
 			path = ChuckNorrisFacts;
 			sourceTree = "<group>";
 		};
-		CA4A3284235E7CB40050854E /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				CA4A3285235E7CB40050854E /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
 		CA4A3292235E7CB40050854E /* ChuckNorrisFactsTests */ = {
 			isa = PBXGroup;
 			children = (
 				CA4A3293235E7CB40050854E /* FactViewModelTests.swift */,
 				CA4A3295235E7CB40050854E /* Info.plist */,
+				CA054940236A4EF60061F3AA /* FactsListViewModelTests.swift */,
 			);
 			path = ChuckNorrisFactsTests;
 			sourceTree = "<group>";
@@ -223,6 +232,7 @@
 			children = (
 				CA53C3E1236205F1002F41E2 /* ChuckNorrisFact.swift */,
 				CA3F4C752367BB2700C58234 /* FontSize.swift */,
+				CA054936236A22160061F3AA /* FactListState.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -264,6 +274,9 @@
 				CA53C3F8236276B5002F41E2 /* Service+Default.swift */,
 				CA53C3F1236267BD002F41E2 /* ServiceProvider.swift */,
 				CAE3985F236299080016C503 /* Error.swift */,
+				CA054938236A498C0061F3AA /* ServiceExecutor.swift */,
+				CA05493A236A4A370061F3AA /* ServiceExecutor+Default.swift */,
+				CA05493C236A4A6D0061F3AA /* Executor.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -345,6 +358,11 @@
 			dependencies = (
 			);
 			name = ChuckNorrisFacts;
+			packageProductDependencies = (
+				CA0549282369BBBE0061F3AA /* RxSwift */,
+				CA05492A2369BBBE0061F3AA /* RxRelay */,
+				CA05492C2369BBBE0061F3AA /* RxCocoa */,
+			);
 			productName = ChuckNorrisFacts;
 			productReference = CA4A3279235E7CB30050854E /* ChuckNorrisFacts.app */;
 			productType = "com.apple.product-type.application";
@@ -417,6 +435,9 @@
 				Base,
 			);
 			mainGroup = CA4A3270235E7CB30050854E;
+			packageReferences = (
+				CA0549272369BBBE0061F3AA /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = CA4A327A235E7CB30050854E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -485,11 +506,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAE39860236299080016C503 /* Error.swift in Sources */,
+				CA0549302369C5950061F3AA /* ChuckNorrisFacts.xcdatamodeld in Sources */,
 				CA53C40323627E1A002F41E2 /* FactListViewModel.swift in Sources */,
 				CA3F4C762367BB2700C58234 /* FontSize.swift in Sources */,
 				CAE398692363F6AB0016C503 /* ActivityView.swift in Sources */,
 				CAE39878236776FC0016C503 /* FactCategories.swift in Sources */,
-				CA0DAEE22369007E00C5D2C6 /* ChuckNorrisFacts.xcdatamodeld in Sources */,
 				CA0DAEDD2368F91200C5D2C6 /* URLRequest+Log.swift in Sources */,
 				CA53C3FC2362783D002F41E2 /* ChuckNorrisFactsService.swift in Sources */,
 				CA3F4C732367B6E300C58234 /* SearchBar.swift in Sources */,
@@ -501,10 +522,14 @@
 				CA53C40023627C2A002F41E2 /* FactViewModel.swift in Sources */,
 				CA0DAEDB2368F8F200C5D2C6 /* Data+String.swift in Sources */,
 				CAB39E4B23691E6800B57023 /* ErrorCasting.swift in Sources */,
+				CA05493B236A4A370061F3AA /* ServiceExecutor+Default.swift in Sources */,
+				CA054937236A22160061F3AA /* FactListState.swift in Sources */,
 				CA53C3F2236267BD002F41E2 /* ServiceProvider.swift in Sources */,
+				CA05493D236A4A6D0061F3AA /* Executor.swift in Sources */,
 				CAE398732364C5B20016C503 /* SearchViewModel.swift in Sources */,
 				CA4A327F235E7CB30050854E /* SceneDelegate.swift in Sources */,
 				CA4A3281235E7CB30050854E /* FactListView.swift in Sources */,
+				CA054939236A498C0061F3AA /* ServiceExecutor.swift in Sources */,
 				CA0DAEE12369007E00C5D2C6 /* DataManager.swift in Sources */,
 				CA53C3E823620B73002F41E2 /* FactRow.swift in Sources */,
 				CA53C3F9236276B5002F41E2 /* Service+Default.swift in Sources */,
@@ -515,6 +540,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA054941236A4EF60061F3AA /* FactsListViewModelTests.swift in Sources */,
 				CA4A3294235E7CB40050854E /* FactViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -673,7 +699,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"ChuckNorrisFacts/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ChuckNorrisFacts/Source\"";
 				DEVELOPMENT_TEAM = EU52X4J36U;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ChuckNorrisFacts/Info.plist;
@@ -693,7 +719,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"ChuckNorrisFacts/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ChuckNorrisFacts/Source\"";
 				DEVELOPMENT_TEAM = EU52X4J36U;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ChuckNorrisFacts/Info.plist;
@@ -833,13 +859,42 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		CA0549272369BBBE0061F3AA /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = exactVersion;
+				version = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CA0549282369BBBE0061F3AA /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA0549272369BBBE0061F3AA /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		CA05492A2369BBBE0061F3AA /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA0549272369BBBE0061F3AA /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		CA05492C2369BBBE0061F3AA /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA0549272369BBBE0061F3AA /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+/* End XCSwiftPackageProductDependency section */
+
 /* Begin XCVersionGroup section */
-		CA0DAEDF2369007E00C5D2C6 /* ChuckNorrisFacts.xcdatamodeld */ = {
+		CA05492E2369C5950061F3AA /* ChuckNorrisFacts.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				CA0DAEE02369007E00C5D2C6 /* ChuckNorrisFact.xcdatamodel */,
+				CA05492F2369C5950061F3AA /* ChuckNorrisFact.xcdatamodel */,
 			);
-			currentVersion = CA0DAEE02369007E00C5D2C6 /* ChuckNorrisFact.xcdatamodel */;
+			currentVersion = CA05492F2369C5950061F3AA /* ChuckNorrisFact.xcdatamodel */;
 			path = ChuckNorrisFacts.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
