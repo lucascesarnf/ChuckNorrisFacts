@@ -12,7 +12,12 @@ class ServiceProvider<T: Service> {
     var dataManager = DataManager()
     var executeListner: ((Result<Data, Error>) -> Void)?
 
-    init() {}
+    init() {
+        //Execute Launch argument
+        if ProcessInfo.processInfo.arguments.contains("MockNewtwork") {
+           executor = MockExecutor()
+        }
+    }
 
     convenience init(executor: ServiceExecutor) {
         self.init()

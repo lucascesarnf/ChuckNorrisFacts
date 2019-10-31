@@ -16,6 +16,7 @@
 		CA05493B236A4A370061F3AA /* ServiceExecutor+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA05493A236A4A370061F3AA /* ServiceExecutor+Default.swift */; };
 		CA05493D236A4A6D0061F3AA /* Executor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA05493C236A4A6D0061F3AA /* Executor.swift */; };
 		CA054941236A4EF60061F3AA /* FactsListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA054940236A4EF60061F3AA /* FactsListViewModelTests.swift */; };
+		CA054943236A6FD00061F3AA /* Springboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA054942236A6FD00061F3AA /* Springboard.swift */; };
 		CA0DAEDB2368F8F200C5D2C6 /* Data+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0DAEDA2368F8F200C5D2C6 /* Data+String.swift */; };
 		CA0DAEDD2368F91200C5D2C6 /* URLRequest+Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0DAEDC2368F91200C5D2C6 /* URLRequest+Log.swift */; };
 		CA0DAEE12369007E00C5D2C6 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0DAEDE2369007E00C5D2C6 /* DataManager.swift */; };
@@ -73,6 +74,7 @@
 		CA05493A236A4A370061F3AA /* ServiceExecutor+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServiceExecutor+Default.swift"; sourceTree = "<group>"; };
 		CA05493C236A4A6D0061F3AA /* Executor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Executor.swift; sourceTree = "<group>"; };
 		CA054940236A4EF60061F3AA /* FactsListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListViewModelTests.swift; sourceTree = "<group>"; };
+		CA054942236A6FD00061F3AA /* Springboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Springboard.swift; sourceTree = "<group>"; };
 		CA0DAEDA2368F8F200C5D2C6 /* Data+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+String.swift"; sourceTree = "<group>"; };
 		CA0DAEDC2368F91200C5D2C6 /* URLRequest+Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Log.swift"; sourceTree = "<group>"; };
 		CA0DAEDE2369007E00C5D2C6 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 			children = (
 				CA4A329E235E7CB40050854E /* ChuckNorrisFactsUITests.swift */,
 				CA4A32A0235E7CB40050854E /* Info.plist */,
+				CA054942236A6FD00061F3AA /* Springboard.swift */,
 			);
 			path = ChuckNorrisFactsUITests;
 			sourceTree = "<group>";
@@ -550,6 +553,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA4A329F235E7CB40050854E /* ChuckNorrisFactsUITests.swift in Sources */,
+				CA054943236A6FD00061F3AA /* Springboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
