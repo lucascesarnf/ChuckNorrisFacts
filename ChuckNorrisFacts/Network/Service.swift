@@ -23,6 +23,7 @@ protocol Service {
     var path: String { get }
     var parameters: [String: Any]? { get }
     var method: ServiceMethod { get }
+    var dataType: Codable.Type { get }
     var sampleData: String { get }
     var saveData: Bool { get }
 }

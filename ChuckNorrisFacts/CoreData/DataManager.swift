@@ -9,7 +9,9 @@
 import Foundation
 import CoreData
 
-struct DataManager {
+class DataManager {
+    static let shared =  DataManager()
+
     let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "EntityData")
 
     private lazy var context: NSManagedObjectContext = {
@@ -22,21 +24,23 @@ struct DataManager {
         return container.viewContext
     }()
 
-    mutating func saveData(value: Data, url: String) {
+    func saveData(value: Data, url: String) {
         guard let entity = NSEntityDescription.entity(forEntityName: "EntityData", in: context),
             let valueString =  String(data: value, encoding: String.Encoding.utf8) else { return }
         let entityData = NSManagedObject(entity: entity, insertInto: context)
-        resetRecords(for: url)
+        context.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
         entityData.setValue(url, forKey: "key")
         entityData.setValue(valueString, forKey: "value")
-        do {
-            try context.save()
-        } catch let error as NSError {
-            print("Could not save. \(error), \(error.userInfo)")
+        context.performAndWait {
+            do {
+                try context.save()
+            } catch let error as NSError {
+                print("Could not save. \(error), \(error.userInfo)")
+            }
         }
     }
 
-    mutating func loadData(from url: String) -> Data? {
+    func loadData(from url: String) -> Data? {
         let predicate = NSPredicate(format: "key == %@", url)
         fetchRequest.predicate = predicate
         do {
@@ -52,19 +56,7 @@ struct DataManager {
         return nil
     }
 
-    mutating func resetRecords(for url: String) {
-         let predicate = NSPredicate(format: "key == %@", url)
-         fetchRequest.predicate = predicate
-        do {
-            guard let results = try context.fetch(fetchRequest) as? [NSManagedObject] else { return }
-            results.forEach { result in context.delete(result)}
-            try context.save()
-        } catch {
-            print("There was an error")
-        }
-    }
-
-    mutating func loadObject<U>(url: String, decodeType: U.Type) -> U? where U: Decodable {
+    func loadObject<U>(url: String, decodeType: U.Type) -> U? where U: Decodable {
         let decoder = JSONDecoder()
 
         guard let data = self.loadData(from: url) else { return nil }
@@ -78,12 +70,14 @@ struct DataManager {
         }
     }
 
-    mutating func reset() {
+    func reset() {
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
-        do {
-            try context.execute(deleteRequest)
-        } catch let error as NSError {
-            print(error)
+        context.performAndWait {
+            do {
+                try context.execute(deleteRequest)
+            } catch let error as NSError {
+                print(error)
+            }
         }
     }
 }

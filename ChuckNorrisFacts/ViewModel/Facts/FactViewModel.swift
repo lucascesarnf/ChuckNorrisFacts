@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class FactViewModel: Identifiable {
+class FactViewModel: Identifiable, Equatable {
     // MARK: - @Combine
     @Published var fact: ChuckNorrisFact
     @Published var shareURL: Bool = false
@@ -45,5 +45,9 @@ class FactViewModel: Identifiable {
             objectsToShare = [rote]
         }
         activityVC = ActivityView(activityItems: objectsToShare, applicationActivities: nil)
+    }
+
+    static func == (lhs: FactViewModel, rhs: FactViewModel) -> Bool {
+           return lhs.fact == rhs.fact
     }
 }

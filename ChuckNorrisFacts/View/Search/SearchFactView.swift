@@ -9,16 +9,20 @@
 import SwiftUI
 
 struct SearchFactView: View {
-    @Binding var searchText: String
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @Binding var queryType: QueryType
+    @State var searchText = ""
     private let searchModel = SearchViewModel()
 
     var body: some View {
         VStack {
-            TextField("Enter your search term", text: $searchText)
+            TextField("Enter your search term", text: $searchText, onCommit: {
+                self.queryType = .query(self.searchText)
+                self.presentationMode.wrappedValue.dismiss()
+            })
                 .padding()
                 .textFieldStyle(RoundedBorderTextFieldStyle())
-                .background(Color.gray)
+                .background(Color("Search"))
             Spacer()
             if searchModel.theareCategories() {
                 categories
@@ -27,6 +31,12 @@ struct SearchFactView: View {
         }
         .navigationBarTitle("")
         .navigationBarHidden(true)
+        .onAppear(perform: {
+            self.queryType = .none
+        })
+        .onDisappear(perform: {
+             self.queryType = .none
+        })
     }
 
     var categories: some View {
@@ -35,15 +45,16 @@ struct SearchFactView: View {
                 HStack {
                     ForEach(categories, id: \.self) { category in
                         Button(action: {
-                            print(category)
-                           self.presentationMode.wrappedValue.dismiss()
+                            self.queryType = .category(category)
+                            self.presentationMode.wrappedValue.dismiss()
                         }, label: {
                         Text(category.uppercased())
                             .fontWeight(.bold)
                             .foregroundColor(.white)
                             .padding(5)
-                            .background(Color.blue)
+                            .background(Color("Category"))
                         })
+                        .cornerRadius(5)
                     }
                 }.padding(3)
             }
@@ -53,9 +64,9 @@ struct SearchFactView: View {
 
 #if DEBUG
 struct SearchFactView_Previews: PreviewProvider {
-    @State static var text = ""
+    @State static var query = QueryType.none
     static var previews: some View {
-        SearchFactView(searchText: $text)
+        SearchFactView(queryType: $query)
     }
 }
 #endif

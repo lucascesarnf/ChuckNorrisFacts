@@ -53,4 +53,15 @@ extension ChuckNorrisFactsService: Service {
     var method: ServiceMethod {
         return .get
     }
+
+    var dataType: Codable.Type {
+        switch self {
+        case .category, .random:
+            return ChuckNorrisFact.self
+        case .query:
+            return ChuckNorrisFactsResponse.self
+        case .categories:
+            return [String].self
+        }
+    }
 }

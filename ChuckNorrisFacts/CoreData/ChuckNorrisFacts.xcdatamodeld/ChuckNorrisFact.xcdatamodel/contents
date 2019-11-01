@@ -3,8 +3,17 @@
     <entity name="EntityData" representedClassName="EntityData" syncable="YES" codeGenerationType="class">
         <attribute name="key" optional="YES" attributeType="String"/>
         <attribute name="value" optional="YES" attributeType="String"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="key"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="SearchTerm" representedClassName="SearchTerm" syncable="YES" codeGenerationType="class">
+        <attribute name="term" optional="YES" attributeType="String"/>
     </entity>
     <elements>
         <element name="EntityData" positionX="-63" positionY="-18" width="128" height="73"/>
+        <element name="SearchTerm" positionX="-63" positionY="0" width="128" height="58"/>
     </elements>
 </model>

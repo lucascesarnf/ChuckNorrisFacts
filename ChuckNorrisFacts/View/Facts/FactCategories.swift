@@ -21,7 +21,8 @@ struct FactCategories: View {
                             .foregroundColor(.white)
                             .padding(5)
                     }
-                    .background(Color.blue)
+                    .background(Color("Category"))
+                    .cornerRadius(5)
                 }
             }
         }

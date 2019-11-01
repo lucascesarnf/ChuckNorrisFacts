@@ -39,7 +39,7 @@ extension ServiceExecutor {
     }
 
     func saveData(value: Data, url: String) {
-        var dataManager = DataManager()
+        let dataManager = DataManager()
         dataManager.saveData(value: value, url: url)
     }
 }

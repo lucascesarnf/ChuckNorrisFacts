@@ -34,6 +34,7 @@ struct FactRow: View {
             Image("share")
                 .resizable()
                 .frame(width: 30, height: 30, alignment: .center)
+                .foregroundColor(Color("Search"))
         }).sheet(isPresented: $showShare, onDismiss: {
             self.showShare = false
         }, content: {

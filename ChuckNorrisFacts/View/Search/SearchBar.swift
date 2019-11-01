@@ -10,17 +10,19 @@ import SwiftUI
 
 struct SearchBar: View {
     @State private var showSearch = false
-    @State var text = ""
+    @Binding var queryType: QueryType
+
     var body: some View {
        HStack {
             Text("CHUCK NORRIS FACTS")
                 .foregroundColor(.white)
                 .fontWeight(.bold)
+                .background(Color("Search"))
             Spacer()
             searchBarButton
         }
-        .padding()
-        .background(Color.gray)
+       .padding()
+       .background(Color("Search"))
     }
 
     var searchBarButton: some View {
@@ -34,16 +36,16 @@ struct SearchBar: View {
         }).sheet(isPresented: $showSearch, onDismiss: {
             self.showSearch = false
         }, content: {
-            SearchFactView(searchText: self.$text)
+            SearchFactView(queryType: self.$queryType)
         })
     }
 }
 
 #if DEBUG
 struct SearchBar_Previews: PreviewProvider {
-    @State static var shouldShowSearchScreen = false
+    @State static var queryType = QueryType.none
     static var previews: some View {
-        SearchBar()
+        SearchBar(queryType: $queryType)
     }
 }
 #endif
