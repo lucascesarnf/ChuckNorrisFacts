@@ -32,7 +32,7 @@ class FactsListViewModelTests: XCTestCase {
         let expectation = self.expectation(description: "Load categories")
         self.measure {
             viewModel.provider.executeListner = { _ in
-                let categories = self.dataManager.loadObject(url: "\(service.urlRequest)", decodeType: [String].self)
+                let categories = self.dataManager.loadObject(url: service.urlString, decodeType: [String].self)
                 XCTAssertNotNil(categories)
                 expectation.fulfill()
             }

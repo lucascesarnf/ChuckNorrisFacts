@@ -9,25 +9,33 @@
 import SwiftUI
 
 struct SearchBar: View {
-    @Binding var shouldShowSearchScreen: Bool
-
+    @State private var showSearch = false
+    @State var text = ""
     var body: some View {
        HStack {
             Text("CHUCK NORRIS FACTS")
                 .foregroundColor(.white)
                 .fontWeight(.bold)
             Spacer()
-            Button(action: {
-                self.shouldShowSearchScreen = true
-            }, label: {
-                Image("search")
-                    .resizable()
-                    .frame(width: 30, height: 30, alignment: .center)
-                    .foregroundColor(.white)
-            })
+            searchBarButton
         }
         .padding()
         .background(Color.gray)
+    }
+
+    var searchBarButton: some View {
+        Button(action: {
+            self.showSearch = true
+        }, label: {
+            Image("search")
+                .resizable()
+                .frame(width: 30, height: 30, alignment: .center)
+                .foregroundColor(.white)
+        }).sheet(isPresented: $showSearch, onDismiss: {
+            self.showSearch = false
+        }, content: {
+            SearchFactView(searchText: self.$text)
+        })
     }
 }
 
@@ -35,7 +43,7 @@ struct SearchBar: View {
 struct SearchBar_Previews: PreviewProvider {
     @State static var shouldShowSearchScreen = false
     static var previews: some View {
-        SearchBar(shouldShowSearchScreen: $shouldShowSearchScreen)
+        SearchBar()
     }
 }
 #endif

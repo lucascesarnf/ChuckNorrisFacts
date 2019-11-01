@@ -24,7 +24,7 @@ class Springboard {
         let iconFrame = icon.frame
         let springboardFrame = springboard.frame
         //springboard.swipeLeft()
-        // springboard.activate() 
+        //springboard.activate() 
         //Thread.sleep(forTimeInterval: 1.0)
 
         icon.press(forDuration: 1.3)

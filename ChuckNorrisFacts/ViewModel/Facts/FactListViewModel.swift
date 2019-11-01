@@ -21,7 +21,7 @@ class FactListViewModel: ObservableObject {
     var error = FactsError.generic
 
     // MARK: - Variables/Constants
-    let provider = ServiceProvider<ChuckNorrisFactsService>()
+    let provider = ServiceProvider<ChuckNorrisFactsService>(executor: MockExecutor())
     var dataManager = DataManager()
 
     // MARK: - Lifecycle

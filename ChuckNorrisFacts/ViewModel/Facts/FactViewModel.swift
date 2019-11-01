@@ -17,6 +17,7 @@ class FactViewModel: Identifiable {
     // MARK: - Variables/Constants
     let id = UUID()
     let textToShare = "ChuckNorris is awesome!  Check out this fact about him!"
+    let emptyCategories = ["UNCATEGORIZED"]
     let caractersLimitNumber = 80
     var activityVC: ActivityView!
 
@@ -35,7 +36,7 @@ class FactViewModel: Identifiable {
     }
 
     func categories() -> [String] {
-        return fact.categories.count > 0 ? fact.categories : ["UNCATEGORIZED"]
+        return fact.categories.count > 0 ? fact.categories : emptyCategories
     }
 
     func shareFact() {

@@ -58,6 +58,6 @@ class ServiceProvider<T: Service> {
                 }
             }
         }
-        return dataManager.loadObject(url: "\(service.urlRequest)", decodeType: decodeType)
+        return dataManager.loadObject(url: service.urlString, decodeType: decodeType)
     }
 }

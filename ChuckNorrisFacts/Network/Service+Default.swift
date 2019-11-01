@@ -23,6 +23,10 @@ extension Service {
         return request
     }
 
+    public var urlString: String {
+        return "\(urlRequest)"
+    }
+
     private var url: URL? {
         var urlComponents = URLComponents(string: baseURL)
         urlComponents?.path = "/jokes" + path

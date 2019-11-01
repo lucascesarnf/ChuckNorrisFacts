@@ -10,35 +10,30 @@ import SwiftUI
 import Combine
 
 struct FactListView: View {
-
     // MARK: - @Combine
     @ObservedObject var viewModel = FactListViewModel()
-    @ObservedObject var searchModel = SearchViewModel()
-    @State var isNavigationBarHidden: Bool = true
     @State private var shouldShowSearchScreen = false
+    @State private var searchText = ""
 
     // MARK: - @Views
     var body: some View {
-        NavigationView {
-            VStack {
-                if viewModel.didError {
-                    errorToast
-                }
-
-                NavigationLink(destination: SearchFactView(searchModel: searchModel, isNavigationBarHidden:
-                    $isNavigationBarHidden), isActive: $shouldShowSearchScreen) {
-                        SearchBar(shouldShowSearchScreen: $shouldShowSearchScreen)
-                }
-                .navigationBarTitle("")
-                .navigationBarHidden(isNavigationBarHidden)
-                .onAppear {
-                    self.isNavigationBarHidden = true
-                }
-
-                containedView()
+        VStack {
+            if viewModel.didError {
+                errorToast
             }
+            SearchBar()
+            containedView()
         }
-  }
+    }
+
+    var errorToast: some View {
+        Text(viewModel.error.errorDescription†)
+            .transition(.slide)
+            .font(.system(size: 20))
+            .foregroundColor(.white)
+            .padding()
+            .background(Color.red)
+    }
 
     var factsList: some View {
         List(viewModel.facts) { model in
@@ -46,20 +41,11 @@ struct FactListView: View {
         }
     }
 
-    var errorToast: some View {
-        Text(viewModel.error.errorDescription†)
-        .transition(.slide)
-        .font(.system(size: 20))
-        .foregroundColor(.white)
-        .padding()
-        .background(Color.red)
-    }
-
     var noFacts: some View {
         VStack {
             Text("Search and share mi facts now!")
-            .fontWeight(.bold)
-            .font(.system(size: 20))
+                .fontWeight(.bold)
+                .font(.system(size: 20))
             Image("alert")
                 .resizable()
                 .frame(width: 150, height: 150, alignment: .center)
@@ -69,10 +55,10 @@ struct FactListView: View {
 
     // MARK: - @Funcitons
     func containedView() -> AnyView {
-         switch viewModel.currentState {
-         case .facts:
+        switch viewModel.currentState {
+        case .facts:
             return AnyView(factsList)
-         case .noFacts:
+        case .noFacts:
             return  AnyView(noFacts)
         }
     }
