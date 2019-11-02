@@ -11,5 +11,6 @@ import Foundation
 enum FactListState {
     case facts
     case noFacts
+    case noCasheAndError
     case load
 }

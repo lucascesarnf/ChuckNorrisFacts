@@ -12,6 +12,7 @@ enum FactsError: Error {
     case notConnectedToInternet
     case networkConnectionLost
     case timeOut
+    case noFacts
     case returned(error: Error)
 
     init(error: Error) {
@@ -36,9 +37,11 @@ extension FactsError: LocalizedError {
         case .notConnectedToInternet:
             return "There is no internet connection, check your network connection and try again."
         case .networkConnectionLost:
-            return " The network connection was lost, check your network connection and try again."
+            return "The network connection was lost, check your network connection and try again."
         case .timeOut:
             return "Looks like the server is taking to long to respond, please try again later."
+        case .noFacts:
+            return "Not results found."
         case .returned(let error):
             return error.localizedDescription
         }

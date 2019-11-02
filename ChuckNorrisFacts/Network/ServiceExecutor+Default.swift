@@ -23,7 +23,7 @@ extension ServiceExecutor {
     func execute<T: Service>(_ service: T, completion: @escaping (Result<Data, Error>) -> Void) {
         print("\n\n#########################")
         service.urlRequest.log()
-        URLSession.shared.dataTask(with: service.urlRequest) { (data, _, error) in
+        makeSessionWith(timeout: service.timeout).dataTask(with: service.urlRequest) { (data, _, error) in
             if let error = error {
                 print("⛔ Request failed")
                 completion(.failure(error))
@@ -41,5 +41,12 @@ extension ServiceExecutor {
     func saveData(value: Data, url: String) {
         let dataManager = DataManager()
         dataManager.saveData(value: value, url: url)
+    }
+
+    private func makeSessionWith(timeout: Timeout) -> URLSession {
+        let sessionConfig = URLSessionConfiguration.default
+        sessionConfig.timeoutIntervalForRequest = timeout.rawValue
+        sessionConfig.timeoutIntervalForResource = timeout.rawValue
+        return URLSession(configuration: sessionConfig)
     }
 }

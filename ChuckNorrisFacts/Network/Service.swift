@@ -7,6 +7,12 @@
 //
 
 import Foundation
+import UIKit
+
+enum Timeout: Double {
+    case normal = 30
+    case extended = 60
+}
 
 enum ServiceMethod: String {
     case get = "GET"
@@ -24,6 +30,7 @@ protocol Service {
     var parameters: [String: Any]? { get }
     var method: ServiceMethod { get }
     var dataType: Codable.Type { get }
+    var timeout: Timeout { get }
     var sampleData: String { get }
     var saveData: Bool { get }
 }

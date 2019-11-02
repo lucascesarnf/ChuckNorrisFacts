@@ -6,15 +6,6 @@
 //  Copyright © 2019 Lucas César  Nogueira Fonseca. All rights reserved.
 //
 
-
-
-
-
-///Adicionar caso onde não há cache e há erro
-
-
-
-
 import Foundation
 import SwiftUI
 import Combine
@@ -24,6 +15,9 @@ class FactListViewModel: ObservableObject {
     // MARK: - @Combine
     @Published var currentState = FactListState.noFacts
     @Published var didError = false
+
+    // MARK: - State Controll
+    private var didCache = false
     private var lastQuery = ""
     private var performingCategory = false
     private var performingQuery = false
@@ -53,58 +47,42 @@ class FactListViewModel: ObservableObject {
     }
 
     private func fetch(query: String) {
-        didError = false
+        cleanStatus()
         performingQuery = true
         let cache = provider.load(service: .query(query), decodeType: ChuckNorrisFactsResponse.self) { result in
             switch result {
             case .success(let response):
-                var facts = response.result.map(FactViewModel.init)
-                facts.append(contentsOf: self.facts)
-                self.facts = facts.uniques
-                self.currentState = .facts
+                self.successHandling(response.result.map(FactViewModel.init))
             case .failure(let error):
-                print((error as NSError).code)
-                print(error.localizedDescription)
-                self.error = error
-                self.didError = true
-                self.removeToastAfterDelay()
+                self.errorHandling(error)
             }
             self.performingQuery = false
         }
 
         if let facts = cache {
-            self.facts = facts.result.map(FactViewModel.init)
-            self.currentState = .facts
+            cacheHandling(facts.result.map(FactViewModel.init))
         } else {
-            self.currentState = .load
+            loaderHandling()
         }
     }
 
     private func fetch(category: String) {
-        didError = false
+        cleanStatus()
         performingCategory = true
         let cache = provider.load(service: .category(category), decodeType: ChuckNorrisFact.self) { result in
             switch result {
             case .success(let response):
-                var facts = [response].map(FactViewModel.init)
-                facts.append(contentsOf: self.facts)
-                self.facts = facts.uniques
-                self.currentState = .facts
+                self.successHandling([response].map(FactViewModel.init))
             case .failure(let error):
-                print((error as NSError).code)
-                print(error.localizedDescription)
-                self.error = error
-                self.didError = true
-                self.removeToastAfterDelay()
+                self.errorHandling(error)
             }
             self.performingCategory = false
         }
 
         if let fact = cache {
-            self.facts = [fact].map(FactViewModel.init)
-            self.currentState = .facts
+            cacheHandling([fact].map(FactViewModel.init))
         } else {
-            self.currentState = .load
+            loaderHandling()
         }
     }
 
@@ -116,9 +94,50 @@ class FactListViewModel: ObservableObject {
             }
         case .category(let category):
             if !performingCategory {
-              fetch(category: category)
+                fetch(category: category)
             }
         default: break
+        }
+    }
+
+    private func cleanStatus() {
+        didError = false
+        didCache = false
+    }
+
+   // MARK: - Handling
+    private func loaderHandling() {
+        self.facts = []
+        self.currentState = .load
+    }
+
+    private func cacheHandling(_ cache: [FactViewModel]) {
+        facts = cache
+        didCache = true
+        currentState = .facts
+    }
+
+    private func successHandling(_ facts: [FactViewModel]) {
+        if self.facts.isEmpty && facts.isEmpty {
+            currentState = .noCasheAndError
+            error = FactsError.noFacts
+        } else {
+            var mutable = facts
+            mutable.append(contentsOf: self.facts)
+            self.facts = mutable.uniques
+            currentState = .facts
+        }
+    }
+
+    private func errorHandling(_ error: FactsError) {
+        print(error¬¬.code)
+        print(error.localizedDescription)
+        self.error = error
+        removeToastAfterDelay()
+        if didCache {
+            didError = true
+        } else {
+            currentState = .noCasheAndError
         }
     }
 }

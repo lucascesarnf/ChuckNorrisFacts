@@ -14,26 +14,50 @@ struct FactListView: View {
     @ObservedObject var viewModel = FactListViewModel()
     @State private var shouldShowSearchScreen = false
     @State private var queryType = QueryType.none
+    @State private var spin = false
+    @State private var isLoading = false
 
     // MARK: - @Views
     var body: some View {
         VStack(spacing: 0) {
-            SearchBar(queryType: $queryType)
+            if !isLoading {
+                SearchBar(queryType: $queryType)
+            }
             if viewModel.didError {
                 errorToast
             }
-            containedView()
+            loading
+            //containedView()
         }
     }
 
     var errorToast: some View {
-        Text(self.viewModel.error.errorDescription†)
-            .transition(.opacity)
-            .animation(.easeIn)
-            .font(.system(size: 20))
-            .foregroundColor(.white)
-            .padding()
-            .background(Color.red)
+        VStack {
+            Spacer()
+            .frame(height: 5)
+            Text(self.viewModel.error.errorDescription†)
+                       .transition(.opacity)
+                       .animation(.easeIn)
+                       .font(.system(size: 20))
+                       .foregroundColor(.white)
+                       .padding()
+                       .background(Color.red)
+            Spacer()
+            .frame(height: 5)
+        }
+    }
+
+    var error: some View {
+        VStack {
+            Text(viewModel.error.errorDescription†)
+                .fontWeight(.bold)
+                .font(.system(size: 18))
+                .padding()
+            Image("error")
+                .resizable()
+                .frame(width: 150, height: 150, alignment: .center)
+                .foregroundColor(.white)
+        }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
     }
 
     var factsList: some View {
@@ -43,31 +67,37 @@ struct FactListView: View {
     }
 
     var noFacts: some View {
-        VStack {
-            Text("Search and share mi facts now!")
-                .fontWeight(.bold)
-                .font(.system(size: 20))
+        VStack(alignment: .center) {
             Image("alert")
                 .resizable()
                 .frame(width: 150, height: 150, alignment: .center)
                 .foregroundColor(.white)
+            Text("Search and share my facts now!")
+            .fontWeight(.bold)
+            .font(.system(size: 20))
         }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
     }
 
     var loading: some View {
-        GeometryReader { geometry in
-            ZStack(alignment: .center) {
-                VStack {
-                    Text("Loading...")
-                    ActivityIndicator(isAnimating: .constant(true), style: .large)
-                }
-                .frame(width: geometry.size.width / 2,
-                       height: geometry.size.height / 5)
-                .background(Color.secondary.colorInvert())
-                .foregroundColor(Color.primary)
-                .cornerRadius(20)
-            }
-        }
+        VStack(alignment: .center) {
+            Image("refresh")
+                .resizable()
+                .frame(width: 70, height: 70)
+                .rotationEffect(.degrees(spin ? 360 : 0))
+            .animation(loaderAnimation)
+                .onAppear(perform: {
+                    self.spin.toggle()
+                   // self.isLoading.toggle()
+                })
+            .onDisappear(perform: {
+               // self.isLoading.toggle()
+            })
+        }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
+    }
+
+    var loaderAnimation: Animation {
+        Animation.linear(duration: 0.8)
+            .repeatForever(autoreverses: false)
     }
 
     // MARK: - @Funcitons
@@ -80,6 +110,8 @@ struct FactListView: View {
             return  AnyView(noFacts)
         case .load:
             return AnyView(loading)
+        case .noCasheAndError:
+            return AnyView(error)
         }
     }
 

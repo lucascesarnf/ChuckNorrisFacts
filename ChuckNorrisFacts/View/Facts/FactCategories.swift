@@ -15,14 +15,12 @@ struct FactCategories: View {
         ScrollView(.horizontal, showsIndicators: true) {
             HStack {
                 ForEach(categories, id: \.self) { category in
-                    Group {
-                        Text(category.uppercased())
-                            .fontWeight(.bold)
-                            .foregroundColor(.white)
-                            .padding(5)
-                    }
-                    .background(Color("Category"))
-                    .cornerRadius(5)
+                    Text(category.uppercased())
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .padding(5)
+                        .background(Color("Category"))
+                        .cornerRadius(5)
                 }
             }
         }

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 extension Service {
     var baseURL: String {
@@ -25,6 +26,10 @@ extension Service {
 
     public var urlString: String {
         return "\(urlRequest)"
+    }
+
+    public var timeout: Timeout {
+        return .normal
     }
 
     private var url: URL? {
