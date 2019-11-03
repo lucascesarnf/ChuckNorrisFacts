@@ -13,7 +13,7 @@ struct FactListView: View {
     // MARK: - @Combine
     @ObservedObject var viewModel = FactListViewModel()
     @State private var shouldShowSearchScreen = false
-    @State private var queryType = QueryType.none
+    @State private var queryType = PerformQuery.none
     @State private var spin = false
     @State private var enableSearchButton = true
 
@@ -58,9 +58,20 @@ struct FactListView: View {
     }
 
     var factsList: some View {
-        List(viewModel.facts) { model in
-            FactRow(model: model)
-        }
+        List(content: {
+            Section(content: {
+               ForEach(viewModel.facts, id: \.self) { fact in
+                   FactRow(model: FactViewModel(fact))
+               }
+            })
+            Section(header: Text("Randon Past Searches").fontWeight(.bold).font(.system(size:25)).padding(),
+                content: {
+                 ForEach(viewModel.localFacts, id: \.self) { fact in
+                     FactRow(model: FactViewModel(fact))
+                     .background(Color("Local"))
+                 }
+            })
+        })
     }
 
     var noFacts: some View {

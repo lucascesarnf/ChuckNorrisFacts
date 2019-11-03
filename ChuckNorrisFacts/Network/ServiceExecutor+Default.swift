@@ -37,7 +37,7 @@ extension ServiceExecutor {
                 print("✅ Request completed")
                 self.printJsonData(data: data)
                 if service.saveData {
-                    self.saveData(value: data, url: "\(service.urlRequest)")
+                    self.saveData(value: data, url: service.urlString)
                 }
                 completion(.success(data))
             }

@@ -9,17 +9,13 @@
 import Foundation
 
 enum ChuckNorrisFactsService {
-    case random
     case categories
-    case category(_ category: String)
     case query(_ query: String)
 }
 
 extension ChuckNorrisFactsService: Service {
     var path: String {
         switch self {
-        case .random, .category:
-            return "/random"
         case .categories:
             return "/categories"
         case .query:
@@ -29,8 +25,6 @@ extension ChuckNorrisFactsService: Service {
 
     var parameters: [String: Any]? {
         switch self {
-        case .category(let category):
-            return ["category": category]
         case .query(let query):
             return ["query": query]
         default:
@@ -41,8 +35,6 @@ extension ChuckNorrisFactsService: Service {
 
     var sampleData: String {
         switch self {
-        case .category, .random:
-            return "RandonFactData"
         case .query:
             return "FactsData"
         case .categories:
@@ -56,8 +48,6 @@ extension ChuckNorrisFactsService: Service {
 
     var dataType: Codable.Type {
         switch self {
-        case .category, .random:
-            return ChuckNorrisFact.self
         case .query:
             return ChuckNorrisFactsResponse.self
         case .categories:

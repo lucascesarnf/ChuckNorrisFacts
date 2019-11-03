@@ -23,15 +23,16 @@ class FactListViewModel: ObservableObject {
     private var performingQuery = false
 
     // MARK: - Variables/Constants
-    var facts = [FactViewModel]()
+    var facts = [ChuckNorrisFact]()
+    var localFacts = [ChuckNorrisFact]()
     var error = FactsError.generic
-
-    // MARK: - Variables/Constants
     let provider = ServiceProvider<ChuckNorrisFactsService>()
+    let numberOfLocalFacts = 10
 
     // MARK: - Lifecycle
     init() {
         loadCategories()
+        loadLocalFacts()
     }
 
     // MARK: - Functions
@@ -51,7 +52,7 @@ class FactListViewModel: ObservableObject {
         let cache = provider.load(service: .query(query), decodeType: ChuckNorrisFactsResponse.self) { result in
             switch result {
             case .success(let response):
-                self.successHandling(response.result.map(FactViewModel.init))
+                self.successHandling(response.result)
             case .failure(let error):
                 self.errorHandling(error)
             }
@@ -59,41 +60,17 @@ class FactListViewModel: ObservableObject {
         }
 
         if let facts = cache?.result, (cache?.total)† > 0 {
-            cacheHandling(facts.map(FactViewModel.init))
+            cacheHandling(facts)
         } else {
             loaderHandling()
         }
     }
 
-    private func fetch(category: String) {
-        cleanStatus()
-        performingCategory = true
-        let cache = provider.load(service: .category(category), decodeType: ChuckNorrisFact.self) { result in
-            switch result {
-            case .success(let response):
-                self.successHandling([response].map(FactViewModel.init))
-            case .failure(let error):
-                self.errorHandling(error)
-            }
-            self.performingCategory = false
-        }
-
-        if let fact = cache {
-            cacheHandling([fact].map(FactViewModel.init))
-        } else {
-            loaderHandling()
-        }
-    }
-
-    func performQuery(_ type: QueryType) {
+    func performQuery(_ type: PerformQuery) {
         switch type {
         case .query(let query):
             if !performingQuery {
                 fetch(query: query)
-            }
-        case .category(let category):
-            if !performingCategory {
-                fetch(category: category)
             }
         default: break
         }
@@ -104,19 +81,27 @@ class FactListViewModel: ObservableObject {
         didCache = false
     }
 
+    private func loadLocalFacts() {
+        let results = ServiceResultManager.loadRandonObjects(decodeType: ChuckNorrisFactsResponse.self)
+        localFacts = results.flatMap({$0.result}).choose(numberOfLocalFacts)
+        if !localFacts.isEmpty {
+            currentState = .facts
+        }
+    }
+
    // MARK: - Handling
     private func loaderHandling() {
         self.facts = []
         self.currentState = .load
     }
 
-    private func cacheHandling(_ cache: [FactViewModel]) {
+    private func cacheHandling(_ cache: [ChuckNorrisFact]) {
         facts = cache
         didCache = true
         currentState = .facts
     }
 
-    private func successHandling(_ facts: [FactViewModel]) {
+    private func successHandling(_ facts: [ChuckNorrisFact]) {
         if self.facts.isEmpty && facts.isEmpty {
             currentState = .noCasheAndError
             error = FactsError.noFacts

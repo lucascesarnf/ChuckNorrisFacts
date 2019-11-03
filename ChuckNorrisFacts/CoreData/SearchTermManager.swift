@@ -24,28 +24,44 @@ struct SearchTermManager {
         return container.viewContext
     }()
 
-    static func saveData(term: String) {
+    static func saveObject(term: String, time: Date) {
         guard let entity = NSEntityDescription.entity(forEntityName: entityName, in: context) else { return }
         let entityData = NSManagedObject(entity: entity, insertInto: context)
         entityData.setValue(term, forKey: "term")
+        entityData.setValue(time, forKey: "time")
         context.performAndWait {
-            do {
                 try? context.save()
-            } catch let error as NSError {
-                print("Could not save. \(error), \(error.userInfo)")
-            }
         }
     }
 
-    static func loadData() -> [String] {
-        do {
-            if let results = try? context.fetch(fetchRequest) as? [NSManagedObject] {
+    static func loadObject() -> [String] {
+        guard var results = try? context.fetch(fetchRequest) as? [NSManagedObject] else { return [] }
+        results = results.sorted(by: {($0.value(forKey: "time") as? Date)† > ($1.value(forKey: "time") as? Date)†})
                 let test = results.map({($0.value(forKey: "term") as? String)†})
                 return test
-            }
-        } catch {
-            print("Error is retriving titles items")
+    }
+
+    static func updateObject(term: String, time: Date) {
+        let predicate = NSPredicate(format: "term == %@", term)
+        fetchRequest.predicate = predicate
+        if let results = try? context.fetch(fetchRequest) as? [NSManagedObject], let firstResult = results.first {
+            firstResult.setValue(time, forKey: "time")
         }
-        return []
+        context.performAndWait {
+                try? context.save()
+        }
+        fetchRequest.predicate = nil
+    }
+
+    static func removeObject(term: String) {
+        let predicate = NSPredicate(format: "term == %@", term)
+        fetchRequest.predicate = predicate
+        if let results = try? context.fetch(fetchRequest) as? [NSManagedObject], let firstResult = results.first {
+            context.performAndWait {
+                context.delete(firstResult)
+                try? context.save()
+            }
+            fetchRequest.predicate = nil
+        }
     }
 }

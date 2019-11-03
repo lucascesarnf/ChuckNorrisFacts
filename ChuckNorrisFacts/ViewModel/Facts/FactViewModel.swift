@@ -22,7 +22,7 @@ class FactViewModel: Identifiable, Equatable {
     var activityVC: ActivityView!
 
     // MARK: - Lifecycle
-    init(fact: ChuckNorrisFact) {
+    init(_ fact: ChuckNorrisFact) {
         self.fact = fact
     }
 

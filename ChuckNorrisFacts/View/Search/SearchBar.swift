@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SearchBar: View {
     @State private var showSearch = false
-    @Binding var queryType: QueryType
+    @Binding var queryType: PerformQuery
     @Binding var enableSearchButton: Bool
 
     var body: some View {
@@ -46,7 +46,7 @@ struct SearchBar: View {
 
 #if DEBUG
 struct SearchBar_Previews: PreviewProvider {
-    @State static var queryType = QueryType.none
+    @State static var queryType = PerformQuery.none
     @State static var enableSearchButton = true
     static var previews: some View {
         SearchBar(queryType: $queryType, enableSearchButton: $enableSearchButton)

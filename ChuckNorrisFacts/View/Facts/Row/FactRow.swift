@@ -46,7 +46,7 @@ struct FactRow: View {
 #if DEBUG
 struct FactRow_Previews: PreviewProvider {
     static var previews: some View {
-        FactRow(model: FactViewModel(fact:
+        FactRow(model: FactViewModel(
             ChuckNorrisFact(iconURL: "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
                             id: nil,
                             url: nil,

@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SearchFactView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @Binding var queryType: QueryType
+    @Binding var queryType: PerformQuery
     @State private var searchText = ""
     private let viewModel = SearchViewModel()
 
@@ -53,7 +53,7 @@ struct SearchFactView: View {
                 HStack {
                     ForEach(categories, id: \.self) { category in
                         Button(action: {
-                            self.queryType = .category(category)
+                            self.queryType = .query(category)
                             self.presentationMode.wrappedValue.dismiss()
                         }, label: {
                         Text(category.uppercased())
@@ -103,7 +103,7 @@ struct SearchFactView: View {
 
 #if DEBUG
 struct SearchFactView_Previews: PreviewProvider {
-    @State static var query = QueryType.none
+    @State static var query = PerformQuery.none
     static var previews: some View {
         SearchFactView(queryType: $query)
     }

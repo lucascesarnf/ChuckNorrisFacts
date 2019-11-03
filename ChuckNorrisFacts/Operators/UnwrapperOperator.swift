@@ -18,6 +18,10 @@ postfix func † (rhs: String?) -> String {
     return rhs ?? ""
 }
 
+postfix func † (rhs: Date?) -> Date {
+    return rhs ?? Date()
+}
+
 postfix func †<T>(rhs: [T]?) -> [T] {
     return rhs ?? []
 }

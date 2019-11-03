@@ -24,7 +24,7 @@ class MockExecutor: ServiceExecutor {
                 do {
                     let data = try Data(contentsOf: url)
                     if service.saveData {
-                        self.saveData(value: data, url: "\(service.urlRequest)")
+                        self.saveData(value: data, url: service.urlString)
                     }
                     completion(.success(data))
                 } catch {

@@ -8,8 +8,7 @@
 
 import Foundation
 
-enum QueryType {
+enum PerformQuery {
     case query(String)
-    case category(String)
     case none
 }

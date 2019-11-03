@@ -31,52 +31,56 @@ struct ServiceResultManager {
         entityData.setValue(url, forKey: "key")
         entityData.setValue(valueString, forKey: "value")
         context.performAndWait {
-            do {
-                try? context.save()
-            } catch let error as NSError {
-                print("Could not save. \(error), \(error.userInfo)")
+            try? context.save()
+        }
+    }
+
+    static func loadRandonObjects<U>(numberOfResults: Int = 3, decodeType: U.Type) -> [U] where U: Decodable {
+        guard let results =  try? context.fetch(fetchRequest) as? [NSManagedObject] else { return [] }
+        let decoder = JSONDecoder()
+        var randonResults = [U]()
+        for result in results.choose(numberOfResults) {
+            if let value = result.value(forKey: "value") as? String, let data = value.data(using: String.Encoding.utf8),
+                let resp = try? decoder.decode(decodeType, from: data) {
+                randonResults.append(resp)
             }
         }
+        return randonResults
     }
 
     static func loadData(from url: String) -> Data? {
         let predicate = NSPredicate(format: "key == %@", url)
         fetchRequest.predicate = predicate
-        do {
-            guard let results = try? context.fetch(fetchRequest) as? [NSManagedObject] else { return nil }
-
-            if let firstResult = results.first, let value = firstResult.value(forKey: "value") as? String {
-                return value.data(using: String.Encoding.utf8)
-            }
-        } catch {
-            print("Error is retriving titles items")
-            return nil
-        }
-        return nil
+        guard let results = try? context.fetch(fetchRequest) as? [NSManagedObject], let firstResult = results.first,
+            let value = firstResult.value(forKey: "value") as? String else { return nil }
+        fetchRequest.predicate = nil
+        return value.data(using: String.Encoding.utf8)
     }
 
-   static func loadObject<U>(url: String, decodeType: U.Type) -> U? where U: Decodable {
-        let decoder = JSONDecoder()
-
+    static func loadObject<U>(url: String, decodeType: U.Type) -> U? where U: Decodable {
         guard let data = self.loadData(from: url) else { return nil }
-        do {
-            let resp = try? decoder.decode(decodeType, from: data)
-            print("✅ Cache Loaded")
-            return resp
-        } catch {
-            print(error)
-            return nil
+          let decoder = JSONDecoder()
+        let resp = try? decoder.decode(decodeType, from: data)
+        print("✅ Cache Loaded")
+        return resp
+    }
+
+    static func removeObject(url: String) {
+        let predicate = NSPredicate(format: "key == %@", url)
+        fetchRequest.predicate = predicate
+        if let results = try? context.fetch(fetchRequest) as? [NSManagedObject], let firstResult = results.first {
+            context.performAndWait {
+                context.delete(firstResult)
+                try? context.save()
+            }
+            fetchRequest.predicate = nil
         }
     }
 
    static func reset() {
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
         context.performAndWait {
-            do {
-                try? context.execute(deleteRequest)
-            } catch let error as NSError {
-                print(error)
-            }
+                _ = try? context.execute(deleteRequest)
         }
     }
 }

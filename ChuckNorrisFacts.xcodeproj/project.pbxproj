@@ -17,7 +17,7 @@
 		CA05493D236A4A6D0061F3AA /* Executor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA05493C236A4A6D0061F3AA /* Executor.swift */; };
 		CA054941236A4EF60061F3AA /* FactsListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA054940236A4EF60061F3AA /* FactsListViewModelTests.swift */; };
 		CA054943236A6FD00061F3AA /* Springboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA054942236A6FD00061F3AA /* Springboard.swift */; };
-		CA05494C236C73FD0061F3AA /* QueryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA05494B236C73FD0061F3AA /* QueryType.swift */; };
+		CA05494C236C73FD0061F3AA /* PerformQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA05494B236C73FD0061F3AA /* PerformQuery.swift */; };
 		CA054956236CEF360061F3AA /* Collection+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA054955236CEF360061F3AA /* Collection+Utils.swift */; };
 		CA05495C236E30970061F3AA /* SearchTermManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA05495B236E30970061F3AA /* SearchTermManager.swift */; };
 		CA0DAEDB2368F8F200C5D2C6 /* Data+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0DAEDA2368F8F200C5D2C6 /* Data+String.swift */; };
@@ -79,7 +79,7 @@
 		CA05493C236A4A6D0061F3AA /* Executor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Executor.swift; sourceTree = "<group>"; };
 		CA054940236A4EF60061F3AA /* FactsListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListViewModelTests.swift; sourceTree = "<group>"; };
 		CA054942236A6FD00061F3AA /* Springboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Springboard.swift; sourceTree = "<group>"; };
-		CA05494B236C73FD0061F3AA /* QueryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryType.swift; sourceTree = "<group>"; };
+		CA05494B236C73FD0061F3AA /* PerformQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformQuery.swift; sourceTree = "<group>"; };
 		CA054955236CEF360061F3AA /* Collection+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Utils.swift"; sourceTree = "<group>"; };
 		CA05495B236E30970061F3AA /* SearchTermManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTermManager.swift; sourceTree = "<group>"; };
 		CA0DAEDA2368F8F200C5D2C6 /* Data+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+String.swift"; sourceTree = "<group>"; };
@@ -182,6 +182,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		CA2B6A40236F7B4400A6006B /* Row */ = {
+			isa = PBXGroup;
+			children = (
+				CA53C3E723620B73002F41E2 /* FactRow.swift */,
+			);
+			path = Row;
+			sourceTree = "<group>";
+		};
 		CA4A3270235E7CB30050854E = {
 			isa = PBXGroup;
 			children = (
@@ -246,7 +254,7 @@
 				CA53C3E1236205F1002F41E2 /* ChuckNorrisFact.swift */,
 				CA3F4C752367BB2700C58234 /* FontSize.swift */,
 				CA054936236A22160061F3AA /* FactListState.swift */,
-				CA05494B236C73FD0061F3AA /* QueryType.swift */,
+				CA05494B236C73FD0061F3AA /* PerformQuery.swift */,
 				CA2B6A3C236F5DEE00A6006B /* APIError.swift */,
 			);
 			path = Model;
@@ -275,8 +283,8 @@
 		CA53C3E923621626002F41E2 /* Facts */ = {
 			isa = PBXGroup;
 			children = (
+				CA2B6A40236F7B4400A6006B /* Row */,
 				CA4A3280235E7CB30050854E /* FactListView.swift */,
-				CA53C3E723620B73002F41E2 /* FactRow.swift */,
 				CAE39877236776FC0016C503 /* FactCategories.swift */,
 			);
 			path = Facts;
@@ -550,7 +558,7 @@
 				CA0DAEE12369007E00C5D2C6 /* ServiceResultManager.swift in Sources */,
 				CA054956236CEF360061F3AA /* Collection+Utils.swift in Sources */,
 				CA53C3E823620B73002F41E2 /* FactRow.swift in Sources */,
-				CA05494C236C73FD0061F3AA /* QueryType.swift in Sources */,
+				CA05494C236C73FD0061F3AA /* PerformQuery.swift in Sources */,
 				CA53C3F9236276B5002F41E2 /* Service+Default.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

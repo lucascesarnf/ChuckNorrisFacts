@@ -19,6 +19,8 @@ class SearchViewModel: ObservableObject {
     private var categories = [String]()
     private let numberOfCategories = 8
     private let categoriesColumnsNumer = 3
+    private let limitOfSearchTerms = 8
+    private let minimumNumberOfCharacters = 3
 
     // MARK: - Lifecycle
     init() {
@@ -32,13 +34,19 @@ class SearchViewModel: ObservableObject {
     }
 
     func saveSearchTerm(_ term: String) {
-        if !term.isEmpty && term.count > 3 && !pastSearches.contains(term) {
-            SearchTermManager.saveData(term: term)
+        if !term.isEmpty && term.count >= 3 && !pastSearches.contains(term) {
+            if pastSearches.count < limitOfSearchTerms {
+                SearchTermManager.saveObject(term: term, time: Date())
+            } else {
+                deleteLastAndSaveNew(term: term)
+            }
+        } else if pastSearches.contains(term) {
+            SearchTermManager.updateObject(term: term, time: Date())
         }
     }
 
     private func loadPastSearch() {
-        pastSearches = SearchTermManager.loadData()
+        pastSearches = SearchTermManager.loadObject()
     }
 
     private func loadCategories() {
@@ -47,6 +55,13 @@ class SearchViewModel: ObservableObject {
                 decodeType: [String].self)†.choose(numberOfCategories)
             makeCategoriesGrid()
         }
+    }
+
+    private func deleteLastAndSaveNew(term: String) {
+        let serviceToRemoveCache = ChuckNorrisFactsService.query(term)
+        SearchTermManager.removeObject(term: pastSearches.last†)
+        ServiceResultManager.removeObject(url: serviceToRemoveCache.urlString)
+        SearchTermManager.saveObject(term: term, time: Date())
     }
 
     private func makeCategoriesGrid() {
