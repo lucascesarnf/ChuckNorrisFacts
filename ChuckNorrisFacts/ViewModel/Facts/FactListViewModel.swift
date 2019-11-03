@@ -28,7 +28,6 @@ class FactListViewModel: ObservableObject {
 
     // MARK: - Variables/Constants
     let provider = ServiceProvider<ChuckNorrisFactsService>()
-    var dataManager = DataManager()
 
     // MARK: - Lifecycle
     init() {
@@ -59,8 +58,8 @@ class FactListViewModel: ObservableObject {
             self.performingQuery = false
         }
 
-        if let facts = cache {
-            cacheHandling(facts.result.map(FactViewModel.init))
+        if let facts = cache?.result, (cache?.total)† > 0 {
+            cacheHandling(facts.map(FactViewModel.init))
         } else {
             loaderHandling()
         }

@@ -18,10 +18,12 @@
 		CA054941236A4EF60061F3AA /* FactsListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA054940236A4EF60061F3AA /* FactsListViewModelTests.swift */; };
 		CA054943236A6FD00061F3AA /* Springboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA054942236A6FD00061F3AA /* Springboard.swift */; };
 		CA05494C236C73FD0061F3AA /* QueryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA05494B236C73FD0061F3AA /* QueryType.swift */; };
-		CA054956236CEF360061F3AA /* Array+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA054955236CEF360061F3AA /* Array+Utils.swift */; };
+		CA054956236CEF360061F3AA /* Collection+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA054955236CEF360061F3AA /* Collection+Utils.swift */; };
+		CA05495C236E30970061F3AA /* SearchTermManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA05495B236E30970061F3AA /* SearchTermManager.swift */; };
 		CA0DAEDB2368F8F200C5D2C6 /* Data+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0DAEDA2368F8F200C5D2C6 /* Data+String.swift */; };
 		CA0DAEDD2368F91200C5D2C6 /* URLRequest+Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0DAEDC2368F91200C5D2C6 /* URLRequest+Log.swift */; };
-		CA0DAEE12369007E00C5D2C6 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0DAEDE2369007E00C5D2C6 /* DataManager.swift */; };
+		CA0DAEE12369007E00C5D2C6 /* ServiceResultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0DAEDE2369007E00C5D2C6 /* ServiceResultManager.swift */; };
+		CA2B6A3D236F5DEE00A6006B /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2B6A3C236F5DEE00A6006B /* APIError.swift */; };
 		CA3F4C732367B6E300C58234 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3F4C722367B6E300C58234 /* SearchBar.swift */; };
 		CA3F4C762367BB2700C58234 /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3F4C752367BB2700C58234 /* FontSize.swift */; };
 		CA4A327D235E7CB30050854E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA4A327C235E7CB30050854E /* AppDelegate.swift */; };
@@ -78,10 +80,12 @@
 		CA054940236A4EF60061F3AA /* FactsListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListViewModelTests.swift; sourceTree = "<group>"; };
 		CA054942236A6FD00061F3AA /* Springboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Springboard.swift; sourceTree = "<group>"; };
 		CA05494B236C73FD0061F3AA /* QueryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryType.swift; sourceTree = "<group>"; };
-		CA054955236CEF360061F3AA /* Array+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Utils.swift"; sourceTree = "<group>"; };
+		CA054955236CEF360061F3AA /* Collection+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Utils.swift"; sourceTree = "<group>"; };
+		CA05495B236E30970061F3AA /* SearchTermManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTermManager.swift; sourceTree = "<group>"; };
 		CA0DAEDA2368F8F200C5D2C6 /* Data+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+String.swift"; sourceTree = "<group>"; };
 		CA0DAEDC2368F91200C5D2C6 /* URLRequest+Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Log.swift"; sourceTree = "<group>"; };
-		CA0DAEDE2369007E00C5D2C6 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		CA0DAEDE2369007E00C5D2C6 /* ServiceResultManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceResultManager.swift; sourceTree = "<group>"; };
+		CA2B6A3C236F5DEE00A6006B /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		CA3F4C722367B6E300C58234 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		CA3F4C752367BB2700C58234 /* FontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
 		CA4A3279235E7CB30050854E /* ChuckNorrisFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChuckNorrisFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,7 +166,8 @@
 			isa = PBXGroup;
 			children = (
 				CA05492E2369C5950061F3AA /* ChuckNorrisFacts.xcdatamodeld */,
-				CA0DAEDE2369007E00C5D2C6 /* DataManager.swift */,
+				CA0DAEDE2369007E00C5D2C6 /* ServiceResultManager.swift */,
+				CA05495B236E30970061F3AA /* SearchTermManager.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -172,7 +177,7 @@
 			children = (
 				CA0DAEDA2368F8F200C5D2C6 /* Data+String.swift */,
 				CA0DAEDC2368F91200C5D2C6 /* URLRequest+Log.swift */,
-				CA054955236CEF360061F3AA /* Array+Utils.swift */,
+				CA054955236CEF360061F3AA /* Collection+Utils.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -242,6 +247,7 @@
 				CA3F4C752367BB2700C58234 /* FontSize.swift */,
 				CA054936236A22160061F3AA /* FactListState.swift */,
 				CA05494B236C73FD0061F3AA /* QueryType.swift */,
+				CA2B6A3C236F5DEE00A6006B /* APIError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -526,6 +532,8 @@
 				CAE39876236754A90016C503 /* UnwrapperOperator.swift in Sources */,
 				CAE3987D23679C510016C503 /* SearchFactView.swift in Sources */,
 				CA53C3F023624104002F41E2 /* Service.swift in Sources */,
+				CA05495C236E30970061F3AA /* SearchTermManager.swift in Sources */,
+				CA2B6A3D236F5DEE00A6006B /* APIError.swift in Sources */,
 				CA4A327D235E7CB30050854E /* AppDelegate.swift in Sources */,
 				CA53C3E2236205F1002F41E2 /* ChuckNorrisFact.swift in Sources */,
 				CA53C40023627C2A002F41E2 /* FactViewModel.swift in Sources */,
@@ -539,8 +547,8 @@
 				CA4A327F235E7CB30050854E /* SceneDelegate.swift in Sources */,
 				CA4A3281235E7CB30050854E /* FactListView.swift in Sources */,
 				CA054939236A498C0061F3AA /* ServiceExecutor.swift in Sources */,
-				CA0DAEE12369007E00C5D2C6 /* DataManager.swift in Sources */,
-				CA054956236CEF360061F3AA /* Array+Utils.swift in Sources */,
+				CA0DAEE12369007E00C5D2C6 /* ServiceResultManager.swift in Sources */,
+				CA054956236CEF360061F3AA /* Collection+Utils.swift in Sources */,
 				CA53C3E823620B73002F41E2 /* FactRow.swift in Sources */,
 				CA05494C236C73FD0061F3AA /* QueryType.swift in Sources */,
 				CA53C3F9236276B5002F41E2 /* Service+Default.swift in Sources */,

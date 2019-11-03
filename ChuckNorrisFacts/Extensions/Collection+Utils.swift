@@ -16,3 +16,7 @@ public extension Array where Element: Equatable {
         }
     }
 }
+
+public extension Collection {
+    func choose(_ n: Int) -> [Element] { Array(shuffled().prefix(n)) }
+}

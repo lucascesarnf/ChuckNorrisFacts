@@ -9,7 +9,6 @@ import Foundation
 
 class ServiceProvider<T: Service> {
     var executor: ServiceExecutor = Executor()
-    var dataManager = DataManager()
     var executeListner: ((Result<Data, Error>) -> Void)?
 
     init() {
@@ -58,6 +57,6 @@ class ServiceProvider<T: Service> {
                 }
             }
         }
-        return dataManager.loadObject(url: service.urlString, decodeType: decodeType)
+        return ServiceResultManager.loadObject(url: service.urlString, decodeType: decodeType)
     }
 }

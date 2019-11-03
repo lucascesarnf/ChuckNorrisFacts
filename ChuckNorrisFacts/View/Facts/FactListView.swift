@@ -15,19 +15,16 @@ struct FactListView: View {
     @State private var shouldShowSearchScreen = false
     @State private var queryType = QueryType.none
     @State private var spin = false
-    @State private var isLoading = false
+    @State private var enableSearchButton = true
 
     // MARK: - @Views
     var body: some View {
         VStack(spacing: 0) {
-            if !isLoading {
-                SearchBar(queryType: $queryType)
-            }
+            SearchBar(queryType: $queryType, enableSearchButton: $enableSearchButton)
             if viewModel.didError {
                 errorToast
             }
-            loading
-            //containedView()
+            containedView()
         }
     }
 
@@ -84,15 +81,20 @@ struct FactListView: View {
                 .resizable()
                 .frame(width: 70, height: 70)
                 .rotationEffect(.degrees(spin ? 360 : 0))
-            .animation(loaderAnimation)
+                .animation(loaderAnimation)
                 .onAppear(perform: {
                     self.spin.toggle()
-                   // self.isLoading.toggle()
                 })
-            .onDisappear(perform: {
-               // self.isLoading.toggle()
-            })
+                .onDisappear(perform: {
+                    self.spin.toggle()
+                })
         }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
+            .onAppear(perform: {
+                self.enableSearchButton = false
+            })
+        .onDisappear(perform: {
+               self.enableSearchButton = true
+        })
     }
 
     var loaderAnimation: Animation {

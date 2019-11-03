@@ -13,7 +13,8 @@ enum FactsError: Error {
     case networkConnectionLost
     case timeOut
     case noFacts
-    case returned(error: Error)
+    case returned(Error)
+    case statusCode(String)
 
     init(error: Error) {
         switch URLError.Code(rawValue: error¬¬.code) {
@@ -24,7 +25,7 @@ enum FactsError: Error {
         case .timedOut:
             self = .timeOut
         default:
-            self = .returned(error: error)
+            self = .returned(error)
         }
     }
 }
@@ -42,6 +43,8 @@ extension FactsError: LocalizedError {
             return "Looks like the server is taking to long to respond, please try again later."
         case .noFacts:
             return "Not results found."
+        case .statusCode(let error):
+            return error
         case .returned(let error):
             return error.localizedDescription
         }

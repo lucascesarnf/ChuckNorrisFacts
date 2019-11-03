@@ -23,11 +23,17 @@ extension ServiceExecutor {
     func execute<T: Service>(_ service: T, completion: @escaping (Result<Data, Error>) -> Void) {
         print("\n\n#########################")
         service.urlRequest.log()
-        makeSessionWith(timeout: service.timeout).dataTask(with: service.urlRequest) { (data, _, error) in
+        makeSessionWith(timeout: service.timeout).dataTask(with: service.urlRequest) { (data, response, error) in
             if let error = error {
                 print("⛔ Request failed")
                 completion(.failure(error))
             } else if let data = data {
+                if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode != 200,
+                    let statusError = self.statusCodeError(data: data) {
+                    print("⛔ Request Error")
+                    completion(.failure(statusError))
+                    return
+                }
                 print("✅ Request completed")
                 self.printJsonData(data: data)
                 if service.saveData {
@@ -39,8 +45,7 @@ extension ServiceExecutor {
     }
 
     func saveData(value: Data, url: String) {
-        let dataManager = DataManager()
-        dataManager.saveData(value: value, url: url)
+        ServiceResultManager.saveData(value: value, url: url)
     }
 
     private func makeSessionWith(timeout: Timeout) -> URLSession {
@@ -48,5 +53,11 @@ extension ServiceExecutor {
         sessionConfig.timeoutIntervalForRequest = timeout.rawValue
         sessionConfig.timeoutIntervalForResource = timeout.rawValue
         return URLSession(configuration: sessionConfig)
+    }
+
+    private func statusCodeError(data: Data) -> Error? {
+        let decoder = JSONDecoder()
+        let result = try? decoder.decode(APIError.self, from: data)
+        return result?.error
     }
 }

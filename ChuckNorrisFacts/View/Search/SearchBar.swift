@@ -11,6 +11,7 @@ import SwiftUI
 struct SearchBar: View {
     @State private var showSearch = false
     @Binding var queryType: QueryType
+    @Binding var enableSearchButton: Bool
 
     var body: some View {
        HStack {
@@ -33,7 +34,9 @@ struct SearchBar: View {
                 .resizable()
                 .frame(width: 30, height: 30, alignment: .center)
                 .foregroundColor(.white)
-        }).sheet(isPresented: $showSearch, onDismiss: {
+        })
+        .disabled(!enableSearchButton)
+            .sheet(isPresented: $showSearch, onDismiss: {
             self.showSearch = false
         }, content: {
             SearchFactView(queryType: self.$queryType)
@@ -44,8 +47,9 @@ struct SearchBar: View {
 #if DEBUG
 struct SearchBar_Previews: PreviewProvider {
     @State static var queryType = QueryType.none
+    @State static var enableSearchButton = true
     static var previews: some View {
-        SearchBar(queryType: $queryType)
+        SearchBar(queryType: $queryType, enableSearchButton: $enableSearchButton)
     }
 }
 #endif

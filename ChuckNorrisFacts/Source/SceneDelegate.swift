@@ -11,6 +11,7 @@ import SwiftUI
 import Network
 
 var newtworkConnection = false
+var applicationName = "ChuckNorrisFacts"
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 

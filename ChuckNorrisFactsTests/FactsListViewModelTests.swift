@@ -11,19 +11,16 @@ import XCTest
 
 class FactsListViewModelTests: XCTestCase {
     var viewModel: FactListViewModel!
-    var dataManager: DataManager!
 
     override func setUp() {
         super.setUp()
         viewModel = FactListViewModel()
         viewModel.provider.executor = MockExecutor()
-        dataManager = DataManager()
     }
 
     override func tearDown() {
         viewModel = nil
-        dataManager.reset()
-        dataManager = nil
+        ServiceResultManager.reset()
         super.tearDown()
     }
 
@@ -32,7 +29,7 @@ class FactsListViewModelTests: XCTestCase {
         let expectation = self.expectation(description: "Load categories")
         self.measure {
             viewModel.provider.executeListner = { _ in
-                let categories = self.dataManager.loadObject(url: service.urlString, decodeType: [String].self)
+                let categories = ServiceResultManager.loadObject(url: service.urlString, decodeType: [String].self)
                 XCTAssertNotNil(categories)
                 expectation.fulfill()
             }
