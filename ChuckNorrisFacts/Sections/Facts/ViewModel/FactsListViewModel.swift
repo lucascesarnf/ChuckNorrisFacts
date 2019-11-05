@@ -36,11 +36,11 @@ class FactsListViewModel: ObservableObject {
         loadLocalFacts()
     }
 
-    // MARK: - Functions
+    // MARK: - Public Functions
     func loadCategories() {
         provider?.execute(service: .categories)
     }
-    
+
     func setError(_ didError: Bool) {
         self.didError = didError
     }
@@ -55,6 +55,15 @@ class FactsListViewModel: ObservableObject {
         }
     }
 
+    func loadLocalFacts() {
+        let results = ServiceResultManager.loadRandonObjects(decodeType: ChuckNorrisFactsResponse.self)
+        localFacts = results.flatMap({$0.result}).choose(numberOfLocalFacts)
+        if !localFacts.isEmpty {
+            currentState = .facts
+        }
+    }
+
+    // MARK: - Private Functions
     private func fetch(query: String) {
         cleanStatus()
         performingQuery = true
@@ -62,6 +71,7 @@ class FactsListViewModel: ObservableObject {
             switch result {
             case .success(let response):
                 self.successHandling(response.result)
+                self.localFactsHandling()
             case .failure(let error):
                 self.errorHandling(error)
             }
@@ -78,14 +88,6 @@ class FactsListViewModel: ObservableObject {
     private func cleanStatus() {
         didError = false
         didCache = false
-    }
-
-    private func loadLocalFacts() {
-        let results = ServiceResultManager.loadRandonObjects(decodeType: ChuckNorrisFactsResponse.self)
-        localFacts = results.flatMap({$0.result}).choose(numberOfLocalFacts)
-        if !localFacts.isEmpty {
-            currentState = .facts
-        }
     }
 
    // MARK: - Handling
@@ -109,6 +111,12 @@ class FactsListViewModel: ObservableObject {
             temp.append(contentsOf: self.facts)
             self.facts = temp.uniques
             currentState = .facts
+        }
+    }
+
+    private func localFactsHandling() {
+        if localFacts.count < numberOfLocalFacts {
+              loadLocalFacts()
         }
     }
 

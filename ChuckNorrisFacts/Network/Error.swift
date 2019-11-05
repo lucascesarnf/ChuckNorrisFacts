@@ -54,3 +54,17 @@ extension FactsError: LocalizedError {
         }
     }
 }
+
+struct APIError: LocalizedError, Codable, Hashable {
+    var status: Int
+    var errorDescription: String
+
+    enum CodingKeys: String, CodingKey {
+        case errorDescription = "message"
+        case status
+    }
+
+    var error: Error {
+         return NSError(domain: "", code: status, userInfo: [ NSLocalizedDescriptionKey: errorDescription]) as Error
+    }
+}

@@ -9,11 +9,15 @@
 import SwiftUI
 
 struct SearchFactView: View {
+    // MARK: - @Combine
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @Binding var queryType: PerformQuery
     @State private var searchText = ""
-    private let viewModel = SearchViewModel()
 
+    // MARK: - Variables/Constants
+    private let viewModel = SearchFactViewModel()
+
+    // MARK: - Views
     var body: some View {
         VStack {
             TextField("Enter your search term", text: $searchText, onCommit: {

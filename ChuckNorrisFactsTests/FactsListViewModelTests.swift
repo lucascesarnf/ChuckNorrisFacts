@@ -101,6 +101,59 @@ class FactsListViewModelTests: XCTestCase {
         waitForExpectations(timeout: 5, handler: nil)
     }
 
+    func testSetErrorObservable() {
+        viewModel.setError(true)
+        let sink = viewModel.$didError.sink(receiveValue: { didError in
+            XCTAssertTrue(didError)
+        })
+        XCTAssertNotNil(sink)
+    }
+
+    func testLocalRandonLocalFacts() {
+        let expectation = self.expectation(description: "Failed to load local facts")
+        if let data = MockExecutor.getDataFromJson(jsonFile: "FactsData") {
+            ServiceResultManager.saveData(value: data, url: "test/facts/")
+            ServiceResultManager.saveContext()
+            let sink = viewModel.$currentState.sink(receiveValue: { factListState in
+                switch factListState {
+                case .facts:
+                    XCTAssertNotNil(self.viewModel.localFacts,
+                                   "Viewmodel load local facts fail to bring randon facts")
+                    expectation.fulfill()
+                default:
+                    break
+                }
+            })
+            XCTAssertNotNil(sink)
+            viewModel.loadLocalFacts()
+            waitForExpectations(timeout: 5, handler: nil)
+        } else {
+            XCTFail("Fail while try to parse FactsData json to Data")
+        }
+    }
+
+    func testRequestErrorAndLoadCache() {
+        if let data = MockExecutor.getDataFromJson(jsonFile: "FactsData") {
+            let expectation = self.expectation(description: "Failed to load cache when service returns error")
+            let url = ChuckNorrisFactsService.query("test").urlString
+            ServiceResultManager.saveData(value: data, url: url)
+            let sink = viewModel.$didError.sink(receiveValue: { didError in
+                if didError {
+                    XCTAssertNotNil(self.viewModel.facts,
+                                    "Viewmodel load local facts fail to bring randon facts")
+                    expectation.fulfill()
+                }
+            })
+            XCTAssertNotNil(sink)
+            let executor = MockFailureExecutor()
+            viewModel.provider?.executor = executor
+            viewModel.performQuery(PerformQuery.query("test"))
+            waitForExpectations(timeout: 5, handler: nil)
+        } else {
+            XCTFail("Fail while try to parse FactsData json to Data")
+        }
+    }
+
     private func expectedFacsData<U>(from json: String, decodeType: U.Type) -> U? where U: Decodable {
         guard let expectedData = MockExecutor.getDataFromJson(jsonFile: json),
             let expected = try? decodeType.decode(from: expectedData) else { return nil }

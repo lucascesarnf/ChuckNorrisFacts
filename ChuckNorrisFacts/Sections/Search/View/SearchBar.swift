@@ -9,10 +9,12 @@
 import SwiftUI
 
 struct SearchBar: View {
+    // MARK: - @Combine
     @State private var showSearch = false
     @Binding var queryType: PerformQuery
     @Binding var enableSearchButton: Bool
 
+    // MARK: - Views
     var body: some View {
        HStack {
             Text("CHUCK NORRIS FACTS")

@@ -12,12 +12,12 @@ import RxCocoa
 
 class SearchViewModelTests: XCTestCase {
     // MARK: - Variables/Constants
-    var viewModel: SearchViewModel!
+    var viewModel: SearchFactViewModel!
 
     // MARK: - Lifecycle
     override func setUp() {
         super.setUp()
-        viewModel = SearchViewModel()
+        viewModel = SearchFactViewModel()
     }
 
     override func tearDown() {
@@ -86,6 +86,6 @@ class SearchViewModelTests: XCTestCase {
 
     private func mockCloseAndOpenViewModel() {
         ///ViewModelSearchTerm resets whenever you search and save a term
-        viewModel = SearchViewModel()
+        viewModel = SearchFactViewModel()
     }
 }

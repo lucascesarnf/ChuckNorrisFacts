@@ -18,9 +18,11 @@ struct FactsListView: View {
     @State private var queryType = PerformQuery.none
     @State private var spin = false
     @State private var enableSearchButton = true
+
+    // MARK: - Variables/Constants
     var navigationController: UINavigationController
 
-    // MARK: - @Views
+    // MARK: - Views
     var body: some View {
         VStack(spacing: 0) {
             SearchBar(queryType: $queryType, enableSearchButton: $enableSearchButton)
@@ -123,8 +125,8 @@ struct FactsListView: View {
             .repeatForever(autoreverses: false)
     }
 
-    // MARK: - @Funcitons
-    func containedView() -> AnyView {
+    // MARK: - Funcitons
+   private func containedView() -> AnyView {
         query()
         switch viewModel.currentState {
         case .facts:
@@ -138,7 +140,7 @@ struct FactsListView: View {
         }
     }
 
-    func query() {
+   private func query() {
         viewModel.performQuery(queryType)
     }
 }

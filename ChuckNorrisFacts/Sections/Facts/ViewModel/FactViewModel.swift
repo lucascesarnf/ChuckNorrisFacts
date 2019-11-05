@@ -46,6 +46,7 @@ class FactViewModel: Identifiable, Equatable {
         activityVC = ActivityView(activityItems: objectsToShare, applicationActivities: nil)
     }
 
+    // MARK: - Equatable
     static func == (lhs: FactViewModel, rhs: FactViewModel) -> Bool {
            return lhs.fact == rhs.fact
     }

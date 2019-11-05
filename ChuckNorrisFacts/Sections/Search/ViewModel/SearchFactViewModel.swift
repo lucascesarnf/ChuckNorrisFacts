@@ -1,5 +1,5 @@
 //
-//  SearchViewModel.swift
+//  SearchFactViewModel.swift
 //  ChuckNorrisFacts
 //
 //  Created by Lucas César  Nogueira Fonseca on 26/10/19.
@@ -9,7 +9,7 @@
 import Foundation
 import SwiftUI
 
-class SearchViewModel: ObservableObject {
+class SearchFactViewModel: ObservableObject {
     // MARK: - @Combine
     @Published var shouldShowSearchScreen: Bool = false
 
@@ -27,7 +27,7 @@ class SearchViewModel: ObservableObject {
         loadPastSearch()
     }
 
-    // MARK: - Functions
+    // MARK: - Public Functions
     func haveCategories() -> Bool {
         loadCategories()
         return categories.count > 0
@@ -45,6 +45,7 @@ class SearchViewModel: ObservableObject {
         }
     }
 
+    // MARK: - Private Functions
     private func loadPastSearch() {
         pastSearches = SearchTermManager.loadObject()
     }

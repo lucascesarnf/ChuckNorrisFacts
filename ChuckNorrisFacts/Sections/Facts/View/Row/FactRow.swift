@@ -9,9 +9,13 @@
 import SwiftUI
 
 struct FactRow: View {
+    // MARK: - @Combine
     @State private var showShare = false
+
+    // MARK: - Variables/Constants
     var model: FactViewModel
 
+    // MARK: - Views
     var body: some View {
         VStack(alignment: .leading) {
             Spacer(minLength: 10)

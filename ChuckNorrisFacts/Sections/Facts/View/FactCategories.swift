@@ -9,8 +9,10 @@
 import SwiftUI
 
 struct FactCategories: View {
+    // MARK: - Variables/Constants
     var categories: [String]
 
+    // MARK: - Views
     var body: some View {
         ScrollView(.horizontal, showsIndicators: true) {
             HStack {

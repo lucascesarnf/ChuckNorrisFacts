@@ -14,7 +14,6 @@ var newtworkConnection = false
 var applicationName = "ChuckNorrisFacts"
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
     var window: UIWindow?
     let monitor = NWPathMonitor()
     var coordinator: MainCoordinator?
