@@ -40,6 +40,20 @@ class FactsListViewModel: ObservableObject {
     func loadCategories() {
         provider?.execute(service: .categories)
     }
+    
+    func setError(_ didError: Bool) {
+        self.didError = didError
+    }
+
+    func performQuery(_ type: PerformQuery) {
+        switch type {
+        case .query(let query):
+            if !performingQuery {
+                fetch(query: query)
+            }
+        default: break
+        }
+    }
 
     private func fetch(query: String) {
         cleanStatus()
@@ -58,20 +72,6 @@ class FactsListViewModel: ObservableObject {
             cacheHandling(facts)
         } else {
             loaderHandling()
-        }
-    }
-
-    func setError(_ didError: Bool) {
-        self.didError = didError
-    }
-
-    func performQuery(_ type: PerformQuery) {
-        switch type {
-        case .query(let query):
-            if !performingQuery {
-                fetch(query: query)
-            }
-        default: break
         }
     }
 

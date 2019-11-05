@@ -1,5 +1,5 @@
 //
-//  FactListView.swift
+//  FactsListView.swift
 //  ChuckNorrisFacts
 //
 //  Created by Lucas César  Nogueira Fonseca on 21/10/19.
@@ -8,15 +8,17 @@
 
 import Foundation
 import SwiftUI
+import UIKit
 import Combine
 
-struct FactListView: View {
+struct FactsListView: View {
     // MARK: - @Combine
-    @ObservedObject var viewModel = FactsListViewModel()
+    @ObservedObject var viewModel: FactsListViewModel
     @State private var shouldShowSearchScreen = false
     @State private var queryType = PerformQuery.none
     @State private var spin = false
     @State private var enableSearchButton = true
+    var navigationController: UINavigationController
 
     // MARK: - @Views
     var body: some View {
@@ -26,7 +28,9 @@ struct FactListView: View {
                 errorToast
             }
             containedView()
-        }
+        }.onAppear(perform: {
+            self.navigationController.setNavigationBarHidden(true, animated: false)
+        })
     }
 
     var errorToast: some View {
@@ -142,7 +146,7 @@ struct FactListView: View {
 #if DEBUG
 struct FactListView_Previews: PreviewProvider {
     static var previews: some View {
-        FactListView()
+        FactsListView(viewModel: FactsListViewModel(), navigationController: UINavigationController())
     }
 }
 #endif
