@@ -1,7 +1,8 @@
 osx_image: xcode11.1 
 language: swift 
-script:
-  - xcodebuild -scheme ChuckNorrisFacts -workspace ChuckNorrisFacts.xcodeproj -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8,OS=13.1' build test
-after_success:
-  - bash <(curl -s https://codecov.io/bash) -t 04a76ce7-6c40-45c1-a32f-54f10bfd033a
-- script: swiftlint
+jobs:
+  include:
+    - script: xcodebuild clean build test -project ChuckNorrisFacts.xcodeproj -scheme ChuckNorrisFacts -destination "platform=iOS Simulator,name=iPhone 8,OS=13.1" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -enableCodeCoverage YES 
+
+      after_script: bash <(curl -s https://codecov.io/bash) -t 04a76ce7-6c40-45c1-a32f-54f10bfd033a
+    - script: swiftlint
