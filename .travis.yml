@@ -1,0 +1,6 @@
+osx_image: xcode11.1 
+idioma: swift 
+os: osx 
+xcode_project: ChuckNorrisFacts.xcodeproj 
+xcode_scheme: ChuckNorrisFacts 
+xcode_destination: platform = iOS Simulator, OS = 13.1, nome = iPhone 8
