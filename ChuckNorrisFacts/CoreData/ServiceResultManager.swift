@@ -37,11 +37,10 @@ struct ServiceResultManager {
 
     static func loadRandonObjects<U>(numberOfResults: Int = 3, decodeType: U.Type) -> [U] where U: Decodable {
         guard let results =  try? context.fetch(fetchRequest) as? [NSManagedObject] else { return [] }
-        let decoder = JSONDecoder()
         var randonResults = [U]()
         for result in results.choose(numberOfResults) {
             if let value = result.value(forKey: "value") as? String, let data = value.data(using: String.Encoding.utf8),
-                let resp = try? decoder.decode(decodeType, from: data) {
+                let resp = try? decodeType.decode(from: data) {
                 randonResults.append(resp)
             }
         }
@@ -59,8 +58,7 @@ struct ServiceResultManager {
 
     static func loadObject<U>(url: String, decodeType: U.Type) -> U? where U: Decodable {
         guard let data = self.loadData(from: url) else { return nil }
-          let decoder = JSONDecoder()
-        let resp = try? decoder.decode(decodeType, from: data)
+        let resp = try? decodeType.decode(from: data)
         print("✅ Cache Loaded")
         return resp
     }
@@ -74,6 +72,12 @@ struct ServiceResultManager {
                 try? context.save()
             }
             fetchRequest.predicate = nil
+        }
+    }
+
+    static func saveContext () {
+        if context.hasChanges {
+            try? context.save()
         }
     }
 

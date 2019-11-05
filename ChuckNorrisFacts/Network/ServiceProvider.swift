@@ -9,7 +9,7 @@ import Foundation
 
 class ServiceProvider<T: Service> {
     var executor: ServiceExecutor = Executor()
-    var executeListner: ((Result<Data, Error>) -> Void)?
+    var listner: ((Result<Data, Error>) -> Void)?
 
     init() {
         //Execute Launch argument
@@ -23,14 +23,11 @@ class ServiceProvider<T: Service> {
         self.executor = executor
     }
 
-    func load(service: T, deliverQueue: DispatchQueue = DispatchQueue.main,
-              completion: @escaping (Result<Data, Error>) -> Void) {
-        executor.execute(service, completion: completion)
-    }
-
     func execute(service: T) {
         executor.execute(service) { result in
-            self.executeListner?(result)
+            DispatchQueue.main.async {
+                self.listner?(result)
+            }
         }
     }
 
@@ -40,9 +37,8 @@ class ServiceProvider<T: Service> {
         executor.execute(service) { result in
             switch result {
             case .success(let data):
-                let decoder = JSONDecoder()
                 do {
-                    let resp = try decoder.decode(decodeType, from: data)
+                    let resp = try decodeType.decode(from: data)
                     deliverQueue.async {
                         completion?(.success(resp))
                     }
@@ -56,6 +52,7 @@ class ServiceProvider<T: Service> {
                    completion?(.failure(FactsError(error: error)))
                 }
             }
+            self.listner?(result)
         }
         return ServiceResultManager.loadObject(url: service.urlString, decodeType: decodeType)
     }

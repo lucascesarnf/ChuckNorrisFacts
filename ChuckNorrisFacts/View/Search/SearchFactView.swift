@@ -26,7 +26,7 @@ struct SearchFactView: View {
                 .background(Color("Search"))
             Spacer()
             .frame(height: 5)
-            if viewModel.theareCategories() {
+            if viewModel.haveCategories() {
                 categories
             }
             Spacer()

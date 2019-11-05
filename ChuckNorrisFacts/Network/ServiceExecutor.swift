@@ -9,6 +9,7 @@
 import Foundation
 
 protocol ServiceExecutor: AnyObject {
+    var saveData: Bool { get set }
     func execute<T: Service>(_ service: T, completion: @escaping (Result<Data, Error>) -> Void)
     func saveData(value: Data, url: String)
 }

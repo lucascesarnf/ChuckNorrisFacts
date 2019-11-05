@@ -1,5 +1,5 @@
 //
-//  FactListViewModel.swift
+//  FactsListViewModel.swift
 //  ChuckNorrisFacts
 //
 //  Created by Lucas César  Nogueira Fonseca on 24/10/19.
@@ -11,7 +11,7 @@ import SwiftUI
 import Combine
 import UIKit
 
-class FactListViewModel: ObservableObject {
+class FactsListViewModel: ObservableObject {
     // MARK: - @Combine
     @Published var currentState = FactListState.noFacts
     @Published var didError = false
@@ -26,30 +26,25 @@ class FactListViewModel: ObservableObject {
     var facts = [ChuckNorrisFact]()
     var localFacts = [ChuckNorrisFact]()
     var error = FactsError.generic
-    let provider = ServiceProvider<ChuckNorrisFactsService>()
+    var provider: ServiceProvider<ChuckNorrisFactsService>?
     let numberOfLocalFacts = 10
 
     // MARK: - Lifecycle
-    init() {
+    init(provider: ServiceProvider<ChuckNorrisFactsService> = ServiceProvider<ChuckNorrisFactsService>()) {
+        self.provider = provider
         loadCategories()
         loadLocalFacts()
     }
 
     // MARK: - Functions
     func loadCategories() {
-           provider.execute(service: .categories)
-    }
-
-    func removeToastAfterDelay() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            self.didError = false
-        }
+        provider?.execute(service: .categories)
     }
 
     private func fetch(query: String) {
         cleanStatus()
         performingQuery = true
-        let cache = provider.load(service: .query(query), decodeType: ChuckNorrisFactsResponse.self) { result in
+        let cache = provider?.load(service: .query(query), decodeType: ChuckNorrisFactsResponse.self) { result in
             switch result {
             case .success(let response):
                 self.successHandling(response.result)
@@ -64,6 +59,10 @@ class FactListViewModel: ObservableObject {
         } else {
             loaderHandling()
         }
+    }
+
+    func setError(_ didError: Bool) {
+        self.didError = didError
     }
 
     func performQuery(_ type: PerformQuery) {
@@ -103,12 +102,12 @@ class FactListViewModel: ObservableObject {
 
     private func successHandling(_ facts: [ChuckNorrisFact]) {
         if self.facts.isEmpty && facts.isEmpty {
-            currentState = .noCasheAndError
             error = FactsError.noFacts
+            currentState = .noCasheAndError
         } else {
-            var mutable = facts
-            mutable.append(contentsOf: self.facts)
-            self.facts = mutable.uniques
+            var temp = facts
+            temp.append(contentsOf: self.facts)
+            self.facts = temp.uniques
             currentState = .facts
         }
     }
@@ -117,7 +116,6 @@ class FactListViewModel: ObservableObject {
         print(error¬¬.code)
         print(error.localizedDescription)
         self.error = error
-        removeToastAfterDelay()
         if didCache {
             didError = true
         } else {

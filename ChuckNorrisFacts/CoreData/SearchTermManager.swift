@@ -64,4 +64,17 @@ struct SearchTermManager {
             fetchRequest.predicate = nil
         }
     }
+
+    static func saveContext () {
+        if context.hasChanges {
+            try? context.save()
+        }
+    }
+
+    static func reset() {
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        context.performAndWait {
+                _ = try? context.execute(deleteRequest)
+        }
+    }
 }

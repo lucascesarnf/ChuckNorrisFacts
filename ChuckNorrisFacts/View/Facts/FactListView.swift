@@ -6,12 +6,13 @@
 //  Copyright © 2019 Lucas César  Nogueira Fonseca. All rights reserved.
 //
 
+import Foundation
 import SwiftUI
 import Combine
 
 struct FactListView: View {
     // MARK: - @Combine
-    @ObservedObject var viewModel = FactListViewModel()
+    @ObservedObject var viewModel = FactsListViewModel()
     @State private var shouldShowSearchScreen = false
     @State private var queryType = PerformQuery.none
     @State private var spin = false
@@ -31,16 +32,21 @@ struct FactListView: View {
     var errorToast: some View {
         VStack {
             Spacer()
-            .frame(height: 5)
+                .frame(height: 5)
             Text(self.viewModel.error.errorDescription†)
-                       .transition(.opacity)
-                       .animation(.easeIn)
-                       .font(.system(size: 20))
-                       .foregroundColor(.white)
-                       .padding()
-                       .background(Color.red)
+                .transition(.opacity)
+                .animation(.easeIn)
+                .font(.system(size: 20))
+                .foregroundColor(.white)
+                .padding()
+                .background(Color.red)
             Spacer()
-            .frame(height: 5)
+                .frame(height: 5)
+                .onAppear(perform: {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                        self.viewModel.setError(false)
+                    }
+                })
         }
     }
 

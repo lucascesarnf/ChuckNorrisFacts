@@ -11,8 +11,7 @@ import UIKit
 
 class FactViewModel: Identifiable, Equatable {
     // MARK: - @Combine
-    @Published var fact: ChuckNorrisFact
-    @Published var shareURL: Bool = false
+    var fact: ChuckNorrisFact
 
     // MARK: - Variables/Constants
     let id = UUID()

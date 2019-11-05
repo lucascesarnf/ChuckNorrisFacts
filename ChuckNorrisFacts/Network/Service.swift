@@ -32,5 +32,4 @@ protocol Service {
     var dataType: Codable.Type { get }
     var timeout: Timeout { get }
     var sampleData: String { get }
-    var saveData: Bool { get }
 }

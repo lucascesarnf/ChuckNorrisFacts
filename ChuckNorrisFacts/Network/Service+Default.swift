@@ -16,7 +16,7 @@ extension Service {
 
     public var urlRequest: URLRequest {
         guard let url = self.url else {
-            fatalError("URL could not be built")
+            return URLRequest(url: NSURL() as URL)
         }
         var request = URLRequest(url: url)
         request.httpMethod = method.rawValue
@@ -41,9 +41,5 @@ extension Service {
             }
         }
         return urlComponents?.url
-    }
-
-    var saveData: Bool {
-        return true
     }
 }

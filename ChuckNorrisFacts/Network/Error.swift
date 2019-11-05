@@ -7,7 +7,7 @@
 //
 
 import Foundation
-enum FactsError: Error {
+enum FactsError: Error, Equatable {
     case generic
     case notConnectedToInternet
     case networkConnectionLost
@@ -27,6 +27,10 @@ enum FactsError: Error {
         default:
             self = .returned(error)
         }
+    }
+
+    static func == (lhs: FactsError, rhs: FactsError) -> Bool {
+        return lhs.errorDescription == rhs.errorDescription
     }
 }
 

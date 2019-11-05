@@ -30,10 +30,6 @@ postfix func † (rhs: Int?) -> Int {
     return rhs ?? 0
 }
 
-postfix func † (rhs: Double?) -> Double {
-    return rhs ?? 0
-}
-
 postfix func † (rhs: Bool?) -> Bool {
     return rhs ?? false
 }

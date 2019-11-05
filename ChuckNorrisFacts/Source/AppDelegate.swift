@@ -32,24 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate.
         //See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
-            self.saveContext()
-        }
-
-    lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "ChuckNorrisFacts")
-        container.loadPersistentStores(completionHandler: { (_, error) in
-            if let error = error as NSError? {
-                print("Unresolved error \(error), \(error.userInfo)")
-            }
-        })
-        return container
-    }()
-
-    // MARK: - Core Data Saving support
-    func saveContext () {
-        let context = persistentContainer.viewContext
-        if context.hasChanges {
-                try? context.save()
-        }
+        ServiceResultManager.saveContext()
+        SearchTermManager.saveContext()
     }
 }

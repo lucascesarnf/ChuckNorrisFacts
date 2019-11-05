@@ -28,7 +28,7 @@ class SearchViewModel: ObservableObject {
     }
 
     // MARK: - Functions
-    func theareCategories() -> Bool {
+    func haveCategories() -> Bool {
         loadCategories()
         return categories.count > 0
     }

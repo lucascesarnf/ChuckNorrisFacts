@@ -9,6 +9,15 @@
           "revision": "b3e888b4972d9bc76495dd74d30a8c7fad4b9395",
           "version": "5.0.1"
         }
+      },
+      {
+        "package": "RxSwiftExt",
+        "repositoryURL": "https://github.com/RxSwiftCommunity/RxSwiftExt",
+        "state": {
+          "branch": null,
+          "revision": "608136ecaf29b2c43345dab95518464e57567449",
+          "version": "5.1.1"
+        }
       }
     ]
   },
