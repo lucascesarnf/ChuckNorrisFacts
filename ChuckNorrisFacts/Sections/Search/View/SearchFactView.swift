@@ -37,6 +37,8 @@ struct SearchFactView: View {
             .frame(height: 20)
             pastSearches
         }
+        .accessibility(hint: Text("Search Chuck Norris Facts View"))
+        .accessibility(identifier: "Search Fact View")
         .navigationBarTitle("")
         .navigationBarHidden(true)
         .onAppear(perform: {

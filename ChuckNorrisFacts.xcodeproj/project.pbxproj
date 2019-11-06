@@ -16,7 +16,6 @@
 		CA05493B236A4A370061F3AA /* ServiceExecutor+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA05493A236A4A370061F3AA /* ServiceExecutor+Default.swift */; };
 		CA05493D236A4A6D0061F3AA /* Executor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA05493C236A4A6D0061F3AA /* Executor.swift */; };
 		CA054941236A4EF60061F3AA /* FactsListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA054940236A4EF60061F3AA /* FactsListViewModelTests.swift */; };
-		CA054943236A6FD00061F3AA /* Springboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA054942236A6FD00061F3AA /* Springboard.swift */; };
 		CA05494C236C73FD0061F3AA /* PerformQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA05494B236C73FD0061F3AA /* PerformQuery.swift */; };
 		CA054956236CEF360061F3AA /* Collection+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA054955236CEF360061F3AA /* Collection+Utils.swift */; };
 		CA05495C236E30970061F3AA /* SearchTermManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA05495B236E30970061F3AA /* SearchTermManager.swift */; };
@@ -85,7 +84,6 @@
 		CA05493A236A4A370061F3AA /* ServiceExecutor+Default.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServiceExecutor+Default.swift"; sourceTree = "<group>"; };
 		CA05493C236A4A6D0061F3AA /* Executor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Executor.swift; sourceTree = "<group>"; };
 		CA054940236A4EF60061F3AA /* FactsListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListViewModelTests.swift; sourceTree = "<group>"; };
-		CA054942236A6FD00061F3AA /* Springboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Springboard.swift; sourceTree = "<group>"; };
 		CA05494B236C73FD0061F3AA /* PerformQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformQuery.swift; sourceTree = "<group>"; };
 		CA054955236CEF360061F3AA /* Collection+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Utils.swift"; sourceTree = "<group>"; };
 		CA05495B236E30970061F3AA /* SearchTermManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTermManager.swift; sourceTree = "<group>"; };
@@ -260,7 +258,6 @@
 			children = (
 				CA4A329E235E7CB40050854E /* ChuckNorrisFactsUITests.swift */,
 				CA4A32A0235E7CB40050854E /* Info.plist */,
-				CA054942236A6FD00061F3AA /* Springboard.swift */,
 			);
 			path = ChuckNorrisFactsUITests;
 			sourceTree = "<group>";
@@ -636,7 +633,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA4A329F235E7CB40050854E /* ChuckNorrisFactsUITests.swift in Sources */,
-				CA054943236A6FD00061F3AA /* Springboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
