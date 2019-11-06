@@ -37,12 +37,14 @@ struct SearchBar: View {
                 .frame(width: 30, height: 30, alignment: .center)
                 .foregroundColor(.white)
         })
-        .disabled(!enableSearchButton)
+            .accessibility(hint: Text("Facts Search button"))
+            .accessibility(identifier: "Search Button")
+            .disabled(!enableSearchButton)
             .sheet(isPresented: $showSearch, onDismiss: {
-            self.showSearch = false
-        }, content: {
-            SearchFactView(queryType: self.$queryType)
-        })
+                self.showSearch = false
+            }, content: {
+                SearchFactView(queryType: self.$queryType)
+            })
     }
 }
 

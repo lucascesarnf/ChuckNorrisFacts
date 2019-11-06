@@ -15,7 +15,6 @@ class ChuckNorrisFactsUITests: XCTestCase {
         super.setUp()
         continueAfterFailure = false
         app = XCUIApplication()
-        app.launchArguments = ["MockNewtwork"]
     }
 
     override func tearDown() {
@@ -23,17 +22,57 @@ class ChuckNorrisFactsUITests: XCTestCase {
         super.tearDown()
     }
 
-    func testExample() {
+    func testRequestAndShareFactWithSuccess() {
+        app.launchArguments = ["MockNetwork", "ClearCoreData"]
         app.launch()
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let noFats = app.staticTexts["Search and share my facts now!"].exists
+        XCTAssertTrue(noFats)
+        app.buttons["Search Button"].tap()
+        app.textFields["Search Fact View"].tap()
+        let tKey = app.keys["T"]
+        tKey.tap()
+        let eKey = app.keys["e"]
+        eKey.tap()
+        let sKey = app.keys["s"]
+        sKey.tap()
+        let tKey2 = app.keys["t"]
+        tKey2.tap()
+        eKey.tap()
+        app.buttons["Return"].tap()
+        let shareButtons = self.app.buttons["Share Button"].firstMatch
+        shareButtons.tap()
+        let shareView = app.otherElements["ActivityListView"]
+        XCTAssertNotNil(shareView)
     }
 
-    func testLaunchPerformance() {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
-            measure(metrics: [XCTOSSignpostMetric.applicationLaunch]) {
-                XCUIApplication().launch()
-            }
-        }
+    func testShareFactWithError() {
+        let errorMessage = "An unexpected error occurred, please try again later."
+        app.launchArguments = ["MockNetworkError", "ClearCoreData"]
+        app.launch()
+        let noFats = app.staticTexts["Search and share my facts now!"].exists
+        XCTAssertTrue(noFats)
+        app.buttons["Search Button"].tap()
+        app.textFields["Search Fact View"].tap()
+        let tKey = app.keys["T"]
+        tKey.tap()
+        let eKey = app.keys["e"]
+        eKey.tap()
+        let sKey = app.keys["s"]
+        sKey.tap()
+        let tKey2 = app.keys["t"]
+        tKey2.tap()
+        eKey.tap()
+        app.buttons["Return"].tap()
+        let networkError = app.staticTexts[errorMessage].exists
+        XCTAssertNotNil(networkError)
+    }
+
+    func testShareFactsCached() {
+        app.launchArguments = ["MockNetwork"]
+        app.launch()
+        let shareButtons = self.app.buttons["Share Button"].firstMatch
+        shareButtons.tap()
+        let shareView = app.otherElements["ActivityListView"]
+        XCTAssertNotNil(shareView)
     }
 }

@@ -17,6 +17,10 @@ class MainCoordinator: Coordinator {
 
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
+        if ProcessInfo.processInfo.arguments.contains("ClearCoreData") {
+            ServiceResultManager.reset()
+            SearchTermManager.reset()
+        }
     }
 
     func start() {

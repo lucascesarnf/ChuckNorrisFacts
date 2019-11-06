@@ -259,8 +259,8 @@
 			isa = PBXGroup;
 			children = (
 				CA4A329E235E7CB40050854E /* ChuckNorrisFactsUITests.swift */,
-				CA4A32A0235E7CB40050854E /* Info.plist */,
 				CA054942236A6FD00061F3AA /* Springboard.swift */,
+				CA4A32A0235E7CB40050854E /* Info.plist */,
 			);
 			path = ChuckNorrisFactsUITests;
 			sourceTree = "<group>";

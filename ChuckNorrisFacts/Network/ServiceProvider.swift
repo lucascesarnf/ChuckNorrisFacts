@@ -13,8 +13,10 @@ class ServiceProvider<T: Service> {
 
     init() {
         //Execute Launch argument
-        if ProcessInfo.processInfo.arguments.contains("MockNewtwork") {
+        if ProcessInfo.processInfo.arguments.contains("MockNetwork") {
            executor = MockExecutor()
+        } else if ProcessInfo.processInfo.arguments.contains("MockNetworkError") {
+            executor = MockFailureExecutor()
         }
     }
 

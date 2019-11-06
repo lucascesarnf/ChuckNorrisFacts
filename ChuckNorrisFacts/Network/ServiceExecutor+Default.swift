@@ -76,10 +76,6 @@ extension ServiceExecutor {
         ServiceResultManager.saveData(value: value, url: url)
     }
 
-    private func dispatchQueue() -> DispatchQueue {
-        return DispatchQueue.global(qos: .background)
-    }
-
     private func makeSessionWith(timeout: Timeout) -> URLSession {
         let sessionConfig = URLSessionConfiguration.default
         sessionConfig.timeoutIntervalForRequest = timeout.rawValue

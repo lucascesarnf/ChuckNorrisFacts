@@ -73,7 +73,15 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "MockNewtwork"
+            argument = "MockNetwork"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "MockNetworkError"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "ClearCoreData"
             isEnabled = "NO">
          </CommandLineArgument>
       </CommandLineArguments>

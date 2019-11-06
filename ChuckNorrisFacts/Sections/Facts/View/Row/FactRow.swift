@@ -39,7 +39,10 @@ struct FactRow: View {
                 .resizable()
                 .frame(width: 30, height: 30, alignment: .center)
                 .foregroundColor(Color("Search"))
-        }).sheet(isPresented: $showShare, onDismiss: {
+        })
+            .accessibility(hint: Text("Facts share button"))
+            .accessibility(identifier: "Share Button")
+            .sheet(isPresented: $showShare, onDismiss: {
             self.showShare = false
         }, content: {
             self.model.activityVC
