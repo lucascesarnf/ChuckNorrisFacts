@@ -1,7 +1,7 @@
 # ChuckNorrisFacts
 [![Build Status](https://travis-ci.com/lucascesarnf/ChuckNorrisFacts.svg?branch=master)](https://travis-ci.com/lucascesarnf/ChuckNorrisFacts) [![codecov](https://codecov.io/gh/lucascesarnf/ChuckNorrisFacts/branch/master/graph/badge.svg)](https://codecov.io/gh/lucascesarnf/ChuckNorrisFacts)
 
- This project consumes the API [Chuck Norris Facts] (https://api.chucknorris.io/) and was intended to study `SwiftUI` and the `Combine` framework.
+ This project consumes the API [Chuck Norris Facts](https://api.chucknorris.io/) and was intended to study `SwiftUI` and the `Combine` framework.
 
 ### Requirements
 
@@ -9,13 +9,10 @@
 * Swift 5.1
 * iOS 13.1
 * SwiftLint
-```
-Give examples
-```
 
 ### Installing
 
-Install SwiftLint[SwiftLint](https://github.com/realm/SwiftLint):
+Install [SwiftLint](https://github.com/realm/SwiftLint):
 ### Using [Homebrew](http://brew.sh/):
 
 ```
