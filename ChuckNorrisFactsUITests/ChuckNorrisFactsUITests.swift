@@ -29,8 +29,6 @@ class ChuckNorrisFactsUITests: XCTestCase {
         XCTAssertTrue(noFats)
         app.buttons["Search Button"].tap()
         app.textFields["Search Fact View"].tap()
-        let tKey = app.keys["T"]
-        tKey.tap()
         app.buttons["Return"].tap()
         let shareButtons = self.app.buttons["Share Button"].firstMatch
         shareButtons.tap()
@@ -46,8 +44,6 @@ class ChuckNorrisFactsUITests: XCTestCase {
         XCTAssertTrue(noFats)
         app.buttons["Search Button"].tap()
         app.textFields["Search Fact View"].tap()
-        let tKey = app.keys["T"]
-        tKey.tap()
         app.buttons["Return"].tap()
         let networkError = app.staticTexts[errorMessage].exists
         XCTAssertNotNil(networkError)
