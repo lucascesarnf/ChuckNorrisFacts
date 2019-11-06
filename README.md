@@ -9,9 +9,6 @@
 * Swift 5.1
 * iOS 13.1
 * SwiftLint
-```
-Give examples
-```
 
 ### Installing
 
