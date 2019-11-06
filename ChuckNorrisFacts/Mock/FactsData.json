@@ -1,0 +1,40 @@
+{
+	"total":4,
+	"result":
+	[
+		{
+			"categories":["Testedesucesso","Arrolaaaaaaa", "Tentando mais um"],
+		    "created_at":"2016-05-01 10:51:41.584544",
+		    "icon_url":"https://assets.chucknorris.host/img/avatar/chuck-norris.png",
+		    "id":"JJAAmEyFQcqlWInDZcvTJg","updated_at":"2016-05-01 10:51:41.584544",
+		    "url":"https://api.chucknorris.io/jokes/JJAAmEyFQcqlWInDZcvTJg",
+		    "value":"CHuck Norris' Mother has a tatoo of Chuck Norris on her right bicep."
+		},
+        
+        {
+            "categories":[],
+            "created_at":"2016-05-01 10:51:41.584544",
+            "icon_url":"https://assets.chucknorris.host/img/avatar/chuck-norris.png",
+            "id":"ee1C4k1lTD6jT7KfES7Sng","updated_at":"2016-05-01 10:51:41.584544",
+            "url":"https://api.chucknorris.io/jokes/ee1C4k1lTD6jT7KfES7Sng",
+            "value":"That is not a normal tatoo of a screaming eagle on Chuck Norris' back! It is in fact, self applied body art that he created with an Acetylene welding torch and Napalm."
+        },
+
+        {
+            "categories":[],
+            "created_at":"2016-05-01 10:51:41.584544",
+            "icon_url":"https://assets.chucknorris.host/img/avatar/chuck-norris.png",
+            "id":"e_EDH2ZFQ-KK9MpBIBFLTw","updated_at":"2016-05-01 10:51:41.584544",
+            "url":"https://api.chucknorris.io/jokes/e_EDH2ZFQ-KK9MpBIBFLTw",
+            "value":"Chuck Norris' orgasms have been known to trigger avalanches throughout Europe, volcanic eruptions around the Pacific Rim and violent political unrest across Tatooine."
+        },
+        {
+            "categories":[],
+            "created_at":"2018-05-01 10:51:41.584544",
+            "icon_url":"https://assets.chucknorris.host/img/avatar/chuck-norris.png",
+            "id":"JJAAmEyFQcqlWInDZvCTJg","updated_at":"2018-05-01 10:51:41.584544",
+            "url":"https://api.chucknorris.io/jokes/JJAAmEyFQcqlWInDZcvTJg",
+            "value":"CHuck Norris' tests."
+        }
+	]
+}
