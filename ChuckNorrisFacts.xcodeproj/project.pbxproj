@@ -25,7 +25,6 @@
 		CA10FBDF237082A70098F56D /* FactsDataZeroResults.json in Resources */ = {isa = PBXBuildFile; fileRef = CA10FBDE237082A70098F56D /* FactsDataZeroResults.json */; };
 		CA10FBE42370898B0098F56D /* Decodable+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA10FBE32370898B0098F56D /* Decodable+Utils.swift */; };
 		CA10FBE62370F5180098F56D /* SearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA10FBE52370F5180098F56D /* SearchViewModelTests.swift */; };
-		CA10FBE9237126EE0098F56D /* ObservableType+Retry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA10FBE8237126EE0098F56D /* ObservableType+Retry.swift */; };
 		CA10FBEC23712B460098F56D /* RxSwiftExt in Frameworks */ = {isa = PBXBuildFile; productRef = CA10FBEB23712B460098F56D /* RxSwiftExt */; };
 		CA3F4C732367B6E300C58234 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3F4C722367B6E300C58234 /* SearchBar.swift */; };
 		CA3F4C762367BB2700C58234 /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3F4C752367BB2700C58234 /* FontSize.swift */; };
@@ -46,6 +45,7 @@
 		CA53C3FC2362783D002F41E2 /* ChuckNorrisFactsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA53C3FB2362783D002F41E2 /* ChuckNorrisFactsService.swift */; };
 		CA53C40023627C2A002F41E2 /* FactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA53C3FF23627C2A002F41E2 /* FactViewModel.swift */; };
 		CA53C40323627E1A002F41E2 /* FactsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA53C40223627E1A002F41E2 /* FactsListViewModel.swift */; };
+		CA6A55372373968000A1ACE8 /* OperatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6A55362373968000A1ACE8 /* OperatorsTests.swift */; };
 		CA791D102371326000E82190 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = CA791D0F2371326000E82190 /* RxTest */; };
 		CA7AFD802371A122009BCE35 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AFD7F2371A122009BCE35 /* MainCoordinator.swift */; };
 		CA7AFD822371A163009BCE35 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AFD812371A163009BCE35 /* Coordinator.swift */; };
@@ -93,7 +93,6 @@
 		CA10FBDE237082A70098F56D /* FactsDataZeroResults.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = FactsDataZeroResults.json; sourceTree = "<group>"; };
 		CA10FBE32370898B0098F56D /* Decodable+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decodable+Utils.swift"; sourceTree = "<group>"; };
 		CA10FBE52370F5180098F56D /* SearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTests.swift; sourceTree = "<group>"; };
-		CA10FBE8237126EE0098F56D /* ObservableType+Retry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+Retry.swift"; sourceTree = "<group>"; };
 		CA3F4C722367B6E300C58234 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		CA3F4C752367BB2700C58234 /* FontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
 		CA4A3279235E7CB30050854E /* ChuckNorrisFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChuckNorrisFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +118,7 @@
 		CA53C3FB2362783D002F41E2 /* ChuckNorrisFactsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckNorrisFactsService.swift; sourceTree = "<group>"; };
 		CA53C3FF23627C2A002F41E2 /* FactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactViewModel.swift; sourceTree = "<group>"; };
 		CA53C40223627E1A002F41E2 /* FactsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListViewModel.swift; sourceTree = "<group>"; };
+		CA6A55362373968000A1ACE8 /* OperatorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorsTests.swift; sourceTree = "<group>"; };
 		CA7AFD7F2371A122009BCE35 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		CA7AFD812371A163009BCE35 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		CAB39E4A23691E6800B57023 /* ErrorCasting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCasting.swift; sourceTree = "<group>"; };
@@ -191,7 +191,6 @@
 				CA0DAEDC2368F91200C5D2C6 /* URLRequest+Log.swift */,
 				CA054955236CEF360061F3AA /* Collection+Utils.swift */,
 				CA10FBE32370898B0098F56D /* Decodable+Utils.swift */,
-				CA10FBE8237126EE0098F56D /* ObservableType+Retry.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -248,6 +247,7 @@
 				CA4A3293235E7CB40050854E /* FactViewModelTests.swift */,
 				CA10FBE52370F5180098F56D /* SearchViewModelTests.swift */,
 				CA054940236A4EF60061F3AA /* FactsListViewModelTests.swift */,
+				CA6A55362373968000A1ACE8 /* OperatorsTests.swift */,
 				CA4A3295235E7CB40050854E /* Info.plist */,
 			);
 			path = ChuckNorrisFactsTests;
@@ -608,7 +608,6 @@
 				CAE398732364C5B20016C503 /* SearchFactViewModel.swift in Sources */,
 				CA4A327F235E7CB30050854E /* SceneDelegate.swift in Sources */,
 				CA4A3281235E7CB30050854E /* FactsListView.swift in Sources */,
-				CA10FBE9237126EE0098F56D /* ObservableType+Retry.swift in Sources */,
 				CA054939236A498C0061F3AA /* ServiceExecutor.swift in Sources */,
 				CA0DAEE12369007E00C5D2C6 /* ServiceResultManager.swift in Sources */,
 				CA054956236CEF360061F3AA /* Collection+Utils.swift in Sources */,
@@ -623,6 +622,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA054941236A4EF60061F3AA /* FactsListViewModelTests.swift in Sources */,
+				CA6A55372373968000A1ACE8 /* OperatorsTests.swift in Sources */,
 				CA4A3294235E7CB40050854E /* FactViewModelTests.swift in Sources */,
 				CA10FBE62370F5180098F56D /* SearchViewModelTests.swift in Sources */,
 			);

@@ -34,6 +34,7 @@ class SearchViewModelTests: XCTestCase {
 
     func testHaveCategories() {
         if let data = MockExecutor.getDataFromJson(jsonFile: "CategoriesData") {
+            XCTAssertNotNil(data.toString())
             ServiceResultManager.saveData(value: data, url: ChuckNorrisFactsService.categories.urlString)
             XCTAssertTrue(viewModel.haveCategories())
         } else {
