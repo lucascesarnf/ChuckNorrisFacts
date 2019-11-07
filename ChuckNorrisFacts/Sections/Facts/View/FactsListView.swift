@@ -95,7 +95,6 @@ struct FactsListView: View {
             Text("Search and share my facts now!")
             .fontWeight(.bold)
             .font(.system(size: 20))
-            .accessibility(identifier: "No Facts")
         }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
     }
 
