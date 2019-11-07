@@ -61,6 +61,12 @@ class ChuckNorrisFactsUITests: XCTestCase {
     func testShareFactsCached() {
         app.launchArguments = ["MockNetwork"]
         app.launch()
+        makeRequest()
+        //Finish application
+        app.terminate()
+        //Relaunch to see error with facts cached
+        app.launchArguments = ["MockNetwork"]
+        app.launch()
         XCTAssertNotNil(shareFactAndGetActivityView())
     }
 
