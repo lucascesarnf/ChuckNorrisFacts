@@ -67,15 +67,16 @@ class FactsListViewModel: ObservableObject {
     private func fetch(query: String) {
         cleanStatus()
         performingQuery = true
-        let cache = provider?.load(service: .query(query), decodeType: ChuckNorrisFactsResponse.self) { result in
+        let cache = provider?.load(service: .query(query),
+                                   decodeType: ChuckNorrisFactsResponse.self) { [weak self] result in
             switch result {
             case .success(let response):
-                self.successHandling(response.result)
-                self.localFactsHandling()
+                self?.successHandling(response.result)
+                self?.localFactsHandling()
             case .failure(let error):
-                self.errorHandling(error)
+                self?.errorHandling(error)
             }
-            self.performingQuery = false
+            self?.performingQuery = false
         }
 
         if let facts = cache?.result, (cache?.total)† > 0 {

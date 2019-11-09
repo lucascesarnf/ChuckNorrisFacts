@@ -52,19 +52,13 @@ class ChuckNorrisFactsUITests: XCTestCase {
     func testRequestAndShareFactByCategoryWithSuccess() {
         app.launchArguments = ["MockNetwork"]
         app.launch()
-        sleep(2)
+        sleep(1)
         app.buttons["Search Button"].tap()
         app.buttons["Search Fact View"].firstMatch.tap()
         XCTAssertNotNil(shareFactAndGetActivityView())
     }
 
     func testShareFactsCached() {
-        app.launchArguments = ["MockNetwork"]
-        app.launch()
-        makeRequest()
-        //Finish application
-        app.terminate()
-        //Relaunch to see error with facts cached
         app.launchArguments = ["MockNetwork"]
         app.launch()
         XCTAssertNotNil(shareFactAndGetActivityView())

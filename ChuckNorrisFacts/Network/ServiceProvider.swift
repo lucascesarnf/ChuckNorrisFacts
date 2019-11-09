@@ -7,7 +7,7 @@
 //
 import Foundation
 
-class ServiceProvider<T: Service> {
+struct ServiceProvider<T: Service> {
     var executor: ServiceExecutor = Executor()
     var listner: ((Result<Data, Error>) -> Void)?
 
@@ -20,7 +20,7 @@ class ServiceProvider<T: Service> {
         }
     }
 
-    convenience init(executor: ServiceExecutor) {
+    init(executor: ServiceExecutor) {
         self.init()
         self.executor = executor
     }
