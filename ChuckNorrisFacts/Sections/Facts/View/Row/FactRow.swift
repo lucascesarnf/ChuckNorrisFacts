@@ -46,6 +46,7 @@ struct FactRow: View {
             self.showShare = false
         }, content: {
             self.model.activityVC
+                .accessibility(identifier: "ActivityListView")
         })
     }
 }

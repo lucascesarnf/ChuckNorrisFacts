@@ -28,7 +28,7 @@ class ChuckNorrisFactsUITests: XCTestCase {
         let noFats = app.staticTexts["Search and share my facts now!"].exists
         XCTAssertTrue(noFats)
         makeRequest()
-        XCTAssertNotNil(shareFactAndGetActivityView())
+        XCTAssertTrue(shareFact())
     }
 
     func testShareFactWithErrorAndCache() {
@@ -55,13 +55,13 @@ class ChuckNorrisFactsUITests: XCTestCase {
         sleep(1)
         app.buttons["Search Button"].tap()
         app.buttons["Search Fact View"].firstMatch.tap()
-        XCTAssertNotNil(shareFactAndGetActivityView())
+        XCTAssertTrue(shareFact())
     }
 
     func testShareFactsCached() {
         app.launchArguments = ["MockNetwork"]
         app.launch()
-        XCTAssertNotNil(shareFactAndGetActivityView())
+        XCTAssertTrue(shareFact())
     }
 
     func testShareFactWithError() {
@@ -81,9 +81,10 @@ class ChuckNorrisFactsUITests: XCTestCase {
         app.buttons["Return"].tap()
     }
 
-    private func shareFactAndGetActivityView() -> XCUIElement? {
+    private func shareFact() -> Bool {
        let shareButtons = self.app.buttons["Share Button"].firstMatch
        shareButtons.tap()
-       return app.otherElements["ActivityListView"]
+        let element = app.otherElements["ActivityListView"].firstMatch
+        return element.exists
     }
 }
