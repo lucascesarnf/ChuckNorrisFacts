@@ -39,6 +39,7 @@ class FactsListViewModelTests: XCTestCase {
             XCTAssertNotNil(categories)
             expectation.fulfill()
         }
+        viewModel.loadCategories()
         waitForExpectations(timeout: 5, handler: nil)
     }
 
@@ -64,6 +65,7 @@ class FactsListViewModelTests: XCTestCase {
     }
 
     func testFetchFactsZeroResultsSuccess() {
+        ServiceResultManager.reset()
         let expectation = self.expectation(description: "Load Facts Zero Results Success")
         let executor = MockExecutor(jsonInjection: "FactsDataZeroResults")
         viewModel.provider?.executor = executor
@@ -83,6 +85,7 @@ class FactsListViewModelTests: XCTestCase {
     }
 
     func testFetchFactsFailureWithoutCache() {
+        ServiceResultManager.reset()
         let expectation = self.expectation(description: "Failed to load facts without cache")
         let executor = MockFailureExecutor()
         viewModel.provider?.executor = executor
