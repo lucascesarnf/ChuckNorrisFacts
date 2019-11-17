@@ -7,7 +7,7 @@
 //
 
 import XCTest
-import RxCocoa
+
 @testable import ChuckNorrisFacts
 
 class SearchViewModelTests: XCTestCase {

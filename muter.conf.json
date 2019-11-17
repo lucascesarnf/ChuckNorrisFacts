@@ -1,0 +1,19 @@
+{
+  "arguments" : [
+    "-project",
+    "ChuckNorrisFacts.xcodeproj",
+    "-scheme",
+    "ChuckNorrisFacts",
+    "-sdk",
+    "iphonesimulator",
+    "-destination",
+    "platform=iOS Simulator,name=iPhone 8",
+    "test"
+  ],
+  "exclude" : [
+        "AppDelegate.swift",
+        "SceneDelegate.swift",
+        "MainCoordinator",
+  ],
+  "executable" : "\/usr\/bin\/xcodebuild"
+}
