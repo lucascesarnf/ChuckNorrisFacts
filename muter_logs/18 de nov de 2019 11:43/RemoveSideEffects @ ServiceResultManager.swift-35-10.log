@@ -1,0 +1,767 @@
+Build settings from command line:
+    SDKROOT = iphonesimulator13.1
+    TOOLCHAINS = com.apple.dt.toolchain.XcodeDefault
+
+note: Using new build system
+note: Planning build
+note: Using build description from disk
+PhaseScriptExecution Lint /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Script-CA0DAED82368F51000C5D2C6.sh (in target 'ChuckNorrisFacts' from project 'ChuckNorrisFacts')
+    cd /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/(A\ Document\ Being\ Saved\ By\ muter\ 25)/StoneApp
+    export ACTION=build
+    export AD_HOC_CODE_SIGNING_ALLOWED=YES
+    export ALTERNATE_GROUP=staff
+    export ALTERNATE_MODE=u+w,go-w,a+rX
+    export ALTERNATE_OWNER=lucascesarnogueirafonseca
+    export ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES=NO
+    export ALWAYS_SEARCH_USER_PATHS=NO
+    export ALWAYS_USE_SEPARATE_HEADERMAPS=NO
+    export APPLE_INTERNAL_DEVELOPER_DIR=/AppleInternal/Developer
+    export APPLE_INTERNAL_DIR=/AppleInternal
+    export APPLE_INTERNAL_DOCUMENTATION_DIR=/AppleInternal/Documentation
+    export APPLE_INTERNAL_LIBRARY_DIR=/AppleInternal/Library
+    export APPLE_INTERNAL_TOOLS=/AppleInternal/Developer/Tools
+    export APPLICATION_EXTENSION_API_ONLY=NO
+    export APPLY_RULES_IN_COPY_FILES=NO
+    export APPLY_RULES_IN_COPY_HEADERS=NO
+    export ARCHS=x86_64
+    export ARCHS_STANDARD=x86_64
+    export ARCHS_STANDARD_32_64_BIT="i386 x86_64"
+    export ARCHS_STANDARD_32_BIT=i386
+    export ARCHS_STANDARD_64_BIT=x86_64
+    export ARCHS_STANDARD_INCLUDING_64_BIT=x86_64
+    export ARCHS_UNIVERSAL_IPHONE_OS="i386 x86_64"
+    export ASSETCATALOG_COMPILER_APPICON_NAME=AppIcon
+    export AVAILABLE_PLATFORMS="appletvos appletvsimulator iphoneos iphonesimulator macosx watchos watchsimulator"
+    export AppIdentifierPrefix=EU52X4J36U.
+    export BITCODE_GENERATION_MODE=marker
+    export BUILD_ACTIVE_RESOURCES_ONLY=YES
+    export BUILD_COMPONENTS="headers build"
+    export BUILD_DIR=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products
+    export BUILD_LIBRARY_FOR_DISTRIBUTION=NO
+    export BUILD_ROOT=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products
+    export BUILD_STYLE=
+    export BUILD_VARIANTS=normal
+    export BUILT_PRODUCTS_DIR=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator
+    export CACHE_ROOT=/var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/C/com.apple.DeveloperTools/11.1-11A1027/Xcode/11.1-11A1027/Xcode
+    export CCHROOT=/var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/C/com.apple.DeveloperTools/11.1-11A1027/Xcode/11.1-11A1027/Xcode
+    export CHMOD=/bin/chmod
+    export CHOWN=/usr/sbin/chown
+    export CLANG_ANALYZER_NONNULL=YES
+    export CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION=YES_AGGRESSIVE
+    export CLANG_COVERAGE_MAPPING=YES
+    export CLANG_CXX_LANGUAGE_STANDARD=gnu++14
+    export CLANG_CXX_LIBRARY=libc++
+    export CLANG_ENABLE_MODULES=YES
+    export CLANG_ENABLE_OBJC_ARC=YES
+    export CLANG_ENABLE_OBJC_WEAK=YES
+    export CLANG_MODULES_BUILD_SESSION_FILE=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Session.modulevalidation
+    export CLANG_PROFILE_DATA_DIRECTORY=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/ProfileData
+    export CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING=YES
+    export CLANG_WARN_BOOL_CONVERSION=YES
+    export CLANG_WARN_COMMA=YES
+    export CLANG_WARN_CONSTANT_CONVERSION=YES
+    export CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS=YES
+    export CLANG_WARN_DIRECT_OBJC_ISA_USAGE=YES_ERROR
+    export CLANG_WARN_DOCUMENTATION_COMMENTS=YES
+    export CLANG_WARN_EMPTY_BODY=YES
+    export CLANG_WARN_ENUM_CONVERSION=YES
+    export CLANG_WARN_INFINITE_RECURSION=YES
+    export CLANG_WARN_INT_CONVERSION=YES
+    export CLANG_WARN_NON_LITERAL_NULL_CONVERSION=YES
+    export CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF=YES
+    export CLANG_WARN_OBJC_LITERAL_CONVERSION=YES
+    export CLANG_WARN_OBJC_ROOT_CLASS=YES_ERROR
+    export CLANG_WARN_RANGE_LOOP_ANALYSIS=YES
+    export CLANG_WARN_STRICT_PROTOTYPES=YES
+    export CLANG_WARN_SUSPICIOUS_MOVE=YES
+    export CLANG_WARN_UNGUARDED_AVAILABILITY=YES_AGGRESSIVE
+    export CLANG_WARN_UNREACHABLE_CODE=YES
+    export CLANG_WARN__DUPLICATE_METHOD_MATCH=YES
+    export CLASS_FILE_DIR=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/JavaClasses
+    export CLEAN_PRECOMPS=YES
+    export CLONE_HEADERS=NO
+    export CODESIGNING_FOLDER_PATH=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator/ChuckNorrisFacts.app
+    export CODE_SIGNING_ALLOWED=YES
+    export CODE_SIGNING_REQUIRED=YES
+    export CODE_SIGN_CONTEXT_CLASS=XCiPhoneSimulatorCodeSignContext
+    export CODE_SIGN_IDENTITY=-
+    export CODE_SIGN_INJECT_BASE_ENTITLEMENTS=YES
+    export CODE_SIGN_STYLE=Automatic
+    export COLOR_DIAGNOSTICS=NO
+    export COMBINE_HIDPI_IMAGES=NO
+    export COMPILER_INDEX_STORE_ENABLE=Default
+    export COMPOSITE_SDK_DIRS=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/CompositeSDKs
+    export COMPRESS_PNG_FILES=YES
+    export CONFIGURATION=Debug
+    export CONFIGURATION_BUILD_DIR=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator
+    export CONFIGURATION_TEMP_DIR=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator
+    export CONTENTS_FOLDER_PATH=ChuckNorrisFacts.app
+    export COPYING_PRESERVES_HFS_DATA=NO
+    export COPY_HEADERS_RUN_UNIFDEF=NO
+    export COPY_PHASE_STRIP=NO
+    export COPY_RESOURCES_FROM_STATIC_FRAMEWORKS=YES
+    export CORRESPONDING_DEVICE_PLATFORM_DIR=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform
+    export CORRESPONDING_DEVICE_PLATFORM_NAME=iphoneos
+    export CORRESPONDING_DEVICE_SDK_DIR=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS13.1.sdk
+    export CORRESPONDING_DEVICE_SDK_NAME=iphoneos13.1
+    export CP=/bin/cp
+    export CREATE_INFOPLIST_SECTION_IN_BINARY=NO
+    export CURRENT_ARCH=undefined_arch
+    export CURRENT_VARIANT=normal
+    export DEAD_CODE_STRIPPING=YES
+    export DEBUGGING_SYMBOLS=YES
+    export DEBUG_INFORMATION_FORMAT=dwarf
+    export DEFAULT_COMPILER=com.apple.compilers.llvm.clang.1_0
+    export DEFAULT_DEXT_INSTALL_PATH=/System/Library/DriverExtensions
+    export DEFAULT_KEXT_INSTALL_PATH=/System/Library/Extensions
+    export DEFINES_MODULE=NO
+    export DEPLOYMENT_LOCATION=NO
+    export DEPLOYMENT_POSTPROCESSING=NO
+    export DEPLOYMENT_TARGET_CLANG_ENV_NAME=IPHONEOS_DEPLOYMENT_TARGET
+    export DEPLOYMENT_TARGET_CLANG_FLAG_NAME=mios-simulator-version-min
+    export DEPLOYMENT_TARGET_CLANG_FLAG_PREFIX=-mios-simulator-version-min=
+    export DEPLOYMENT_TARGET_LD_ENV_NAME=IPHONEOS_DEPLOYMENT_TARGET
+    export DEPLOYMENT_TARGET_LD_FLAG_NAME=ios_simulator_version_min
+    export DEPLOYMENT_TARGET_SETTING_NAME=IPHONEOS_DEPLOYMENT_TARGET
+    export DEPLOYMENT_TARGET_SUGGESTED_VALUES="8.0 8.1 8.2 8.3 8.4 9.0 9.1 9.2 9.3 10.0 10.1 10.2 10.3 11.0 11.1 11.2 11.3 11.4 12.0 12.1 12.2 12.3 12.4 13.0 13.1"
+    export DERIVED_FILES_DIR=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/DerivedSources
+    export DERIVED_FILE_DIR=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/DerivedSources
+    export DERIVED_SOURCES_DIR=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/DerivedSources
+    export DEVELOPER_APPLICATIONS_DIR=/Applications/Xcode.app/Contents/Developer/Applications
+    export DEVELOPER_BIN_DIR=/Applications/Xcode.app/Contents/Developer/usr/bin
+    export DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer
+    export DEVELOPER_FRAMEWORKS_DIR=/Applications/Xcode.app/Contents/Developer/Library/Frameworks
+    export DEVELOPER_FRAMEWORKS_DIR_QUOTED=/Applications/Xcode.app/Contents/Developer/Library/Frameworks
+    export DEVELOPER_LIBRARY_DIR=/Applications/Xcode.app/Contents/Developer/Library
+    export DEVELOPER_SDK_DIR=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs
+    export DEVELOPER_TOOLS_DIR=/Applications/Xcode.app/Contents/Developer/Tools
+    export DEVELOPER_USR_DIR=/Applications/Xcode.app/Contents/Developer/usr
+    export DEVELOPMENT_ASSET_PATHS="ChuckNorrisFacts/Source"
+    export DEVELOPMENT_LANGUAGE=en
+    export DEVELOPMENT_TEAM=EU52X4J36U
+    export DOCUMENTATION_FOLDER_PATH=ChuckNorrisFacts.app/en.lproj/Documentation
+    export DONT_GENERATE_INFOPLIST_FILE=NO
+    export DO_HEADER_SCANNING_IN_JAM=NO
+    export DSTROOT=/tmp/ChuckNorrisFacts.dst
+    export DT_TOOLCHAIN_DIR=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain
+    export DWARF_DSYM_FILE_NAME=ChuckNorrisFacts.app.dSYM
+    export DWARF_DSYM_FILE_SHOULD_ACCOMPANY_PRODUCT=NO
+    export DWARF_DSYM_FOLDER_PATH=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator
+    export EFFECTIVE_PLATFORM_NAME=-iphonesimulator
+    export EMBEDDED_CONTENT_CONTAINS_SWIFT=NO
+    export EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE=NO
+    export ENABLE_BITCODE=NO
+    export ENABLE_DEFAULT_HEADER_SEARCH_PATHS=YES
+    export ENABLE_HARDENED_RUNTIME=NO
+    export ENABLE_HEADER_DEPENDENCIES=YES
+    export ENABLE_ON_DEMAND_RESOURCES=YES
+    export ENABLE_PREVIEWS=NO
+    export ENABLE_STRICT_OBJC_MSGSEND=YES
+    export ENABLE_TESTABILITY=YES
+    export ENTITLEMENTS_DESTINATION=__entitlements
+    export ENTITLEMENTS_REQUIRED=YES
+    export EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS=".DS_Store .svn .git .hg CVS"
+    export EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES="*.nib *.lproj *.framework *.gch *.xcode* *.xcassets (*) .DS_Store CVS .svn .git .hg *.pbproj *.pbxproj"
+    export EXECUTABLES_FOLDER_PATH=ChuckNorrisFacts.app/Executables
+    export EXECUTABLE_FOLDER_PATH=ChuckNorrisFacts.app
+    export EXECUTABLE_NAME=ChuckNorrisFacts
+    export EXECUTABLE_PATH=ChuckNorrisFacts.app/ChuckNorrisFacts
+    export EXPANDED_CODE_SIGN_IDENTITY=-
+    export EXPANDED_CODE_SIGN_IDENTITY_NAME=-
+    export FILE_LIST=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects/LinkFileList
+    export FIXED_FILES_DIR=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/FixedFiles
+    export FRAMEWORKS_FOLDER_PATH=ChuckNorrisFacts.app/Frameworks
+    export FRAMEWORK_FLAG_PREFIX=-framework
+    export FRAMEWORK_SEARCH_PATHS="/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator "
+    export FRAMEWORK_VERSION=A
+    export FULL_PRODUCT_NAME=ChuckNorrisFacts.app
+    export GCC3_VERSION=3.3
+    export GCC_C_LANGUAGE_STANDARD=gnu11
+    export GCC_DYNAMIC_NO_PIC=NO
+    export GCC_INLINES_ARE_PRIVATE_EXTERN=YES
+    export GCC_NO_COMMON_BLOCKS=YES
+    export GCC_OBJC_LEGACY_DISPATCH=YES
+    export GCC_OPTIMIZATION_LEVEL=0
+    export GCC_PFE_FILE_C_DIALECTS="c objective-c c++ objective-c++"
+    export GCC_PREPROCESSOR_DEFINITIONS="DEBUG=1 "
+    export GCC_SYMBOLS_PRIVATE_EXTERN=NO
+    export GCC_TREAT_WARNINGS_AS_ERRORS=NO
+    export GCC_VERSION=com.apple.compilers.llvm.clang.1_0
+    export GCC_VERSION_IDENTIFIER=com_apple_compilers_llvm_clang_1_0
+    export GCC_WARN_64_TO_32_BIT_CONVERSION=YES
+    export GCC_WARN_ABOUT_RETURN_TYPE=YES_ERROR
+    export GCC_WARN_UNDECLARED_SELECTOR=YES
+    export GCC_WARN_UNINITIALIZED_AUTOS=YES_AGGRESSIVE
+    export GCC_WARN_UNUSED_FUNCTION=YES
+    export GCC_WARN_UNUSED_VARIABLE=YES
+    export GENERATE_MASTER_OBJECT_FILE=NO
+    export GENERATE_PKGINFO_FILE=YES
+    export GENERATE_PROFILING_CODE=NO
+    export GENERATE_TEXT_BASED_STUBS=NO
+    export GID=20
+    export GROUP=staff
+    export HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT=YES
+    export HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES=YES
+    export HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS=YES
+    export HEADERMAP_INCLUDES_PROJECT_HEADERS=YES
+    export HEADERMAP_USES_FRAMEWORK_PREFIX_ENTRIES=YES
+    export HEADERMAP_USES_VFS=NO
+    export HEADER_SEARCH_PATHS="/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator/include "
+    export HIDE_BITCODE_SYMBOLS=YES
+    export HOME=/Users/lucascesarnogueirafonseca
+    export ICONV=/usr/bin/iconv
+    export INFOPLIST_EXPAND_BUILD_SETTINGS=YES
+    export INFOPLIST_FILE=ChuckNorrisFacts/Info.plist
+    export INFOPLIST_OUTPUT_FORMAT=binary
+    export INFOPLIST_PATH=ChuckNorrisFacts.app/Info.plist
+    export INFOPLIST_PREPROCESS=NO
+    export INFOSTRINGS_PATH=ChuckNorrisFacts.app/en.lproj/InfoPlist.strings
+    export INLINE_PRIVATE_FRAMEWORKS=NO
+    export INSTALLHDRS_COPY_PHASE=NO
+    export INSTALLHDRS_SCRIPT_PHASE=NO
+    export INSTALL_DIR=/tmp/ChuckNorrisFacts.dst/Applications
+    export INSTALL_GROUP=staff
+    export INSTALL_MODE_FLAG=u+w,go-w,a+rX
+    export INSTALL_OWNER=lucascesarnogueirafonseca
+    export INSTALL_PATH=/Applications
+    export INSTALL_ROOT=/tmp/ChuckNorrisFacts.dst
+    export IPHONEOS_DEPLOYMENT_TARGET=13.1
+    export JAVAC_DEFAULT_FLAGS="-J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8"
+    export JAVA_APP_STUB=/System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub
+    export JAVA_ARCHIVE_CLASSES=YES
+    export JAVA_ARCHIVE_TYPE=JAR
+    export JAVA_COMPILER=/usr/bin/javac
+    export JAVA_FOLDER_PATH=ChuckNorrisFacts.app/Java
+    export JAVA_FRAMEWORK_RESOURCES_DIRS=Resources
+    export JAVA_JAR_FLAGS=cv
+    export JAVA_SOURCE_SUBDIR=.
+    export JAVA_USE_DEPENDENCIES=YES
+    export JAVA_ZIP_FLAGS=-urg
+    export JIKES_DEFAULT_FLAGS="+E +OLDCSO"
+    export KEEP_PRIVATE_EXTERNS=NO
+    export LD_DEPENDENCY_INFO_FILE=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/undefined_arch/ChuckNorrisFacts_dependency_info.dat
+    export LD_ENTITLEMENTS_SECTION=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/ChuckNorrisFacts.app-Simulated.xcent
+    export LD_GENERATE_MAP_FILE=NO
+    export LD_MAP_FILE_PATH=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/ChuckNorrisFacts-LinkMap-normal-undefined_arch.txt
+    export LD_NO_PIE=NO
+    export LD_QUOTE_LINKER_ARGUMENTS_FOR_COMPILER_DRIVER=YES
+    export LD_RUNPATH_SEARCH_PATHS=" @executable_path/Frameworks"
+    export LEGACY_DEVELOPER_DIR=/Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer
+    export LEX=lex
+    export LIBRARY_DEXT_INSTALL_PATH=/Library/DriverExtensions
+    export LIBRARY_FLAG_NOSPACE=YES
+    export LIBRARY_FLAG_PREFIX=-l
+    export LIBRARY_KEXT_INSTALL_PATH=/Library/Extensions
+    export LIBRARY_SEARCH_PATHS="/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator "
+    export LINKER_DISPLAYS_MANGLED_NAMES=NO
+    export LINK_FILE_LIST_normal_x86_64=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/ChuckNorrisFacts.LinkFileList
+    export LINK_WITH_STANDARD_LIBRARIES=YES
+    export LLVM_TARGET_TRIPLE_OS_VERSION=ios13.1
+    export LLVM_TARGET_TRIPLE_SUFFIX=-simulator
+    export LLVM_TARGET_TRIPLE_VENDOR=apple
+    export LOCALIZED_RESOURCES_FOLDER_PATH=ChuckNorrisFacts.app/en.lproj
+    export LOCALIZED_STRING_MACRO_NAMES="NSLocalizedString CFCopyLocalizedString"
+    export LOCALIZED_STRING_SWIFTUI_SUPPORT=YES
+    export LOCAL_ADMIN_APPS_DIR=/Applications/Utilities
+    export LOCAL_APPS_DIR=/Applications
+    export LOCAL_DEVELOPER_DIR=/Library/Developer
+    export LOCAL_LIBRARY_DIR=/Library
+    export LOCROOT="/var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/(A Document Being Saved By muter 25)/StoneApp"
+    export LOCSYMROOT="/var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/(A Document Being Saved By muter 25)/StoneApp"
+    export MACH_O_TYPE=mh_execute
+    export MAC_OS_X_PRODUCT_BUILD_VERSION=19A603
+    export MAC_OS_X_VERSION_ACTUAL=101500
+    export MAC_OS_X_VERSION_MAJOR=101500
+    export MAC_OS_X_VERSION_MINOR=1500
+    export METAL_LIBRARY_FILE_BASE=default
+    export METAL_LIBRARY_OUTPUT_DIR=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator/ChuckNorrisFacts.app
+    export MODULES_FOLDER_PATH=ChuckNorrisFacts.app/Modules
+    export MODULE_CACHE_DIR=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ModuleCache.noindex
+    export MTL_ENABLE_DEBUG_INFO=INCLUDE_SOURCE
+    export MTL_FAST_MATH=YES
+    export NATIVE_ARCH=i386
+    export NATIVE_ARCH_32_BIT=i386
+    export NATIVE_ARCH_64_BIT=x86_64
+    export NATIVE_ARCH_ACTUAL=x86_64
+    export NO_COMMON=YES
+    export OBJC_ABI_VERSION=2
+    export OBJECT_FILE_DIR=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects
+    export OBJECT_FILE_DIR_normal=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal
+    export OBJROOT=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex
+    export ONLY_ACTIVE_ARCH=YES
+    export OS=MACOS
+    export OSAC=/usr/bin/osacompile
+    export PACKAGE_TYPE=com.apple.package-type.wrapper.application
+    export PASCAL_STRINGS=YES
+    export PATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/usr/local/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/local/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+    export PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES="/usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Applications/Xcode.app/Contents/Developer/Headers /Applications/Xcode.app/Contents/Developer/SDKs /Applications/Xcode.app/Contents/Developer/Platforms"
+    export PBDEVELOPMENTPLIST_PATH=ChuckNorrisFacts.app/pbdevelopment.plist
+    export PER_ARCH_OBJECT_FILE_DIR=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/undefined_arch
+    export PER_VARIANT_OBJECT_FILE_DIR=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal
+    export PKGINFO_FILE_PATH=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/PkgInfo
+    export PKGINFO_PATH=ChuckNorrisFacts.app/PkgInfo
+    export PLATFORM_DEVELOPER_APPLICATIONS_DIR=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications
+    export PLATFORM_DEVELOPER_BIN_DIR=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin
+    export PLATFORM_DEVELOPER_LIBRARY_DIR=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library
+    export PLATFORM_DEVELOPER_SDK_DIR=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs
+    export PLATFORM_DEVELOPER_TOOLS_DIR=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Tools
+    export PLATFORM_DEVELOPER_USR_DIR=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr
+    export PLATFORM_DIR=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform
+    export PLATFORM_DISPLAY_NAME="iOS Simulator"
+    export PLATFORM_NAME=iphonesimulator
+    export PLATFORM_PREFERRED_ARCH=x86_64
+    export PLATFORM_PRODUCT_BUILD_VERSION=17A820
+    export PLIST_FILE_OUTPUT_FORMAT=binary
+    export PLUGINS_FOLDER_PATH=ChuckNorrisFacts.app/PlugIns
+    export PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR=YES
+    export PRECOMP_DESTINATION_DIR=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/PrefixHeaders
+    export PRESERVE_DEAD_CODE_INITS_AND_TERMS=NO
+    export PRIVATE_HEADERS_FOLDER_PATH=ChuckNorrisFacts.app/PrivateHeaders
+    export PRODUCT_BUNDLE_IDENTIFIER=lucas.ChuckNorrisFacts
+    export PRODUCT_BUNDLE_PACKAGE_TYPE=APPL
+    export PRODUCT_MODULE_NAME=ChuckNorrisFacts
+    export PRODUCT_NAME=ChuckNorrisFacts
+    export PRODUCT_SETTINGS_PATH="/var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/(A Document Being Saved By muter 25)/StoneApp/ChuckNorrisFacts/Info.plist"
+    export PRODUCT_TYPE=com.apple.product-type.application
+    export PROFILING_CODE=NO
+    export PROJECT=ChuckNorrisFacts
+    export PROJECT_DERIVED_FILE_DIR=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/DerivedSources
+    export PROJECT_DIR="/var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/(A Document Being Saved By muter 25)/StoneApp"
+    export PROJECT_FILE_PATH="/var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/(A Document Being Saved By muter 25)/StoneApp/ChuckNorrisFacts.xcodeproj"
+    export PROJECT_NAME=ChuckNorrisFacts
+    export PROJECT_TEMP_DIR=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build
+    export PROJECT_TEMP_ROOT=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex
+    export PUBLIC_HEADERS_FOLDER_PATH=ChuckNorrisFacts.app/Headers
+    export RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS=YES
+    export REMOVE_CVS_FROM_RESOURCES=YES
+    export REMOVE_GIT_FROM_RESOURCES=YES
+    export REMOVE_HEADERS_FROM_EMBEDDED_BUNDLES=YES
+    export REMOVE_HG_FROM_RESOURCES=YES
+    export REMOVE_SVN_FROM_RESOURCES=YES
+    export REZ_COLLECTOR_DIR=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/ResourceManagerResources
+    export REZ_OBJECTS_DIR=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/ResourceManagerResources/Objects
+    export REZ_SEARCH_PATHS="/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator "
+    export SCAN_ALL_SOURCE_FILES_FOR_INCLUDES=NO
+    export SCRIPTS_FOLDER_PATH=ChuckNorrisFacts.app/Scripts
+    export SCRIPT_INPUT_FILE_COUNT=0
+    export SCRIPT_INPUT_FILE_LIST_COUNT=0
+    export SCRIPT_OUTPUT_FILE_COUNT=0
+    export SCRIPT_OUTPUT_FILE_LIST_COUNT=0
+    export SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.1.sdk
+    export SDK_DIR=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.1.sdk
+    export SDK_DIR_iphonesimulator13_1=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.1.sdk
+    export SDK_NAME=iphonesimulator13.1
+    export SDK_NAMES=iphonesimulator13.1
+    export SDK_PRODUCT_BUILD_VERSION=17A820
+    export SDK_VERSION=13.1
+    export SDK_VERSION_ACTUAL=130100
+    export SDK_VERSION_MAJOR=130000
+    export SDK_VERSION_MINOR=100
+    export SED=/usr/bin/sed
+    export SEPARATE_STRIP=NO
+    export SEPARATE_SYMBOL_EDIT=NO
+    export SET_DIR_MODE_OWNER_GROUP=YES
+    export SET_FILE_MODE_OWNER_GROUP=NO
+    export SHALLOW_BUNDLE=YES
+    export SHARED_DERIVED_FILE_DIR=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator/DerivedSources
+    export SHARED_FRAMEWORKS_FOLDER_PATH=ChuckNorrisFacts.app/SharedFrameworks
+    export SHARED_PRECOMPS_DIR=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/PrecompiledHeaders
+    export SHARED_SUPPORT_FOLDER_PATH=ChuckNorrisFacts.app/SharedSupport
+    export SKIP_INSTALL=NO
+    export SOURCE_ROOT="/var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/(A Document Being Saved By muter 25)/StoneApp"
+    export SRCROOT="/var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/(A Document Being Saved By muter 25)/StoneApp"
+    export STRINGS_FILE_OUTPUT_ENCODING=binary
+    export STRIP_BITCODE_FROM_COPIED_FILES=NO
+    export STRIP_INSTALLED_PRODUCT=YES
+    export STRIP_STYLE=all
+    export STRIP_SWIFT_SYMBOLS=YES
+    export SUPPORTED_DEVICE_FAMILIES=1,2
+    export SUPPORTED_PLATFORMS="iphoneos iphonesimulator"
+    export SUPPORTS_TEXT_BASED_API=NO
+    export SWIFT_ACTIVE_COMPILATION_CONDITIONS=DEBUG
+    export SWIFT_OPTIMIZATION_LEVEL=-Onone
+    export SWIFT_PLATFORM_TARGET_PREFIX=ios
+    export SWIFT_RESPONSE_FILE_PATH_normal_x86_64=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/ChuckNorrisFacts.SwiftFileList
+    export SWIFT_VERSION=5.0
+    export SYMROOT=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products
+    export SYSTEM_ADMIN_APPS_DIR=/Applications/Utilities
+    export SYSTEM_APPS_DIR=/Applications
+    export SYSTEM_CORE_SERVICES_DIR=/System/Library/CoreServices
+    export SYSTEM_DEMOS_DIR=/Applications/Extras
+    export SYSTEM_DEVELOPER_APPS_DIR=/Applications/Xcode.app/Contents/Developer/Applications
+    export SYSTEM_DEVELOPER_BIN_DIR=/Applications/Xcode.app/Contents/Developer/usr/bin
+    export SYSTEM_DEVELOPER_DEMOS_DIR="/Applications/Xcode.app/Contents/Developer/Applications/Utilities/Built Examples"
+    export SYSTEM_DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer
+    export SYSTEM_DEVELOPER_DOC_DIR="/Applications/Xcode.app/Contents/Developer/ADC Reference Library"
+    export SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR="/Applications/Xcode.app/Contents/Developer/Applications/Graphics Tools"
+    export SYSTEM_DEVELOPER_JAVA_TOOLS_DIR="/Applications/Xcode.app/Contents/Developer/Applications/Java Tools"
+    export SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR="/Applications/Xcode.app/Contents/Developer/Applications/Performance Tools"
+    export SYSTEM_DEVELOPER_RELEASENOTES_DIR="/Applications/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes"
+    export SYSTEM_DEVELOPER_TOOLS=/Applications/Xcode.app/Contents/Developer/Tools
+    export SYSTEM_DEVELOPER_TOOLS_DOC_DIR="/Applications/Xcode.app/Contents/Developer/ADC Reference Library/documentation/DeveloperTools"
+    export SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR="/Applications/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes/DeveloperTools"
+    export SYSTEM_DEVELOPER_USR_DIR=/Applications/Xcode.app/Contents/Developer/usr
+    export SYSTEM_DEVELOPER_UTILITIES_DIR=/Applications/Xcode.app/Contents/Developer/Applications/Utilities
+    export SYSTEM_DEXT_INSTALL_PATH=/System/Library/DriverExtensions
+    export SYSTEM_DOCUMENTATION_DIR=/Library/Documentation
+    export SYSTEM_KEXT_INSTALL_PATH=/System/Library/Extensions
+    export SYSTEM_LIBRARY_DIR=/System/Library
+    export TAPI_VERIFY_MODE=ErrorsOnly
+    export TARGETED_DEVICE_FAMILY=1,2
+    export TARGETNAME=ChuckNorrisFacts
+    export TARGET_BUILD_DIR=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator
+    export TARGET_DEVICE_IDENTIFIER=0CB4F4E0-80D3-4C42-BA2F-8B1A37D0CDC6
+    export TARGET_DEVICE_MODEL=iPhone10,4
+    export TARGET_DEVICE_OS_VERSION=13.1
+    export TARGET_NAME=ChuckNorrisFacts
+    export TARGET_TEMP_DIR=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build
+    export TEMP_DIR=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build
+    export TEMP_FILES_DIR=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build
+    export TEMP_FILE_DIR=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build
+    export TEMP_ROOT=/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex
+    export TOOLCHAINS="com.apple.dt.toolchain.XcodeDefault com.apple.dt.toolchain.XcodeDefault"
+    export TOOLCHAIN_DIR=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain
+    export TREAT_MISSING_BASELINES_AS_TEST_FAILURES=NO
+    export TeamIdentifierPrefix=EU52X4J36U.
+    export UID=501
+    export UNLOCALIZED_RESOURCES_FOLDER_PATH=ChuckNorrisFacts.app
+    export UNSTRIPPED_PRODUCT=NO
+    export USER=lucascesarnogueirafonseca
+    export USER_APPS_DIR=/Users/lucascesarnogueirafonseca/Applications
+    export USER_LIBRARY_DIR=/Users/lucascesarnogueirafonseca/Library
+    export USE_DYNAMIC_NO_PIC=YES
+    export USE_HEADERMAP=YES
+    export USE_HEADER_SYMLINKS=NO
+    export USE_LLVM_TARGET_TRIPLES=YES
+    export USE_LLVM_TARGET_TRIPLES_FOR_CLANG=YES
+    export USE_LLVM_TARGET_TRIPLES_FOR_LD=YES
+    export USE_LLVM_TARGET_TRIPLES_FOR_TAPI=YES
+    export VALIDATE_DEVELOPMENT_ASSET_PATHS=YES_ERROR
+    export VALIDATE_PRODUCT=NO
+    export VALIDATE_WORKSPACE=NO
+    export VALID_ARCHS="i386 x86_64"
+    export VERBOSE_PBXCP=NO
+    export VERSIONPLIST_PATH=ChuckNorrisFacts.app/version.plist
+    export VERSION_INFO_BUILDER=lucascesarnogueirafonseca
+    export VERSION_INFO_FILE=ChuckNorrisFacts_vers.c
+    export VERSION_INFO_STRING=""@(#)PROGRAM:ChuckNorrisFacts  PROJECT:ChuckNorrisFacts-""
+    export WRAPPER_EXTENSION=app
+    export WRAPPER_NAME=ChuckNorrisFacts.app
+    export WRAPPER_SUFFIX=.app
+    export WRAP_ASSET_PACKS_IN_SEPARATE_DIRECTORIES=NO
+    export XCODE_APP_SUPPORT_DIR=/Applications/Xcode.app/Contents/Developer/Library/Xcode
+    export XCODE_PRODUCT_BUILD_VERSION=11A1027
+    export XCODE_VERSION_ACTUAL=1110
+    export XCODE_VERSION_MAJOR=1100
+    export XCODE_VERSION_MINOR=1110
+    export XPCSERVICES_FOLDER_PATH=ChuckNorrisFacts.app/XPCServices
+    export YACC=yacc
+    export arch=undefined_arch
+    export variant=normal
+    /bin/sh -c /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Script-CA0DAED82368F51000C5D2C6.sh
+Loading configuration from '.swiftlint.yml'
+Linting Swift files at paths 
+Linting 'ActivityView.swift' (1/41)
+Linting 'SearchFactView.swift' (2/41)
+Linting 'SearchFactViewModel.swift' (3/41)
+Linting 'PerformQuery.swift' (4/41)
+Linting 'SearchBar.swift' (5/41)
+Linting 'FactViewModel.swift' (6/41)
+Linting 'FactsListViewModel.swift' (7/41)
+Linting 'FontSize.swift' (8/41)
+Linting 'ChuckNorrisFact.swift' (9/41)
+Linting 'FactListState.swift' (10/41)
+Linting 'FactCategories.swift' (11/41)
+Linting 'FactsListView.swift' (12/41)
+Linting 'FactRow.swift' (13/41)
+Linting 'MainCoordinator.swift' (14/41)
+Linting 'Coordinator.swift' (15/41)
+Linting 'UnwrapperOperator.swift' (16/41)
+Linting 'ErrorCasting.swift' (17/41)
+Linting 'AppDelegate.swift' (18/41)
+Linting 'SceneDelegate.swift' (19/41)
+Linting 'Executor.swift' (20/41)
+Linting 'Service.swift' (21/41)
+Linting 'ServiceExecutor.swift' (22/41)
+Linting 'Error.swift' (23/41)
+Linting 'ServiceExecutor+Default.swift' (24/41)
+Linting 'Service+Default.swift' (25/41)
+Linting 'ServiceProvider.swift' (26/41)
+Linting 'GenericError.swift' (27/41)
+Linting 'ChuckNorrisFacts/CoreData/SearchTermManager.swift' (28/41)
+Linting 'ChuckNorrisFacts/CoreData/ServiceResultManager.swift' (29/41)
+Linting 'Decodable+Utils.swift' (30/41)
+Linting 'URLRequest+Log.swift' (31/41)
+Linting 'Data+String.swift' (32/41)
+Linting 'Collection+Utils.swift' (33/41)
+Linting 'ChuckNorrisFactsService.swift' (34/41)
+Linting 'muter_tmp/SearchTermManager.swift' (35/41)
+Linting 'muter_tmp/ServiceResultManager.swift' (36/41)
+Linting 'SearchViewModelTests.swift' (37/41)
+Linting 'FactsListViewModelTests.swift' (38/41)
+Linting 'FactViewModelTests.swift' (39/41)
+Linting 'OperatorsTests.swift' (40/41)
+Linting 'ChuckNorrisFactsUITests.swift' (41/41)
+Done linting! Found 0 violations, 0 serious in 41 files.
+
+CompileSwiftSources normal x86_64 com.apple.xcode.tools.swift.compiler (in target 'ChuckNorrisFacts' from project 'ChuckNorrisFacts')
+    cd /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/(A\ Document\ Being\ Saved\ By\ muter\ 25)/StoneApp
+    export DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer
+    export SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.1.sdk
+    export TOOLCHAINS="com.apple.dt.toolchain.XcodeDefault com.apple.dt.toolchain.XcodeDefault"
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -incremental -module-name ChuckNorrisFacts -Onone -enable-batch-mode -enforce-exclusivity=checked @/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/ChuckNorrisFacts.SwiftFileList -DDEBUG -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.1.sdk -target x86_64-apple-ios13.1-simulator -g -module-cache-path /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -Xfrontend -serialize-debugging-options -profile-coverage-mapping -profile-generate -enable-testing -index-store-path /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Index/DataStore -swift-version 5 -I /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator -F /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator -c -j4 -output-file-map /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/ChuckNorrisFacts-OutputFileMap.json -parseable-output -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/ChuckNorrisFacts.swiftmodule -Xcc -I/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/swift-overrides.hmap -Xcc -iquote -Xcc /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/ChuckNorrisFacts-generated-files.hmap -Xcc -I/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/ChuckNorrisFacts-own-target-headers.hmap -Xcc -I/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/ChuckNorrisFacts-all-target-headers.hmap -Xcc -iquote -Xcc /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/ChuckNorrisFacts-project-headers.hmap -Xcc -I/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/DerivedSources-normal/x86_64 -Xcc -I/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/DerivedSources/x86_64 -Xcc -I/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/DerivedSources -Xcc -DDEBUG=1 -emit-objc-header -emit-objc-header-path /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/ChuckNorrisFacts-Swift.h -working-directory /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/\(A\ Document\ Being\ Saved\ By\ muter\ 25\)/StoneApp
+
+CompileSwift normal x86_64 /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/(A\ Document\ Being\ Saved\ By\ muter\ 25)/StoneApp/ChuckNorrisFacts/CoreData/ServiceResultManager.swift (in target 'ChuckNorrisFacts' from project 'ChuckNorrisFacts')
+    cd /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/(A\ Document\ Being\ Saved\ By\ muter\ 25)/StoneApp
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift -frontend -c /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/\(A\ Document\ Being\ Saved\ By\ muter\ 25\)/StoneApp/ChuckNorrisFacts/Network/Error.swift /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/\(A\ Document\ Being\ Saved\ By\ muter\ 25\)/StoneApp/ChuckNorrisFacts/Sections/Facts/ViewModel/FactsListViewModel.swift /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/\(A\ Document\ Being\ Saved\ By\ muter\ 25\)/StoneApp/ChuckNorrisFacts/Sections/Facts/Model/FontSize.swift /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/\(A\ Document\ Being\ Saved\ By\ muter\ 25\)/StoneApp/ChuckNorrisFacts/Sections/Activity/ActivityView.swift /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/\(A\ Document\ Being\ Saved\ By\ muter\ 25\)/StoneApp/ChuckNorrisFacts/Sections/Facts/View/FactCategories.swift /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/\(A\ Document\ Being\ Saved\ By\ muter\ 25\)/StoneApp/ChuckNorrisFacts/Extensions/URLRequest+Log.swift /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/\(A\ Document\ Being\ Saved\ By\ muter\ 25\)/StoneApp/ChuckNorrisFacts/Extensions/Decodable+Utils.swift /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/\(A\ Document\ Being\ Saved\ By\ muter\ 25\)/StoneApp/ChuckNorrisFacts/Coordinator/Coordinator.swift /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/\(A\ Document\ Being\ Saved\ By\ muter\ 25\)/StoneApp/ChuckNorrisFacts/Service/ChuckNorrisFactsService.swift /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/\(A\ Document\ Being\ Saved\ By\ muter\ 25\)/StoneApp/ChuckNorrisFacts/Sections/Search/View/SearchBar.swift /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/\(A\ Document\ Being\ Saved\ By\ muter\ 25\)/StoneApp/ChuckNorrisFacts/Operators/UnwrapperOperator.swift /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/\(A\ Document\ Being\ Saved\ By\ muter\ 25\)/StoneApp/ChuckNorrisFacts/Sections/Search/View/SearchFactView.swift /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/\(A\ Document\ Being\ Saved\ By\ muter\ 25\)/StoneApp/ChuckNorrisFacts/Network/Service.swift /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/\(A\ Document\ Being\ Saved\ By\ muter\ 25\)/StoneApp/ChuckNorrisFacts/CoreData/SearchTermManager.swift /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/\(A\ Document\ Being\ Saved\ By\ muter\ 25\)/StoneApp/ChuckNorrisFacts/Source/AppDelegate.swift /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/\(A\ Document\ Being\ Saved\ By\ muter\ 25\)/StoneApp/ChuckNorrisFacts/Sections/Facts/Model/ChuckNorrisFact.swift /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/\(A\ Document\ Being\ Saved\ By\ muter\ 25\)/StoneApp/ChuckNorrisFacts/Sections/Facts/ViewModel/FactViewModel.swift /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/\(A\ Document\ Being\ Saved\ By\ muter\ 25\)/StoneApp/ChuckNorrisFacts/Extensions/Data+String.swift /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/\(A\ Document\ Being\ Saved\ By\ muter\ 25\)/StoneApp/ChuckNorrisFacts/Operators/ErrorCasting.swift /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/\(A\ Document\ Being\ Saved\ By\ muter\ 25\)/StoneApp/ChuckNorrisFacts/Network/ServiceExecutor+Default.swift /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/\(A\ Document\ Being\ Saved\ By\ muter\ 25\)/StoneApp/ChuckNorrisFacts/Sections/Facts/Model/FactListState.swift /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/\(A\ Document\ Being\ Saved\ By\ muter\ 25\)/StoneApp/ChuckNorrisFacts/Network/ServiceProvider.swift /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/\(A\ Document\ Being\ Saved\ By\ muter\ 25\)/StoneApp/ChuckNorrisFacts/Network/Executor.swift /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/\(A\ Document\ Being\ Saved\ By\ muter\ 25\)/StoneApp/ChuckNorrisFacts/Coordinator/MainCoordinator.swift /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/\(A\ Document\ Being\ Saved\ By\ muter\ 25\)/StoneApp/ChuckNorrisFacts/Sections/Search/ViewModel/SearchFactViewModel.swift /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/\(A\ Document\ Being\ Saved\ By\ muter\ 25\)/StoneApp/ChuckNorrisFacts/Source/SceneDelegate.swift /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/\(A\ Document\ Being\ Saved\ By\ muter\ 25\)/StoneApp/ChuckNorrisFacts/Sections/Facts/View/FactsListView.swift /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/\(A\ Document\ Being\ Saved\ By\ muter\ 25\)/StoneApp/ChuckNorrisFacts/Network/ServiceExecutor.swift -primary-file /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/\(A\ Document\ Being\ Saved\ By\ muter\ 25\)/StoneApp/ChuckNorrisFacts/CoreData/ServiceResultManager.swift /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/\(A\ Document\ Being\ Saved\ By\ muter\ 25\)/StoneApp/ChuckNorrisFacts/Extensions/Collection+Utils.swift /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/\(A\ Document\ Being\ Saved\ By\ muter\ 25\)/StoneApp/ChuckNorrisFacts/Sections/Facts/View/Row/FactRow.swift /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/\(A\ Document\ Being\ Saved\ By\ muter\ 25\)/StoneApp/ChuckNorrisFacts/Sections/Search/Model/PerformQuery.swift /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/\(A\ Document\ Being\ Saved\ By\ muter\ 25\)/StoneApp/ChuckNorrisFacts/Network/Service+Default.swift /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/DerivedSources/CoreDataGenerated/ChuckNorrisFacts/EntityData+CoreDataClass.swift /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/DerivedSources/CoreDataGenerated/ChuckNorrisFacts/EntityData+CoreDataProperties.swift /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/DerivedSources/CoreDataGenerated/ChuckNorrisFacts/SearchTerm+CoreDataClass.swift /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/DerivedSources/CoreDataGenerated/ChuckNorrisFacts/SearchTerm+CoreDataProperties.swift /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/DerivedSources/CoreDataGenerated/ChuckNorrisFacts/ChuckNorrisFacts+CoreDataModel.swift -emit-module-path /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/ServiceResultManager\~partial.swiftmodule -emit-module-doc-path /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/ServiceResultManager\~partial.swiftdoc -serialize-diagnostics-path /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/ServiceResultManager.dia -emit-dependencies-path /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/ServiceResultManager.d -emit-reference-dependencies-path /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/ServiceResultManager.swiftdeps -target x86_64-apple-ios13.1-simulator -enable-objc-interop -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.1.sdk -I /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator -F /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator -enable-testing -g -module-cache-path /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -profile-generate -profile-coverage-mapping -swift-version 5 -enforce-exclusivity=checked -Onone -D DEBUG -serialize-debugging-options -Xcc -working-directory -Xcc /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/\(A\ Document\ Being\ Saved\ By\ muter\ 25\)/StoneApp -enable-anonymous-context-mangled-names -Xcc -I/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/swift-overrides.hmap -Xcc -iquote -Xcc /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/ChuckNorrisFacts-generated-files.hmap -Xcc -I/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/ChuckNorrisFacts-own-target-headers.hmap -Xcc -I/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/ChuckNorrisFacts-all-target-headers.hmap -Xcc -iquote -Xcc /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/ChuckNorrisFacts-project-headers.hmap -Xcc -I/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/DerivedSources-normal/x86_64 -Xcc -I/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/DerivedSources/x86_64 -Xcc -I/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/DerivedSources -Xcc -DDEBUG=1 -module-name ChuckNorrisFacts -o /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/ServiceResultManager.o -index-store-path /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Index/DataStore -index-system-modules
+
+MergeSwiftModule normal x86_64 (in target 'ChuckNorrisFacts' from project 'ChuckNorrisFacts')
+    cd /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/(A\ Document\ Being\ Saved\ By\ muter\ 25)/StoneApp
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift -frontend -merge-modules -emit-module /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/Error\~partial.swiftmodule /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/FactsListViewModel\~partial.swiftmodule /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/FontSize\~partial.swiftmodule /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/ActivityView\~partial.swiftmodule /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/FactCategories\~partial.swiftmodule /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/URLRequest+Log\~partial.swiftmodule /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/Decodable+Utils\~partial.swiftmodule /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/Coordinator\~partial.swiftmodule /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/ChuckNorrisFactsService\~partial.swiftmodule /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/SearchBar\~partial.swiftmodule /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/UnwrapperOperator\~partial.swiftmodule /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/SearchFactView\~partial.swiftmodule /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/Service\~partial.swiftmodule /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/SearchTermManager\~partial.swiftmodule /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/AppDelegate\~partial.swiftmodule /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/ChuckNorrisFact\~partial.swiftmodule /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/FactViewModel\~partial.swiftmodule /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/Data+String\~partial.swiftmodule /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/ErrorCasting\~partial.swiftmodule /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/ServiceExecutor+Default\~partial.swiftmodule /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/FactListState\~partial.swiftmodule /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/ServiceProvider\~partial.swiftmodule /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/Executor\~partial.swiftmodule /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/MainCoordinator\~partial.swiftmodule /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/SearchFactViewModel\~partial.swiftmodule /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/SceneDelegate\~partial.swiftmodule /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/FactsListView\~partial.swiftmodule /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/ServiceExecutor\~partial.swiftmodule /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/ServiceResultManager\~partial.swiftmodule /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/Collection+Utils\~partial.swiftmodule /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/FactRow\~partial.swiftmodule /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/PerformQuery\~partial.swiftmodule /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/Service+Default\~partial.swiftmodule /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/EntityData+CoreDataClass\~partial.swiftmodule /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/EntityData+CoreDataProperties\~partial.swiftmodule /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/SearchTerm+CoreDataClass\~partial.swiftmodule /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/SearchTerm+CoreDataProperties\~partial.swiftmodule /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/ChuckNorrisFacts+CoreDataModel\~partial.swiftmodule -parse-as-library -sil-merge-partial-modules -disable-diagnostic-passes -disable-sil-perf-optzns -target x86_64-apple-ios13.1-simulator -enable-objc-interop -sdk /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.1.sdk -I /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator -F /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator -enable-testing -g -module-cache-path /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ModuleCache.noindex -profile-generate -profile-coverage-mapping -swift-version 5 -enforce-exclusivity=checked -Onone -D DEBUG -serialize-debugging-options -Xcc -working-directory -Xcc /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/\(A\ Document\ Being\ Saved\ By\ muter\ 25\)/StoneApp -enable-anonymous-context-mangled-names -Xcc -I/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/swift-overrides.hmap -Xcc -iquote -Xcc /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/ChuckNorrisFacts-generated-files.hmap -Xcc -I/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/ChuckNorrisFacts-own-target-headers.hmap -Xcc -I/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/ChuckNorrisFacts-all-target-headers.hmap -Xcc -iquote -Xcc /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/ChuckNorrisFacts-project-headers.hmap -Xcc -I/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/DerivedSources-normal/x86_64 -Xcc -I/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/DerivedSources/x86_64 -Xcc -I/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/DerivedSources -Xcc -DDEBUG=1 -emit-module-doc-path /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/ChuckNorrisFacts.swiftdoc -emit-objc-header-path /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/ChuckNorrisFacts-Swift.h -module-name ChuckNorrisFacts -o /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/ChuckNorrisFacts.swiftmodule
+
+Ld /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator/ChuckNorrisFacts.app/ChuckNorrisFacts normal x86_64 (in target 'ChuckNorrisFacts' from project 'ChuckNorrisFacts')
+    cd /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/(A\ Document\ Being\ Saved\ By\ muter\ 25)/StoneApp
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -target x86_64-apple-ios13.1-simulator -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.1.sdk -L/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator -F/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator -filelist /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/ChuckNorrisFacts.LinkFileList -Xlinker -rpath -Xlinker @executable_path/Frameworks -dead_strip -Xlinker -object_path_lto -Xlinker /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/ChuckNorrisFacts_lto.o -Xlinker -export_dynamic -Xlinker -no_deduplicate -Xlinker -objc_abi_version -Xlinker 2 -fobjc-link-runtime -fprofile-instr-generate -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/ChuckNorrisFacts.swiftmodule -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __entitlements -Xlinker /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/ChuckNorrisFacts.app-Simulated.xcent -Xlinker -dependency_info -Xlinker /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/Objects-normal/x86_64/ChuckNorrisFacts_dependency_info.dat -o /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator/ChuckNorrisFacts.app/ChuckNorrisFacts
+
+CopySwiftLibs /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator/ChuckNorrisFacts.app (in target 'ChuckNorrisFacts' from project 'ChuckNorrisFacts')
+    cd /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/(A\ Document\ Being\ Saved\ By\ muter\ 25)/StoneApp
+    export CODESIGN_ALLOCATE=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate
+    export DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer
+    export SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.1.sdk
+    export TOOLCHAINS="com.apple.dt.toolchain.XcodeDefault com.apple.dt.toolchain.XcodeDefault"
+    builtin-swiftStdLibTool --copy --verbose --sign - --scan-executable /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator/ChuckNorrisFacts.app/ChuckNorrisFacts --scan-folder /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator/ChuckNorrisFacts.app/Frameworks --scan-folder /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator/ChuckNorrisFacts.app/PlugIns --platform iphonesimulator --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator/ChuckNorrisFacts.app/Frameworks --strip-bitcode --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os
+
+CodeSign /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator/ChuckNorrisFacts.app (in target 'ChuckNorrisFacts' from project 'ChuckNorrisFacts')
+    cd /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/(A\ Document\ Being\ Saved\ By\ muter\ 25)/StoneApp
+    export CODESIGN_ALLOCATE=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate
+    
+Signing Identity:     "-"
+
+    /usr/bin/codesign --force --sign - --entitlements /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFacts.build/ChuckNorrisFacts.app.xcent --timestamp=none /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator/ChuckNorrisFacts.app
+
+Ld /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator/ChuckNorrisFacts.app/PlugIns/ChuckNorrisFactsTests.xctest/ChuckNorrisFactsTests normal x86_64 (in target 'ChuckNorrisFactsTests' from project 'ChuckNorrisFacts')
+    cd /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/(A\ Document\ Being\ Saved\ By\ muter\ 25)/StoneApp
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -target x86_64-apple-ios13.1-simulator -bundle -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.1.sdk -L/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator -F/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator -L/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -filelist /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFactsTests.build/Objects-normal/x86_64/ChuckNorrisFactsTests.LinkFileList -Xlinker -rpath -Xlinker @executable_path/Frameworks -Xlinker -rpath -Xlinker @loader_path/Frameworks -dead_strip -bundle_loader /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator/ChuckNorrisFacts.app/ChuckNorrisFacts -Xlinker -object_path_lto -Xlinker /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFactsTests.build/Objects-normal/x86_64/ChuckNorrisFactsTests_lto.o -Xlinker -export_dynamic -Xlinker -no_deduplicate -Xlinker -objc_abi_version -Xlinker 2 -fobjc-link-runtime -fprofile-instr-generate -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFactsTests.build/Objects-normal/x86_64/ChuckNorrisFactsTests.swiftmodule -framework XCTest -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __entitlements -Xlinker /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFactsTests.build/ChuckNorrisFactsTests.xctest-Simulated.xcent -Xlinker -dependency_info -Xlinker /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFactsTests.build/Objects-normal/x86_64/ChuckNorrisFactsTests_dependency_info.dat -o /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator/ChuckNorrisFacts.app/PlugIns/ChuckNorrisFactsTests.xctest/ChuckNorrisFactsTests
+
+CopySwiftLibs /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator/ChuckNorrisFacts.app/PlugIns/ChuckNorrisFactsTests.xctest (in target 'ChuckNorrisFactsTests' from project 'ChuckNorrisFacts')
+    cd /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/(A\ Document\ Being\ Saved\ By\ muter\ 25)/StoneApp
+    export CODESIGN_ALLOCATE=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate
+    export DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer
+    export SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator13.1.sdk
+    export TOOLCHAINS="com.apple.dt.toolchain.XcodeDefault com.apple.dt.toolchain.XcodeDefault"
+    builtin-swiftStdLibTool --copy --verbose --sign - --scan-executable /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator/ChuckNorrisFacts.app/PlugIns/ChuckNorrisFactsTests.xctest/ChuckNorrisFactsTests --scan-folder /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator/ChuckNorrisFacts.app/PlugIns/ChuckNorrisFactsTests.xctest/Frameworks --scan-folder /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator/ChuckNorrisFacts.app/PlugIns/ChuckNorrisFactsTests.xctest/PlugIns --platform iphonesimulator --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator/ChuckNorrisFacts.app/PlugIns/ChuckNorrisFactsTests.xctest/Frameworks --strip-bitcode --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Intermediates.noindex/ChuckNorrisFacts.build/Debug-iphonesimulator/ChuckNorrisFactsTests.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os
+
+CodeSign /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator/ChuckNorrisFacts.app/PlugIns/ChuckNorrisFactsTests.xctest (in target 'ChuckNorrisFactsTests' from project 'ChuckNorrisFacts')
+    cd /var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/(A\ Document\ Being\ Saved\ By\ muter\ 25)/StoneApp
+    export CODESIGN_ALLOCATE=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/codesign_allocate
+    
+Signing Identity:     "-"
+
+    /usr/bin/codesign --force --sign - --timestamp=none /Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Build/Products/Debug-iphonesimulator/ChuckNorrisFacts.app/PlugIns/ChuckNorrisFactsTests.xctest
+
+No matching processes belonging to you were found
+2019-11-18 11:50:22.507 xcodebuild[60077:24495156]  IDETestOperationsObserverDebug: Writing diagnostic log for test session to:
+/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Logs/Test/Test-ChuckNorrisFacts-2019.11.18_11-50-17--0300.xcresult/Staging/1_Test/Diagnostics/ChuckNorrisFactsTests-ADAE49ED-D7BB-41B4-BDF7-8D441909A06E/ChuckNorrisFactsTests-7B1580FD-D145-4BE5-BA71-72C377EE6290/Session-ChuckNorrisFactsTests-2019-11-18_115022-acYxWv.log
+2019-11-18 11:50:22.507 xcodebuild[60077:24495002] [MT] IDETestOperationsObserverDebug: (B0E2DA0A-5B79-40C9-84A8-EA6402EE63CA) Beginning test session ChuckNorrisFactsTests-B0E2DA0A-5B79-40C9-84A8-EA6402EE63CA at 2019-11-18 11:50:22.508 with Xcode 11A1027 on target <DVTiPhoneSimulator: 0x7f9ab3da9b80> {
+		SimDevice: iPhone 8 (0CB4F4E0-80D3-4C42-BA2F-8B1A37D0CDC6, iOS 13.1, Shutdown)
+} (13.1 (17A844))
+2019-11-18 11:50:32.504 xcodebuild[60077:24495002] [MT] IDETestOperationsObserverDebug: (B0E2DA0A-5B79-40C9-84A8-EA6402EE63CA) Finished requesting crash reports. Continuing with testing.
+2019-11-18 11:50:34.322 xcodebuild[60077:24495002] [MT] DVTAssertions: Warning in /Library/Caches/com.apple.xbs/Sources/DVTiOSFrameworks/DVTiOSFrameworks-14802/IDEiOSSupportCore/DVTiPhoneSimulator.m:1890
+Details:  [DVTiPhoneSimulator -primaryInstrumentsServer was called from the main thread
+Object:   <DVTiPhoneSimulator: 0x7f9ab3da9b80>
+Method:   -primaryInstrumentsServerWithError:
+Thread:   <NSThread: 0x7f9ab0d05130>{number = 1, name = main}
+Please file a bug at https://feedbackassistant.apple.com with this warning message and any useful information you can provide.
+2019-11-18 11:50:34.958018-0300 ChuckNorrisFacts[60219:24501243] Launching with XCTest injected. Preparing to run tests.
+2019-11-18 11:50:34.977842-0300 ChuckNorrisFacts[60219:24501243] Waiting to run tests until the app finishes launching.
+
+
+#########################
+GET https://api.chucknorris.io/jokes/categories
+BODY 
+ nil
+HEADERS 
+ Optional([:])
+Test Suite 'All tests' started at 2019-11-18 11:50:35.176
+Test Suite 'ChuckNorrisFactsTests.xctest' started at 2019-11-18 11:50:35.177
+Test Suite 'FactViewModelTests' started at 2019-11-18 11:50:35.178
+Test Case '-[ChuckNorrisFactsTests.FactViewModelTests testCategories]' started.
+Test Case '-[ChuckNorrisFactsTests.FactViewModelTests testCategories]' passed (0.002 seconds).
+Test Case '-[ChuckNorrisFactsTests.FactViewModelTests testEquatable]' started.
+Test Case '-[ChuckNorrisFactsTests.FactViewModelTests testEquatable]' passed (0.001 seconds).
+Test Case '-[ChuckNorrisFactsTests.FactViewModelTests testFactDescription]' started.
+Test Case '-[ChuckNorrisFactsTests.FactViewModelTests testFactDescription]' passed (0.001 seconds).
+Test Case '-[ChuckNorrisFactsTests.FactViewModelTests testFontSize]' started.
+Test Case '-[ChuckNorrisFactsTests.FactViewModelTests testFontSize]' passed (0.001 seconds).
+Test Case '-[ChuckNorrisFactsTests.FactViewModelTests testShareActivityView]' started.
+Test Case '-[ChuckNorrisFactsTests.FactViewModelTests testShareActivityView]' passed (0.005 seconds).
+Test Case '-[ChuckNorrisFactsTests.FactViewModelTests testUncategorizedCategorie]' started.
+Test Case '-[ChuckNorrisFactsTests.FactViewModelTests testUncategorizedCategorie]' passed (0.001 seconds).
+Test Suite 'FactViewModelTests' passed at 2019-11-18 11:50:35.195.
+	 Executed 6 tests, with 0 failures (0 unexpected) in 0.011 (0.017) seconds
+Test Suite 'FactsListViewModelTests' started at 2019-11-18 11:50:35.196
+Test Case '-[ChuckNorrisFactsTests.FactsListViewModelTests testFetchFactsFailureWithoutCache]' started.
+0
+An unexpected error occurred, please try again later.
+Test Case '-[ChuckNorrisFactsTests.FactsListViewModelTests testFetchFactsFailureWithoutCache]' passed (0.009 seconds).
+Test Case '-[ChuckNorrisFactsTests.FactsListViewModelTests testFetchFactsSuccess]' started.
+✅ Cache Loaded
+Test Case '-[ChuckNorrisFactsTests.FactsListViewModelTests testFetchFactsSuccess]' passed (0.004 seconds).
+Test Case '-[ChuckNorrisFactsTests.FactsListViewModelTests testFetchFactsZeroResultsSuccess]' started.
+✅ Cache Loaded
+✅ Request completed
+[
+  "animal",
+  "career",
+  "celebrity",
+  "dev",
+  "explicit",
+  "fashion",
+  "food",
+  "history",
+  "money",
+  "movie",
+  "music",
+  "political",
+  "religion",
+  "science",
+  "sport",
+  "travel"
+]
+/var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/(A Document Being Saved By muter 25)/StoneApp/ChuckNorrisFactsTests/FactsListViewModelTests.swift:84: error: -[ChuckNorrisFactsTests.FactsListViewModelTests testFetchFactsZeroResultsSuccess] : Asynchronous wait failed: Exceeded timeout of 5 seconds, with unfulfilled expectations: "Load Facts Zero Results Success".
+Test Case '-[ChuckNorrisFactsTests.FactsListViewModelTests testFetchFactsZeroResultsSuccess]' failed (5.069 seconds).
+Test Case '-[ChuckNorrisFactsTests.FactsListViewModelTests testLoadCategories]' started.
+✅ Cache Loaded
+Test Case '-[ChuckNorrisFactsTests.FactsListViewModelTests testLoadCategories]' passed (0.005 seconds).
+Test Case '-[ChuckNorrisFactsTests.FactsListViewModelTests testLocalRandonLocalFacts]' started.
+2019-11-18 11:50:40.290924-0300 ChuckNorrisFacts[60219:24501243] *** Assertion failure in -[XCTestExpectation fulfill], /Library/Caches/com.apple.xbs/Sources/XCTest_Sim/XCTest-15400/Sources/XCTestFramework/Async/XCTestExpectation.m:79
+/var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/(A Document Being Saved By muter 25)/StoneApp/ChuckNorrisFactsTests/FactsListViewModelTests.swift:125: error: -[ChuckNorrisFactsTests.FactsListViewModelTests testLocalRandonLocalFacts] : failed: caught "NSInternalInconsistencyException", "API violation - multiple calls made to -[XCTestExpectation fulfill] for Failed to load local facts."
+(
+	0   CoreFoundation                      0x00007fff23baa1ee __exceptionPreprocess + 350
+	1   libobjc.A.dylib                     0x00007fff50864b20 objc_exception_throw + 48
+	2   CoreFoundation                      0x00007fff23ba9f68 +[NSException raise:format:arguments:] + 88
+	3   Foundation                          0x00007fff25614de9 -[NSAssertionHandler handleFailureInMethod:object:file:lineNumber:description:] + 191
+	4   XCTest                              0x000000010d008b41 -[XCTestExpectation fulfill] + 652
+	5   ChuckNorrisFactsTests               0x000000010d2609d2 $s21ChuckNorrisFactsTests0c13ListViewModelD0C015testLocalRandoniC0yyFy0abC004FactE5StateOcfU_ + 354
+	6   ChuckNorrisFactsTests               0x000000010d25e38f $s16ChuckNorrisFacts13FactListStateOIegy_ACIegn_TR + 15
+	7   Combine                             0x00007fff23289513 $s7Combine11SubscribersO4SinkC7receiveyAC6DemandVxF + 35
+	8   Combine                             0x00007fff23289750 $s7Combine11SubscribersO4SinkCy_xq_GAA10SubscriberA2aGP7receiveyAC6DemandV5InputQzFTW + 16
+	9   Combine                             0x00007fff23289c93 $s7Combine16AnySubscriberBoxC7receiveyAA11SubscribersO6DemandV5InputQzF + 35
+	10  Combine                             0x00007fff232e9075 $s7Combine19CurrentValueSubjectC7ConduitC5offeryyxF + 165
+	11  Combine                             0x00007fff232e8408 $s7Combine19CurrentValueSubjectC4sendyyxF + 296
+	12  Combine                             0x00007fff232acedd $s7Combine9PublishedV18_enclosingInstance7wrapped7storagexqd___s24ReferenceWritableKeyPathCyqd__xGAHyqd__ACyxGGtcRld__CluisZTf4ngdgd_n + 333
+	13  Combine                             0x00007fff232ac98b $s7Combine9PublishedV18_enclosingInstance7wrapped7storagexqd___s24ReferenceWritableKeyPathCyqd__xGAHyqd__ACyxGGtcRld__CluisZ + 27
+	14  ChuckNorrisFacts                    0x000000010cb08537 $s16ChuckNorrisFacts0C13ListViewModelC12currentStateAA04FactdH0Ovs + 103
+	15  ChuckNorrisFacts                    0x000000010cb0ac5b $s16ChuckNorrisFacts0C13ListViewModelC09loadLocalC0yyF + 651
+	16  ChuckNorrisFactsTests               0x000000010d26079a $s21ChuckNorrisFactsTests0c13ListViewModelD0C015testLocalRandoniC0yyF + 1482
+	17  ChuckNorrisFactsTests               0x000000010d260bbb $s21ChuckNorrisFactsTests0c13ListViewModelD0C015testLocalRandoniC0yyFTo + 43
+	18  CoreFoundation                      0x00007fff23bb138c __invoking___ + 140
+	19  CoreFoundation                      0x00007fff23bae49f -[NSInvocation invoke] + 319
+	20  XCTest                              0x000000010cf7c121 __24-[XCTestCase invokeTest]_block_invoke.208 + 78
+	21  XCTest                              0x000000010cfd61e2 -[XCTestCase(Failures) performFailableBlock:testCaseRun:shouldInterruptTest:] + 57
+	22  XCTest                              0x000000010cfd6100 -[XCTestCase(Failures) _performTurningExceptionsIntoFailuresInterruptAfterHandling:block:] + 96
+	23  XCTest                              0x000000010cf7bc0a __24-[XCTestCase invokeTest]_block_invoke + 1153
+	24  XCTest                              0x000000010cf7b6e2 -[XCTestCase testContextPerformInScope:] + 211
+	25  XCTest                              0x000000010cf7b77c -[XCTestCase invokeTest] + 137
+	26  XCTest                              0x000000010cf7d4ed __26-[XCTestCase performTest:]_block_invoke_2 + 43
+	27  XCTest                              0x000000010cfd61e2 -[XCTestCase(Failures) performFailableBlock:testCaseRun:shouldInterruptTest:] + 57
+	28  XCTest                              0x000000010cfd6100 -[XCTestCase(Failures) _performTurningExceptionsIntoFailuresInterruptAfterHandling:block:] + 96
+	29  XCTest                              0x000000010cf7d404 __26-[XCTestCase performTest:]_block_invoke.334 + 88
+	30  XCTest                              0x000000010cfe9492 +[XCTContext runInContextForTestCase:block:] + 219
+	31  XCTest                              0x000000010cf7cb73 -[XCTestCase performTest:] + 668
+	32  XCTest                              0x000000010cfc2077 -[XCTest runTest] + 57
+	33  XCTest                              0x000000010cf7714a __27-[XCTestSuite performTest:]_block_invoke + 365
+	34  XCTest                              0x000000010cf76874 -[XCTestSuite _performProtectedSectionForTest:testSection:] + 54
+	35  XCTest                              0x000000010cf76b71 -[XCTestSuite performTest:] + 355
+	36  XCTest                              0x000000010cfc2077 -[XCTest runTest] + 57
+	37  XCTest                              0x000000010cf7714a __27-[XCTestSuite performTest:]_block_invoke + 365
+	38  XCTest                              0x000000010cf76874 -[XCTestSuite _performProtectedSectionForTest:testSection:] + 54
+	39  XCTest                              0x000000010cf76b71 -[XCTestSuite performTest:] + 355
+	40  XCTest                              0x000000010cfc2077 -[XCTest runTest] + 57
+	41  XCTest                              0x000000010cf7714a __27-[XCTestSuite performTest:]_block_invoke + 365
+	42  XCTest                              0x000000010cf76874 -[XCTestSuite _performProtectedSectionForTest:testSection:] + 54
+	43  XCTest                              0x000000010cf76b71 -[XCTestSuite performTest:] + 355
+	44  XCTest                              0x000000010cfc2077 -[XCTest runTest] + 57
+	45  XCTest                              0x000000010cff843e __44-[XCTTestRunSession runTestsAndReturnError:]_block_invoke + 171
+	46  XCTest                              0x000000010cff8541 __44-[XCTTestRunSession runTestsAndReturnError:]_block_invoke.84 + 118
+	47  XCTest                              0x000000010cf90e83 -[XCTestObservationCenter _observeTestExecutionForBlock:] + 588
+	48  XCTest                              0x000000010cff81fd -[XCTTestRunSession runTestsAndReturnError:] + 623
+	49  XCTest                              0x000000010cf5a6d7 -[XCTestDriver runTestsAndReturnError:] + 456
+	50  XCTest                              0x000000010cfe56e4 _XCTestMain + 2484
+	51  libXCTestBundleInject.dylib         0x000000010cd20be7 __copy_helper_block_e8_32s + 0
+	52  CoreFoundation                      0x00007fff23b0d09c __CFRUNLOOP_IS_CALLING_OUT_TO_A_BLOCK__ + 12
+	53  CoreFoundation                      0x00007fff23b0c808 __CFRunLoopDoBlocks + 312
+	54  CoreFoundation                      0x00007fff23b0766e __CFRunLoopRun + 1246
+	55  CoreFoundation                      0x00007fff23b06e66 CFRunLoopRunSpecific + 438
+	56  GraphicsServices                    0x00007fff38346bb0 GSEventRunModal + 65
+	57  UIKitCore                           0x00007fff47578dd0 UIApplicationMain + 1621
+	58  ChuckNorrisFacts                    0x000000010cb28d8b main + 75
+	59  libdyld.dylib                       0x00007fff516ecd29 start + 1
+)
+Test Case '-[ChuckNorrisFactsTests.FactsListViewModelTests testLocalRandonLocalFacts]' failed (0.621 seconds).
+Test Case '-[ChuckNorrisFactsTests.FactsListViewModelTests testRequestErrorAndLoadCache]' started.
+✅ Cache Loaded
+0
+An unexpected error occurred, please try again later.
+Test Case '-[ChuckNorrisFactsTests.FactsListViewModelTests testRequestErrorAndLoadCache]' passed (0.004 seconds).
+Test Case '-[ChuckNorrisFactsTests.FactsListViewModelTests testSetErrorObservable]' started.
+Test Case '-[ChuckNorrisFactsTests.FactsListViewModelTests testSetErrorObservable]' passed (0.003 seconds).
+Test Suite 'FactsListViewModelTests' failed at 2019-11-18 11:50:40.914.
+	 Executed 7 tests, with 2 failures (1 unexpected) in 5.714 (5.718) seconds
+Test Suite 'OperatorsTests' started at 2019-11-18 11:50:40.914
+Test Case '-[ChuckNorrisFactsTests.OperatorsTests testArrayUnwrapperOperator]' started.
+Test Case '-[ChuckNorrisFactsTests.OperatorsTests testArrayUnwrapperOperator]' passed (0.000 seconds).
+Test Case '-[ChuckNorrisFactsTests.OperatorsTests testBoolUnwrapperOperator]' started.
+Test Case '-[ChuckNorrisFactsTests.OperatorsTests testBoolUnwrapperOperator]' passed (0.001 seconds).
+Test Case '-[ChuckNorrisFactsTests.OperatorsTests testDateUnwrapperOperator]' started.
+Test Case '-[ChuckNorrisFactsTests.OperatorsTests testDateUnwrapperOperator]' passed (0.001 seconds).
+Test Case '-[ChuckNorrisFactsTests.OperatorsTests testIntUnwrapperOperator]' started.
+Test Case '-[ChuckNorrisFactsTests.OperatorsTests testIntUnwrapperOperator]' passed (0.000 seconds).
+Test Case '-[ChuckNorrisFactsTests.OperatorsTests testNSStringUnwrapperOperator]' started.
+Test Case '-[ChuckNorrisFactsTests.OperatorsTests testNSStringUnwrapperOperator]' passed (0.001 seconds).
+Test Case '-[ChuckNorrisFactsTests.OperatorsTests testStringUnwrapperOperator]' started.
+Test Case '-[ChuckNorrisFactsTests.OperatorsTests testStringUnwrapperOperator]' passed (0.000 seconds).
+Test Case '-[ChuckNorrisFactsTests.OperatorsTests testURLUnwrapperOperator]' started.
+2019-11-18 11:50:40.919588-0300 ChuckNorrisFacts[60219:24501243] -[NSURL init] called; this results in an NSURL instance with an empty URL string. Please use one of the documented NSURL initialization methods instead (initWithString:, initFileURLWithPath:, etc.). This message shown only once.
+Test Case '-[ChuckNorrisFactsTests.OperatorsTests testURLUnwrapperOperator]' passed (0.001 seconds).
+Test Suite 'OperatorsTests' passed at 2019-11-18 11:50:40.920.
+	 Executed 7 tests, with 0 failures (0 unexpected) in 0.004 (0.006) seconds
+Test Suite 'SearchViewModelTests' started at 2019-11-18 11:50:40.921
+Test Case '-[ChuckNorrisFactsTests.SearchViewModelTests testHaveCategories]' started.
+✅ Cache Loaded
+Test Case '-[ChuckNorrisFactsTests.SearchViewModelTests testHaveCategories]' passed (0.009 seconds).
+Test Case '-[ChuckNorrisFactsTests.SearchViewModelTests testLimitOfPastTerms]' started.
+Test Case '-[ChuckNorrisFactsTests.SearchViewModelTests testLimitOfPastTerms]' passed (0.032 seconds).
+Test Case '-[ChuckNorrisFactsTests.SearchViewModelTests testMostRecentTerm]' started.
+Test Case '-[ChuckNorrisFactsTests.SearchViewModelTests testMostRecentTerm]' passed (0.019 seconds).
+Test Case '-[ChuckNorrisFactsTests.SearchViewModelTests testNoCategories]' started.
+✅ Cache Loaded
+/var/folders/10/s6_59dvs2qn6zyjqkbkj1pgm0000gn/T/TemporaryItems/(A Document Being Saved By muter 25)/StoneApp/ChuckNorrisFactsTests/SearchViewModelTests.swift:32: error: -[ChuckNorrisFactsTests.SearchViewModelTests testNoCategories] : XCTAssertFalse failed
+Test Case '-[ChuckNorrisFactsTests.SearchViewModelTests testNoCategories]' failed (0.006 seconds).
+Test Case '-[ChuckNorrisFactsTests.SearchViewModelTests testNumerOfLoadedCategories]' started.
+✅ Cache Loaded
+Test Case '-[ChuckNorrisFactsTests.SearchViewModelTests testNumerOfLoadedCategories]' passed (0.006 seconds).
+Test Case '-[ChuckNorrisFactsTests.SearchViewModelTests testSearchRepeatedTerm]' started.
+Test Case '-[ChuckNorrisFactsTests.SearchViewModelTests testSearchRepeatedTerm]' passed (0.025 seconds).
+Test Suite 'SearchViewModelTests' failed at 2019-11-18 11:50:41.022.
+	 Executed 6 tests, with 1 failure (0 unexpected) in 0.099 (0.101) seconds
+Test Suite 'ChuckNorrisFactsTests.xctest' failed at 2019-11-18 11:50:41.022.
+	 Executed 26 tests, with 3 failures (1 unexpected) in 5.827 (5.845) seconds
+Test Suite 'All tests' failed at 2019-11-18 11:50:41.023.
+	 Executed 26 tests, with 3 failures (1 unexpected) in 5.827 (5.846) seconds
+2019-11-18 11:50:49.437 xcodebuild[60077:24495002] [MT] IDETestOperationsObserverDebug: 26.935 elapsed -- Testing started completed.
+2019-11-18 11:50:49.437 xcodebuild[60077:24495002] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2019-11-18 11:50:49.437 xcodebuild[60077:24495002] [MT] IDETestOperationsObserverDebug: 26.935 sec, +26.935 sec -- end
+
+Test session results, code coverage, and logs:
+	/Users/lucascesarnogueirafonseca/Library/Developer/Xcode/DerivedData/ChuckNorrisFacts-hkmkbefcizssdocgauuhvkdzxadj/Logs/Test/Test-ChuckNorrisFacts-2019.11.18_11-50-17--0300.xcresult
+
+Failing tests:
+	ChuckNorrisFactsTests:
+		FactsListViewModelTests.testFetchFactsZeroResultsSuccess()
+		FactsListViewModelTests.testLocalRandonLocalFacts()
+		SearchViewModelTests.testNoCategories()
+
+** TEST FAILED **
+
+Testing started on 'iPhone 8'

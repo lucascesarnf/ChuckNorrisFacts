@@ -48,6 +48,7 @@
 		CA0059432380D3760045D2C7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA4A3285235E7CB40050854E /* Preview Assets.xcassets */; };
 		CA0059442380D3760045D2C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA4A3282235E7CB40050854E /* Assets.xcassets */; };
 		CA0059452380D3760045D2C7 /* RandonFactData.json in Resources */ = {isa = PBXBuildFile; fileRef = CAE398652363DAD30016C503 /* RandonFactData.json */; };
+		CA00594C2382E59C0045D2C7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA00594B2382E59C0045D2C7 /* Default-568h@2x.png */; };
 		CA0549302369C5950061F3AA /* ChuckNorrisFacts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CA05492E2369C5950061F3AA /* ChuckNorrisFacts.xcdatamodeld */; };
 		CA054937236A22160061F3AA /* FactListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA054936236A22160061F3AA /* FactListState.swift */; };
 		CA054939236A498C0061F3AA /* ServiceExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA054938236A498C0061F3AA /* ServiceExecutor.swift */; };
@@ -117,6 +118,7 @@
 		CA0059172380D2C70045D2C7 /* Mutation Test.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Mutation Test.plist"; path = "/Users/lucascesarnogueirafonseca/Documents/StoneApp/Mutation Test.plist"; sourceTree = "<absolute>"; };
 		CA0059492380D3760045D2C7 /* Mutation Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mutation Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA00594A2380D3760045D2C7 /* ChuckNorrisFacts copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ChuckNorrisFacts copy2-Info.plist"; path = "/Users/lucascesarnogueirafonseca/Documents/StoneApp/ChuckNorrisFacts copy2-Info.plist"; sourceTree = "<absolute>"; };
+		CA00594B2382E59C0045D2C7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		CA05492F2369C5950061F3AA /* ChuckNorrisFact.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChuckNorrisFact.xcdatamodel; sourceTree = "<group>"; };
 		CA054936236A22160061F3AA /* FactListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactListState.swift; sourceTree = "<group>"; };
 		CA054938236A498C0061F3AA /* ServiceExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceExecutor.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 		CA4A3270235E7CB30050854E = {
 			isa = PBXGroup;
 			children = (
+				CA00594B2382E59C0045D2C7 /* Default-568h@2x.png */,
 				CA4A327B235E7CB30050854E /* ChuckNorrisFacts */,
 				CA4A3292235E7CB40050854E /* ChuckNorrisFactsTests */,
 				CA4A329D235E7CB40050854E /* ChuckNorrisFactsUITests */,
@@ -591,6 +594,7 @@
 				CA0059412380D3760045D2C7 /* FactsData.json in Resources */,
 				CA0059422380D3760045D2C7 /* CategoriesData.json in Resources */,
 				CA0059432380D3760045D2C7 /* Preview Assets.xcassets in Resources */,
+				CA00594C2382E59C0045D2C7 /* Default-568h@2x.png in Resources */,
 				CA0059442380D3760045D2C7 /* Assets.xcassets in Resources */,
 				CA0059452380D3760045D2C7 /* RandonFactData.json in Resources */,
 			);

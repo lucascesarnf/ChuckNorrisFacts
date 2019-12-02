@@ -35,7 +35,7 @@ extension Service {
     private var url: URL? {
         var urlComponents = URLComponents(string: baseURL)
         urlComponents?.path = "/jokes" + path
-        if method == .get {
+        if case .get = method {
             if let parameters = parameters as? [String: String] {
                 urlComponents?.queryItems = parameters.map { URLQueryItem(name: $0.key, value: $0.value) }
             }
