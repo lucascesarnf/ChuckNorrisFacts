@@ -7,8 +7,6 @@
 //
 
 import Foundation
-import RxSwift
-import RxSwiftExt
 
 extension ServiceExecutor {
     func printJsonData(data: Data) {
@@ -23,53 +21,28 @@ extension ServiceExecutor {
     }
 
     func execute<T: Service>(_ service: T, completion: @escaping (Result<Data, Error>) -> Void) {
-        _ = rxTest(service)
-            .retry(.customTimerDelayed(maxCount: 3, delayCalculator: { retries -> DispatchTimeInterval in
-                return DispatchTimeInterval.seconds(Int(retries * 4))
-            }),
-           shouldRetry: { error in
-              print("⚠️ Retry ⚠️")
-              return URLError.Code(rawValue: error¬¬.code) == .notConnectedToInternet
-          })
-            .subscribe(
-                onNext: { data in
-                    print(data)
-                    completion(.success(data))
-                },
-                onError: { error in
-                    print(error)
-                    completion(.failure(error))
-            })
-    }
-
-    @discardableResult
-    func rxTest<T: Service>(_ service: T) -> Observable<Data> {
-        return Observable.create { observer -> Disposable in
-            print("\n\n#########################")
-            service.urlRequest.log()
-            self.makeSessionWith(timeout: service.timeout).dataTask(with:
-            service.urlRequest) { (data, response, error) in
-                if let error = error {
-                    print("⛔ Request failed")
-                    observer.onError(error)
-                    //completion(.failure(error))
-                } else if let data = data {
-                    if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode != 200,
-                        let statusError = self.statusCodeError(data: data) {
-                        print("⛔ Request Error")
-                        observer.onError(statusError)//completion(.failure(statusError))
-                        return
-                    }
-                    print("✅ Request completed")
-                    self.printJsonData(data: data)
-                    if self.saveData {
-                        self.saveData(value: data, url: service.urlString)
-                    }
-                    observer.onNext(data)
+       print("\n\n#########################")
+        service.urlRequest.log()
+        self.makeSessionWith(timeout: service.timeout).dataTask(with:
+        service.urlRequest) { (data, response, error) in
+            if let error = error {
+                print("⛔ Request failed")
+                completion(.failure(error))
+            } else if let data = data {
+                if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode != 200,
+                    let statusError = self.statusCodeError(data: data) {
+                    print("⛔ Request Error")
+                    completion(.failure(statusError))
+                    return
                 }
-            }.resume()
-            return Disposables.create()
-        }
+                print("✅ Request completed")
+                self.printJsonData(data: data)
+                if self.saveData {
+                    self.saveData(value: data, url: service.urlString)
+                }
+                completion(.success(data))
+            }
+        }.resume()
     }
 
     func saveData(value: Data, url: String) {
