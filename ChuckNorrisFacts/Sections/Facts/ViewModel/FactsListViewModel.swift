@@ -79,7 +79,8 @@ class FactsListViewModel: ObservableObject {
             self?.performingQuery = false
         }
 
-        if let facts = cache?.result, (cache?.total)† > 0 {
+        let total = cache?.total ?? 0
+        if let facts = cache?.result, total > 0 {
             cacheHandling(facts)
         } else {
             loaderHandling()
@@ -122,7 +123,7 @@ class FactsListViewModel: ObservableObject {
     }
 
     private func errorHandling(_ error: FactsError) {
-        print(error¬¬.code)
+        print(error.toNSError.code)
         print(error.localizedDescription)
         self.error = error
         if didCache {

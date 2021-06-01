@@ -72,7 +72,7 @@ class SearchViewModelTests: XCTestCase {
 
         viewModel.saveSearchTerm(terms[0])
         mockCloseAndOpenViewModel()
-        XCTAssertEqual(viewModel.pastSearches.first†, terms[0], "SearchViewModel is not saving terms sorted by time")
+        XCTAssertEqual(viewModel.pastSearches.first, terms[0], "SearchViewModel is not saving terms sorted by time")
     }
 
     func testLimitOfPastTerms() {
@@ -86,7 +86,6 @@ class SearchViewModelTests: XCTestCase {
     }
 
     private func mockCloseAndOpenViewModel() {
-        ///ViewModelSearchTerm resets whenever you search and save a term
         viewModel = SearchFactViewModel()
     }
 }

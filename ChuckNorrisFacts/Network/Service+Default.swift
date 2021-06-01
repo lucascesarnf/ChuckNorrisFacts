@@ -11,7 +11,7 @@ import UIKit
 
 extension Service {
     var baseURL: String {
-        return "https://api.chucknorris.io"
+        return ProcessInfo.processInfo.environment["baseURL"] ?? "https://api.chucknorris.io"
     }
 
     public var urlRequest: URLRequest {

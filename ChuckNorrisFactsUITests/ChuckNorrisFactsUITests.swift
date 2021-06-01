@@ -32,14 +32,13 @@ class ChuckNorrisFactsUITests: XCTestCase {
     }
 
     func testShareFactWithErrorAndCache() {
-        //Request with success to generate cache
         let errorMessage = "An unexpected error occurred, please try again later."
-        app.launchArguments = ["MockNetwork"]
+        app.launchArguments = ["MockNetwork", "ClearCoreData"]
         app.launch()
         makeRequest()
-        //Finish application
+
         app.terminate()
-        //Relaunch to see error with facts cached
+
         app.launchArguments = ["MockNetworkError"]
         app.launch()
         let shareButtonExist = self.app.buttons["Share Button"].firstMatch.exists
@@ -50,7 +49,7 @@ class ChuckNorrisFactsUITests: XCTestCase {
     }
 
     func testRequestAndShareFactByCategoryWithSuccess() {
-        app.launchArguments = ["MockNetwork"]
+        app.launchArguments = ["MockNetwork", "ClearCoreData"]
         app.launch()
         sleep(1)
         app.buttons["Search Button"].tap()

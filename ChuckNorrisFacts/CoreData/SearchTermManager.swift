@@ -30,15 +30,19 @@ struct SearchTermManager {
         entityData.setValue(term, forKey: "term")
         entityData.setValue(time, forKey: "time")
         context.performAndWait {
-                try? context.save()
+            try? context.save()
         }
     }
 
     static func loadObject() -> [String] {
         guard var results = try? context.fetch(fetchRequest) as? [NSManagedObject] else { return [] }
-        results = results.sorted(by: {($0.value(forKey: "time") as? Date)† > ($1.value(forKey: "time") as? Date)†})
-                let test = results.map({($0.value(forKey: "term") as? String)†})
-                return test
+        results = results.sorted(by: {
+            let currentTime = ($0.value(forKey: "time") as? Date) ?? Date()
+            let nextTime = ($1.value(forKey: "time") as? Date) ?? Date()
+            return currentTime > nextTime
+        })
+        let test = results.map({($0.value(forKey: "term") as? String) ?? ""})
+        return test
     }
 
     static func updateObject(term: String, time: Date) {
@@ -48,7 +52,7 @@ struct SearchTermManager {
             firstResult.setValue(time, forKey: "time")
         }
         context.performAndWait {
-                try? context.save()
+            try? context.save()
         }
         fetchRequest.predicate = nil
     }
@@ -74,7 +78,7 @@ struct SearchTermManager {
     static func reset() {
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
         context.performAndWait {
-                _ = try? context.execute(deleteRequest)
+            _ = try? context.execute(deleteRequest)
         }
     }
 }

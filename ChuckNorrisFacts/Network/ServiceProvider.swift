@@ -12,7 +12,6 @@ struct ServiceProvider<T: Service> {
     var listner: ((Result<Data, Error>) -> Void)?
 
     init() {
-        //Execute Launch argument
         if ProcessInfo.processInfo.arguments.contains("MockNetwork") {
            executor = MockExecutor()
         } else if ProcessInfo.processInfo.arguments.contains("MockNetworkError") {
@@ -27,6 +26,7 @@ struct ServiceProvider<T: Service> {
 
     func execute(service: T) {
         executor.execute(service) { result in
+            print(result)
             DispatchQueue.main.async {
                 self.listner?(result)
             }
@@ -46,12 +46,12 @@ struct ServiceProvider<T: Service> {
                     }
                 } catch {
                     deliverQueue.async {
-                        completion?(.failure(FactsError(error: error)))
+                        completion?(.failure(FactsError(error: error as NSError)))
                     }
                 }
             case .failure(let error):
                 deliverQueue.async {
-                   completion?(.failure(FactsError(error: error)))
+                   completion?(.failure(FactsError(error: error as NSError)))
                 }
             }
             self.listner?(result)

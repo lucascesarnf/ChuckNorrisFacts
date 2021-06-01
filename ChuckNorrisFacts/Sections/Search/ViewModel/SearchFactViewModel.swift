@@ -52,15 +52,18 @@ class SearchFactViewModel: ObservableObject {
 
     private func loadCategories() {
         if categories.isEmpty {
-            self.categories = ServiceResultManager.loadObject(url: ChuckNorrisFactsService.categories.urlString,
-                decodeType: [String].self)†.choose(numberOfCategories)
+            let categoriesURLStrings = ServiceResultManager.loadObject(
+                url: ChuckNorrisFactsService.categories.urlString,
+                decodeType: [String].self
+            ) ?? []
+            self.categories = categoriesURLStrings.choose(numberOfCategories)
             makeCategoriesGrid()
         }
     }
 
     private func deleteLastAndSaveNew(term: String) {
         let serviceToRemoveCache = ChuckNorrisFactsService.query(term)
-        SearchTermManager.removeObject(term: pastSearches.last†)
+        SearchTermManager.removeObject(term: pastSearches.last ?? "")
         ServiceResultManager.removeObject(url: serviceToRemoveCache.urlString)
         SearchTermManager.saveObject(term: term, time: Date())
     }

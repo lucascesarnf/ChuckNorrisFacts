@@ -31,7 +31,7 @@ class FactsListViewModelTests: XCTestCase {
     func testLoadCategories() {
         let service = ChuckNorrisFactsService.categories
         let expectation = self.expectation(description: "Load categories success")
-        //Reinitialization to observate listner changes
+        
         viewModel = FactsListViewModel(provider: ServiceProvider<ChuckNorrisFactsService>(executor: MockExecutor()))
         viewModel.provider?.listner = { result in
             XCTAssertNotNil(result)

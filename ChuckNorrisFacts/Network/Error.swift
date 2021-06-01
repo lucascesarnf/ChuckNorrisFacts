@@ -16,8 +16,8 @@ enum FactsError: Error, Equatable {
     case returned(Error)
     case statusCode(String)
 
-    init(error: Error) {
-        switch URLError.Code(rawValue: error¬¬.code) {
+    init(error: NSError) {
+        switch URLError.Code(rawValue: error.code) {
         case .notConnectedToInternet:
             self = .notConnectedToInternet
         case .networkConnectionLost:
@@ -27,6 +27,10 @@ enum FactsError: Error, Equatable {
         default:
             self = .returned(error)
         }
+    }
+
+    var toNSError: NSError {
+        self as NSError
     }
 
     static func == (lhs: FactsError, rhs: FactsError) -> Bool {
@@ -52,6 +56,10 @@ extension FactsError: LocalizedError {
         case .returned(let error):
             return error.localizedDescription
         }
+    }
+
+    public var description: String {
+        self.errorDescription ?? "Unowned Error"
     }
 }
 

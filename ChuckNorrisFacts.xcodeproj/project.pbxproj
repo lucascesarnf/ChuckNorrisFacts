@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,7 +18,6 @@
 		CA0059232380D3760045D2C7 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AFD812371A163009BCE35 /* Coordinator.swift */; };
 		CA0059242380D3760045D2C7 /* ChuckNorrisFactsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA53C3FB2362783D002F41E2 /* ChuckNorrisFactsService.swift */; };
 		CA0059252380D3760045D2C7 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3F4C722367B6E300C58234 /* SearchBar.swift */; };
-		CA0059262380D3760045D2C7 /* UnwrapperOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE39875236754A90016C503 /* UnwrapperOperator.swift */; };
 		CA0059272380D3760045D2C7 /* SearchFactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE3987C23679C510016C503 /* SearchFactView.swift */; };
 		CA0059282380D3760045D2C7 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA53C3EF23624104002F41E2 /* Service.swift */; };
 		CA0059292380D3760045D2C7 /* SearchTermManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA05495B236E30970061F3AA /* SearchTermManager.swift */; };
@@ -26,7 +25,6 @@
 		CA00592B2380D3760045D2C7 /* ChuckNorrisFact.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA53C3E1236205F1002F41E2 /* ChuckNorrisFact.swift */; };
 		CA00592C2380D3760045D2C7 /* FactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA53C3FF23627C2A002F41E2 /* FactViewModel.swift */; };
 		CA00592D2380D3760045D2C7 /* Data+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0DAEDA2368F8F200C5D2C6 /* Data+String.swift */; };
-		CA00592E2380D3760045D2C7 /* ErrorCasting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB39E4A23691E6800B57023 /* ErrorCasting.swift */; };
 		CA00592F2380D3760045D2C7 /* ServiceExecutor+Default.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA05493A236A4A370061F3AA /* ServiceExecutor+Default.swift */; };
 		CA0059302380D3760045D2C7 /* FactListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA054936236A22160061F3AA /* FactListState.swift */; };
 		CA0059312380D3760045D2C7 /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA53C3F1236267BD002F41E2 /* ServiceProvider.swift */; };
@@ -83,18 +81,19 @@
 		CA53C3FC2362783D002F41E2 /* ChuckNorrisFactsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA53C3FB2362783D002F41E2 /* ChuckNorrisFactsService.swift */; };
 		CA53C40023627C2A002F41E2 /* FactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA53C3FF23627C2A002F41E2 /* FactViewModel.swift */; };
 		CA53C40323627E1A002F41E2 /* FactsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA53C40223627E1A002F41E2 /* FactsListViewModel.swift */; };
-		CA6A55372373968000A1ACE8 /* OperatorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6A55362373968000A1ACE8 /* OperatorsTests.swift */; };
 		CA7AFD802371A122009BCE35 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AFD7F2371A122009BCE35 /* MainCoordinator.swift */; };
 		CA7AFD822371A163009BCE35 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7AFD812371A163009BCE35 /* Coordinator.swift */; };
-		CAB39E4B23691E6800B57023 /* ErrorCasting.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB39E4A23691E6800B57023 /* ErrorCasting.swift */; };
 		CAE39860236299080016C503 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE3985F236299080016C503 /* Error.swift */; };
 		CAE398642363DACC0016C503 /* CategoriesData.json in Resources */ = {isa = PBXBuildFile; fileRef = CAE398632363DACC0016C503 /* CategoriesData.json */; };
 		CAE398662363DAD30016C503 /* RandonFactData.json in Resources */ = {isa = PBXBuildFile; fileRef = CAE398652363DAD30016C503 /* RandonFactData.json */; };
 		CAE398692363F6AB0016C503 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE398682363F6AB0016C503 /* ActivityView.swift */; };
 		CAE398732364C5B20016C503 /* SearchFactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE398722364C5B20016C503 /* SearchFactViewModel.swift */; };
-		CAE39876236754A90016C503 /* UnwrapperOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE39875236754A90016C503 /* UnwrapperOperator.swift */; };
 		CAE39878236776FC0016C503 /* FactCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE39877236776FC0016C503 /* FactCategories.swift */; };
 		CAE3987D23679C510016C503 /* SearchFactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE3987C23679C510016C503 /* SearchFactView.swift */; };
+		F1F15FAD2656E52E00076C23 /* ChuckNorrisFactsSwifterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F15FAC2656E52E00076C23 /* ChuckNorrisFactsSwifterUITests.swift */; };
+		F1F15FB02656EA9000076C23 /* Swifter in Frameworks */ = {isa = PBXBuildFile; productRef = F1F15FAF2656EA9000076C23 /* Swifter */; };
+		F1F15FB22656F8E800076C23 /* ThreadSafetyCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F15FB12656F8E800076C23 /* ThreadSafetyCounter.swift */; };
+		F1F15FB42656FC1300076C23 /* ExpectationHelpable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F15FB32656FC1300076C23 /* ExpectationHelpable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,9 +114,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CA0059172380D2C70045D2C7 /* Mutation Test.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Mutation Test.plist"; path = "/Users/lucascesarnogueirafonseca/Documents/StoneApp/Mutation Test.plist"; sourceTree = "<absolute>"; };
 		CA0059492380D3760045D2C7 /* Mutation Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mutation Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA00594A2380D3760045D2C7 /* ChuckNorrisFacts copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ChuckNorrisFacts copy2-Info.plist"; path = "/Users/lucascesarnogueirafonseca/Documents/StoneApp/ChuckNorrisFacts copy2-Info.plist"; sourceTree = "<absolute>"; };
 		CA00594B2382E59C0045D2C7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		CA05492F2369C5950061F3AA /* ChuckNorrisFact.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChuckNorrisFact.xcdatamodel; sourceTree = "<group>"; };
 		CA054936236A22160061F3AA /* FactListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactListState.swift; sourceTree = "<group>"; };
@@ -159,18 +156,18 @@
 		CA53C3FB2362783D002F41E2 /* ChuckNorrisFactsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckNorrisFactsService.swift; sourceTree = "<group>"; };
 		CA53C3FF23627C2A002F41E2 /* FactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactViewModel.swift; sourceTree = "<group>"; };
 		CA53C40223627E1A002F41E2 /* FactsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsListViewModel.swift; sourceTree = "<group>"; };
-		CA6A55362373968000A1ACE8 /* OperatorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorsTests.swift; sourceTree = "<group>"; };
 		CA7AFD7F2371A122009BCE35 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		CA7AFD812371A163009BCE35 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		CAB39E4A23691E6800B57023 /* ErrorCasting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCasting.swift; sourceTree = "<group>"; };
 		CAE3985F236299080016C503 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		CAE398632363DACC0016C503 /* CategoriesData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CategoriesData.json; sourceTree = "<group>"; };
 		CAE398652363DAD30016C503 /* RandonFactData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = RandonFactData.json; sourceTree = "<group>"; };
 		CAE398682363F6AB0016C503 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		CAE398722364C5B20016C503 /* SearchFactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFactViewModel.swift; sourceTree = "<group>"; };
-		CAE39875236754A90016C503 /* UnwrapperOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnwrapperOperator.swift; sourceTree = "<group>"; };
 		CAE39877236776FC0016C503 /* FactCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactCategories.swift; sourceTree = "<group>"; };
 		CAE3987C23679C510016C503 /* SearchFactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFactView.swift; sourceTree = "<group>"; };
+		F1F15FAC2656E52E00076C23 /* ChuckNorrisFactsSwifterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckNorrisFactsSwifterUITests.swift; sourceTree = "<group>"; };
+		F1F15FB12656F8E800076C23 /* ThreadSafetyCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadSafetyCounter.swift; sourceTree = "<group>"; };
+		F1F15FB32656FC1300076C23 /* ExpectationHelpable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpectationHelpable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +196,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1F15FB02656EA9000076C23 /* Swifter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,8 +253,6 @@
 				CA4A329D235E7CB40050854E /* ChuckNorrisFactsUITests */,
 				CA4A327A235E7CB30050854E /* Products */,
 				CA791D0E2371326000E82190 /* Frameworks */,
-				CA0059172380D2C70045D2C7 /* Mutation Test.plist */,
-				CA00594A2380D3760045D2C7 /* ChuckNorrisFacts copy2-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -294,7 +290,6 @@
 				CA4A3293235E7CB40050854E /* FactViewModelTests.swift */,
 				CA10FBE52370F5180098F56D /* SearchViewModelTests.swift */,
 				CA054940236A4EF60061F3AA /* FactsListViewModelTests.swift */,
-				CA6A55362373968000A1ACE8 /* OperatorsTests.swift */,
 				CA4A3295235E7CB40050854E /* Info.plist */,
 			);
 			path = ChuckNorrisFactsTests;
@@ -305,6 +300,9 @@
 			children = (
 				CA4A329E235E7CB40050854E /* ChuckNorrisFactsUITests.swift */,
 				CA4A32A0235E7CB40050854E /* Info.plist */,
+				F1F15FAC2656E52E00076C23 /* ChuckNorrisFactsSwifterUITests.swift */,
+				F1F15FB12656F8E800076C23 /* ThreadSafetyCounter.swift */,
+				F1F15FB32656FC1300076C23 /* ExpectationHelpable.swift */,
 			);
 			path = ChuckNorrisFactsUITests;
 			sourceTree = "<group>";
@@ -453,8 +451,6 @@
 		CAE398742367545F0016C503 /* Operators */ = {
 			isa = PBXGroup;
 			children = (
-				CAE39875236754A90016C503 /* UnwrapperOperator.swift */,
-				CAB39E4A23691E6800B57023 /* ErrorCasting.swift */,
 			);
 			path = Operators;
 			sourceTree = "<group>";
@@ -534,6 +530,9 @@
 				CA4A329C235E7CB40050854E /* PBXTargetDependency */,
 			);
 			name = ChuckNorrisFactsUITests;
+			packageProductDependencies = (
+				F1F15FAF2656EA9000076C23 /* Swifter */,
+			);
 			productName = ChuckNorrisFactsUITests;
 			productReference = CA4A329A235E7CB40050854E /* ChuckNorrisFactsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -545,7 +544,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1110;
-				LastUpgradeCheck = 1110;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = "Lucas César  Nogueira Fonseca";
 				TargetAttributes = {
 					CA4A3278235E7CB30050854E = {
@@ -557,6 +556,7 @@
 					};
 					CA4A3299235E7CB40050854E = {
 						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1250;
 						TestTargetID = CA4A3278235E7CB30050854E;
 					};
 				};
@@ -571,6 +571,7 @@
 			);
 			mainGroup = CA4A3270235E7CB30050854E;
 			packageReferences = (
+				F1F15FAE2656EA9000076C23 /* XCRemoteSwiftPackageReference "swifter" */,
 			);
 			productRefGroup = CA4A327A235E7CB30050854E /* Products */;
 			projectDirPath = "";
@@ -685,7 +686,6 @@
 				CA0059232380D3760045D2C7 /* Coordinator.swift in Sources */,
 				CA0059242380D3760045D2C7 /* ChuckNorrisFactsService.swift in Sources */,
 				CA0059252380D3760045D2C7 /* SearchBar.swift in Sources */,
-				CA0059262380D3760045D2C7 /* UnwrapperOperator.swift in Sources */,
 				CA0059272380D3760045D2C7 /* SearchFactView.swift in Sources */,
 				CA0059282380D3760045D2C7 /* Service.swift in Sources */,
 				CA0059292380D3760045D2C7 /* SearchTermManager.swift in Sources */,
@@ -693,7 +693,6 @@
 				CA00592B2380D3760045D2C7 /* ChuckNorrisFact.swift in Sources */,
 				CA00592C2380D3760045D2C7 /* FactViewModel.swift in Sources */,
 				CA00592D2380D3760045D2C7 /* Data+String.swift in Sources */,
-				CA00592E2380D3760045D2C7 /* ErrorCasting.swift in Sources */,
 				CA00592F2380D3760045D2C7 /* ServiceExecutor+Default.swift in Sources */,
 				CA0059302380D3760045D2C7 /* FactListState.swift in Sources */,
 				CA0059312380D3760045D2C7 /* ServiceProvider.swift in Sources */,
@@ -726,7 +725,6 @@
 				CA7AFD822371A163009BCE35 /* Coordinator.swift in Sources */,
 				CA53C3FC2362783D002F41E2 /* ChuckNorrisFactsService.swift in Sources */,
 				CA3F4C732367B6E300C58234 /* SearchBar.swift in Sources */,
-				CAE39876236754A90016C503 /* UnwrapperOperator.swift in Sources */,
 				CAE3987D23679C510016C503 /* SearchFactView.swift in Sources */,
 				CA53C3F023624104002F41E2 /* Service.swift in Sources */,
 				CA05495C236E30970061F3AA /* SearchTermManager.swift in Sources */,
@@ -734,7 +732,6 @@
 				CA53C3E2236205F1002F41E2 /* ChuckNorrisFact.swift in Sources */,
 				CA53C40023627C2A002F41E2 /* FactViewModel.swift in Sources */,
 				CA0DAEDB2368F8F200C5D2C6 /* Data+String.swift in Sources */,
-				CAB39E4B23691E6800B57023 /* ErrorCasting.swift in Sources */,
 				CA05493B236A4A370061F3AA /* ServiceExecutor+Default.swift in Sources */,
 				CA054937236A22160061F3AA /* FactListState.swift in Sources */,
 				CA53C3F2236267BD002F41E2 /* ServiceProvider.swift in Sources */,
@@ -757,7 +754,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA054941236A4EF60061F3AA /* FactsListViewModelTests.swift in Sources */,
-				CA6A55372373968000A1ACE8 /* OperatorsTests.swift in Sources */,
 				CA4A3294235E7CB40050854E /* FactViewModelTests.swift in Sources */,
 				CA10FBE62370F5180098F56D /* SearchViewModelTests.swift in Sources */,
 			);
@@ -767,6 +763,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1F15FAD2656E52E00076C23 /* ChuckNorrisFactsSwifterUITests.swift in Sources */,
+				F1F15FB42656FC1300076C23 /* ExpectationHelpable.swift in Sources */,
+				F1F15FB22656F8E800076C23 /* ThreadSafetyCounter.swift in Sources */,
 				CA4A329F235E7CB40050854E /* ChuckNorrisFactsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -868,6 +867,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -928,6 +928,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1050,6 +1051,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EU52X4J36U;
 				INFOPLIST_FILE = ChuckNorrisFactsUITests/Info.plist;
@@ -1061,6 +1063,7 @@
 				"OTHER_LDFLAGS[arch=*]" = "";
 				PRODUCT_BUNDLE_IDENTIFIER = lucas.ChuckNorrisFactsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = ChuckNorrisFacts;
@@ -1071,6 +1074,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EU52X4J36U;
 				INFOPLIST_FILE = ChuckNorrisFactsUITests/Info.plist;
@@ -1137,6 +1141,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F1F15FAE2656EA9000076C23 /* XCRemoteSwiftPackageReference "swifter" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/httpswift/swifter.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F1F15FAF2656EA9000076C23 /* Swifter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F1F15FAE2656EA9000076C23 /* XCRemoteSwiftPackageReference "swifter" */;
+			productName = Swifter;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		CA05492E2369C5950061F3AA /* ChuckNorrisFacts.xcdatamodeld */ = {

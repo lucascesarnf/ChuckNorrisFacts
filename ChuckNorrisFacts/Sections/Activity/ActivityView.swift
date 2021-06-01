@@ -17,10 +17,18 @@ struct ActivityView: UIViewControllerRepresentable {
     func makeUIViewController(context: UIViewControllerRepresentableContext<ActivityView>) -> UIActivityViewController {
         let activityView = UIActivityViewController(activityItems: activityItems,
                                         applicationActivities: applicationActivities)
+        size()
         return activityView
     }
 
     func updateUIViewController(_ uiViewController: UIActivityViewController,
                                 context: UIViewControllerRepresentableContext<ActivityView>) {
+    }
+    
+    func size() {
+        let screenSize: CGRect = UIScreen.main.bounds
+        let screenWidth = screenSize.width
+        let screenHeight = screenSize.height
+        print("Screen width = \(screenWidth), screen height = \(screenHeight)")
     }
 }

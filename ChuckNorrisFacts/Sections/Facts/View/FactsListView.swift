@@ -39,7 +39,7 @@ struct FactsListView: View {
         VStack {
             Spacer()
                 .frame(height: 5)
-            Text(self.viewModel.error.errorDescription†)
+            Text(self.viewModel.error.description)
                 .transition(.opacity)
                 .animation(.easeIn)
                 .font(.system(size: 20))
@@ -58,7 +58,7 @@ struct FactsListView: View {
 
     var error: some View {
         VStack {
-            Text(viewModel.error.errorDescription†)
+            Text(viewModel.error.description)
                 .fontWeight(.bold)
                 .font(.system(size: 18))
                 .padding()
@@ -76,7 +76,7 @@ struct FactsListView: View {
                    FactRow(model: FactViewModel(fact))
                }
             })
-            Section(header: Text("Randon Past Searches").fontWeight(.bold).font(.system(size:25)).padding(),
+            Section(header: Text("Randon Past Searches").fontWeight(.bold).font(.system(size: 25)).padding(),
                 content: {
                  ForEach(viewModel.localFacts, id: \.self) { fact in
                      FactRow(model: FactViewModel(fact))
